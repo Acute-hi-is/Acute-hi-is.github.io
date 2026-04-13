@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<section class="page-hero">
+  <div class="page-hero__inner">
+    <p class="page-hero__eyebrow">News</p>
+    <h1 class="page-hero__title">{{ page.title }}</h1>
+    <p class="page-hero__sub">
+      <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.category %} · {{ page.category | capitalize }}{% endif %}
+    </p>
+  </div>
+</section>
+
+<article class="post-body">
+  <div class="container">
+    <div class="post-body__content">
+      {{ content }}
+    </div>
+    <a href="{{ '/news/' | relative_url }}" class="member-profile__back">&larr; All news</a>
+  </div>
+</article>

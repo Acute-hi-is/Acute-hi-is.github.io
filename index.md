@@ -98,11 +98,15 @@ title: Home
   <div class="stats-ticker" aria-label="Research highlights">
     <div class="stats-ticker__track">
       {% for stat in site.data.stats %}
-      <div class="stats__item"><span class="stats__number">{{ stat.number }}</span><span class="stats__label">{{ stat.label }}</span></div>
+      <a href="{{ stat.link }}" class="stats__item" target="_blank" rel="noopener">
+        <span class="stats__number">{{ stat.number }}</span><span class="stats__label">{{ stat.label }}</span>
+      </a>
       {% endfor %}
       <!-- duplicate set for seamless CSS loop -->
       {% for stat in site.data.stats %}
-      <div class="stats__item"><span class="stats__number">{{ stat.number }}</span><span class="stats__label">{{ stat.label }}</span></div>
+      <a href="{{ stat.link }}" class="stats__item" target="_blank" rel="noopener">
+        <span class="stats__number">{{ stat.number }}</span><span class="stats__label">{{ stat.label }}</span>
+      </a>
       {% endfor %}
     </div>
   </div>
@@ -185,6 +189,38 @@ title: Home
     </div>
   </div>
 </section>
+
+<!-- NEWS -->
+{% if site.posts.size > 0 %}
+<section class="news-preview">
+  <div class="container">
+    <div class="news-preview__header">
+      <div>
+        <span class="section-label">News</span>
+        <h2>Latest from the lab</h2>
+      </div>
+      <a href="{{ '/news/' | relative_url }}" class="news-preview__all">All news &rarr;</a>
+    </div>
+    <div class="news-preview__grid">
+      {% for post in site.posts limit:3 %}
+      <a href="{{ post.url | relative_url }}" class="news-card">
+        <div class="news-card__date">
+          <span class="news-card__month">{{ post.date | date: "%b" }}</span>
+          <span class="news-card__day">{{ post.date | date: "%d" }}</span>
+        </div>
+        <div class="news-card__body">
+          {% if post.category %}
+          <span class="news-card__cat">{{ post.category }}</span>
+          {% endif %}
+          <h3 class="news-card__title">{{ post.title }}</h3>
+          <p class="news-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
 
 <!-- PARTNERS -->
 <section class="partners">

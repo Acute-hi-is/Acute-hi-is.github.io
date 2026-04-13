@@ -9,4 +9,4 @@ status: current
 order: 2
 ---
 
-Professor of Cognitive Psychology at the University of Iceland. Research focuses on visual attention, cross-modal foraging, haptic illusions, and the perceptual science underlying sensory interfaces.
+Árni Kristjánsson graduated with a bachelors degree in Psychology from the University of Iceland in 1996. He finished his PhD in Cognition, Brain and Behavior, from Harvard University in 2002. Subsequently he worked as a post-doctoral researcher at the Institute of Cognitive Neuroscience in London, before joining the faculty of Psychology at the University of Iceland in 2005.

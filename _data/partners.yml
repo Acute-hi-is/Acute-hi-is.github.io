@@ -1,5 +1,16 @@
 # Partners & funders — single source of truth
 
+research:
+  - name: Icelandic Institute of Intelligent Machines
+    url: https://www.iil.is
+    logo: /images/partners/iil_wordmark.jpg
+    alt: IIL — Icelandic Institute of Intelligent Machines
+
+  - name: Icelandic Vision Lab
+    url: https://visionlab.is
+    logo: /images/partners/Vision_Lab_Logo.png
+    alt: Icelandic Vision Lab
+
 industry:
   - name: "Össur ehf."
     url: https://www.ossur.com
@@ -46,3 +57,8 @@ funders:
     url: https://www.edihiceland.is
     logo: /images/partners/edih_iceland.png
     alt: EDIH Iceland
+
+  - name: Technology Development Fund
+    url: https://en.rannis.is/funding/research/technology-development-fund
+    logo: /images/partners/Technology_Development_Fud.png
+    alt: Technology Development Fund

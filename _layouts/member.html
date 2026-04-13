@@ -20,10 +20,12 @@ layout: default
       {% endif %}
       <div class="member-profile__body">
         {{ content }}
-        {% if page.email or page.profile %}
+        {% if page.email or page.profile or page.scholar or page.thesis %}
         <div class="member-profile__links">
           {% if page.email %}<a href="mailto:{{ page.email }}">{{ page.email }}</a>{% endif %}
-          {% if page.profile %}<a href="{{ page.profile }}" target="_blank" rel="noopener">University profile</a>{% endif %}
+          {% if page.profile %}<a href="{{ page.profile }}" target="_blank" rel="noopener">Profile</a>{% endif %}
+          {% if page.scholar %}<a href="{{ page.scholar }}" target="_blank" rel="noopener">Google Scholar</a>{% endif %}
+          {% if page.thesis %}<a href="{{ page.thesis }}" target="_blank" rel="noopener">Thesis</a>{% endif %}
         </div>
         {% endif %}
       </div>

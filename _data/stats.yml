@@ -1,27 +1,95 @@
 # Stats ticker items — displayed as a seamless scrolling ribbon on the homepage
 # The Liquid template duplicates the set automatically for the CSS loop
 
+# ── Vibrotactile & Haptics ──
 - number: "93%"
-  label: Pattern recognition with sequential vibrotactile stimulation
+  label: Sequential vibrotactile pattern recognition accuracy on forearm
+  link: https://doi.org/10.3390/app14010043
+- number: "72.4%"
+  label: Sequential vs 42.7% simultaneous accuracy for prosthetic joint feedback
+  link: https://doi.org/10.3390/biomimetics11020112
+- number: "~93%"
+  label: Ceiling accuracy at 240 ms signal duration for prosthetic feedback
+  link: https://doi.org/10.3390/biomimetics11020112
+- number: "92–98%"
+  label: Peak short-pattern accuracy at 300 ms interstimulus interval
+  link: https://doi.org/10.1016/j.vrih.2025.06.001
+- number: "95%"
+  label: Vibrotactile discrimination accuracy near wrist & elbow anchors
+  link: https://doi.org/10.3390/act12060224
+- number: "34 dB"
+  label: Individual variation range in wrist vibrotactile thresholds
+  link: https://doi.org/10.1145/3529259
+- number: "200 Hz"
+  label: Peak wrist sensitivity frequency (inner/glabrous skin)
+  link: https://doi.org/10.1145/3529259
+- number: "50 dB"
+  label: "Dynamic range available in the 50–300 Hz band at the inner wrist"
+  link: https://doi.org/10.1145/3529259
+- number: "30"
+  label: Participants in wrist threshold study across 25–1,000 Hz
+  link: https://doi.org/10.1145/3529259
+- number: "14"
+  label: Braille-like patterns tested on a 2×3 actuator forearm array
+  link: https://doi.org/10.3390/app14010043
+- number: "6"
+  label: Actuators in the forearm vibrotactile display array
+  link: https://doi.org/10.3390/app14010043
+- number: "4"
+  label: Prosthetic joint positions encoded by the forearm feedback system
+  link: https://doi.org/10.3390/biomimetics11020112
+- number: "826 M"
+  label: People worldwide with some form of vision impairment
+  link: https://doi.org/10.3390/app14010043
+
+# ── Acoustics & Spatial Audio ──
 - number: "100×"
-  label: Speedup in room acoustics via model-order reduction
+  label: Speedup of reduced-order model vs full-order in room acoustics
+  link: https://doi.org/10.1002/nme.70295
+- number: "3.5×"
+  label: Speedup of the new FOM formulation vs conventional approach
+  link: https://doi.org/10.1002/nme.70295
 - number: "1,513"
   label: Spatial positions in the Viking HRTF Dataset
+  link: https://doi.org/10.5281/zenodo.4160401
+- number: "20"
+  label: Pinnae in the Viking HRTF dataset
+  link: https://doi.org/10.5281/zenodo.4160401
 - number: "48"
   label: Individual HRTFs used to train sound-localization AI
+  link: https://doi.org/10.5281/zenodo.6797854
 - number: "~20°"
   label: "Localization error — matching human hearing"
-- number: "3.3%"
-  label: "Pinna notch prediction error — half of prior methods"
-- number: "72.4%"
-  label: Accuracy for prosthetic joint feedback (sequential cues)
-- number: "2×"
-  label: Faster foraging with cross-modal synchrony cues
-- number: "34 dB"
-  label: Individual variation in wrist vibrotactile thresholds
-- number: "0.25 mm"
-  label: Scanner precision for synthetic pinna replication
+  link: https://doi.org/10.5281/zenodo.6797854
 - number: "3.54%"
   label: ML prediction error for personalized HRTFs
-- number: "95%"
-  label: Vibrotactile accuracy near wrist & elbow anchors
+  link: https://doi.org/10.3390/acoustics5010015
+- number: "15"
+  label: Anthropometric parameters used to predict personalized HRTFs
+  link: https://doi.org/10.3390/acoustics5010015
+- number: "3.3%"
+  label: "Pinna notch prediction error — half of prior methods"
+  link: https://doi.org/10.1109/TASLP.2021.3101928
+- number: "1,036"
+  label: HRTF measurement positions for synthetic pinna validation
+  link: https://doi.org/10.1080/23311916.2025.2536150
+- number: "0.25 mm"
+  label: Scanner precision for synthetic pinna replication
+  link: https://doi.org/10.1080/23311916.2025.2536150
+
+# ── Human Perception & Foraging ──
+- number: "2×"
+  label: Faster foraging with cross-modal synchrony cues
+  link: https://doi.org/10.1163/22134808-bja10135
+- number: "6×6"
+  label: Grid foraging paradigm with 36 rotating items
+  link: https://doi.org/10.1163/22134808-bja10135
+- number: "d = 1.62"
+  label: Effect size for cross-modal cue advantage in foraging
+  link: https://doi.org/10.1163/22134808-bja10135
+- number: "1,800"
+  label: Trials across intensity order illusion experiments
+  link: https://doi.org/10.1152/jn.00125.2019
+- number: "16"
+  label: Participants per experiment in the intensity order illusion study
+  link: https://doi.org/10.1152/jn.00125.2019

@@ -36,7 +36,7 @@ description: "Peer-reviewed publications from ACUTE Lab — vibrotactile percept
         <div class="pub-title"><a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">{{ pub.title }}</a></div>
         <div class="pub-authors">{{ pub.authors }}</div>
         <div class="pub-venue"><span>{{ pub.venue }}</span> · {{ pub.year }}</div>
-        <a href="https://doi.org/{{ pub.doi }}" class="pub-doi" target="_blank" rel="noopener">doi:{{ pub.doi }} →</a>
+        <a href="https://doi.org/{{ pub.doi }}" class="pub-doi" target="_blank" rel="noopener">doi:{{ pub.doi }} →</a>{% if pub.pdf %}<a href="{{ pub.pdf | relative_url }}" class="pub-doi pub-pdf" target="_blank" rel="noopener">PDF</a>{% endif %}
         {% if pub.summary %}
           <p class="pub-summary">{{ pub.summary }}</p>
         {% endif %}

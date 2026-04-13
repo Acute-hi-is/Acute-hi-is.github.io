@@ -1,7 +1,7 @@
 title: "ACUTE Lab"
 description: "ACoUstic and Tactile Engineering — Research Laboratory, University of Iceland"
-url: "https://stefvasi.github.io"
-baseurl: "/acute_website"
+url: "https://acute-hi-is.github.io"
+baseurl: ""
 
 # Build
 markdown: kramdown
