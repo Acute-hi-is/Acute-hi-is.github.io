@@ -1,0 +1,26 @@
+:root {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --bg-dark: #0D1B2F;
+  --bg-surface: #f5f2ed;
+  --bg-alt: #eceae4;
+  --bg-white: #ffffff;
+  --accent: #ff8000;
+  --accent-hover: #e67300;
+  --text: #1B1B27;
+  --text-muted: #6b6b6b;
+  --text-dim: #999;
+  --text-on-dark: #f5f2ed;
+  --border: #D6D1C7;
+  --border-light: #e8e4dd;
+  --danger: #dc3545;
+  --danger-hover: #c82333;
+  --success: #28a745;
+
+  --max-w: 1200px;
+  --sidebar-w: 240px;
+  --radius: 8px;
+  --radius-sm: 4px;
+}

@@ -7,31 +7,31 @@ title: Home
 <section class="hero" id="hero-slideshow">
   <div class="hero__slideshow">
     <div class="hero__slide is-active">
-      <img src="{{ '/images/lab_group.jpg' | relative_url }}" alt="ACUTE Lab">
+      <img src="{{ '/images/lab_group.jpg' | relative_url }}" srcset="{{ '/images/responsive/lab_group-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/lab_group-800w.jpg' | relative_url }} 800w, {{ '/images/lab_group.jpg' | relative_url }} 1200w" sizes="100vw" alt="ACUTE Lab">
     </div>
     <div class="hero__slide">
-      <img src="{{ '/images/sensory_substitution.jpg' | relative_url }}" alt="Sensory substitution research">
+      <img src="{{ '/images/sensory_substitution.jpg' | relative_url }}" srcset="{{ '/images/responsive/sensory_substitution-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/sensory_substitution-800w.jpg' | relative_url }} 800w, {{ '/images/sensory_substitution.jpg' | relative_url }} 1200w" sizes="100vw" alt="Sensory substitution research">
     </div>
     <div class="hero__slide">
-      <img src="{{ '/images/kemar.jpg' | relative_url }}" alt="KEMAR mannequin in anechoic chamber">
+      <img src="{{ '/images/kemar.jpg' | relative_url }}" srcset="{{ '/images/responsive/kemar-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/kemar-800w.jpg' | relative_url }} 800w, {{ '/images/kemar.jpg' | relative_url }} 1200w" sizes="100vw" alt="KEMAR mannequin in anechoic chamber">
     </div>
     <div class="hero__slide">
-      <img src="{{ '/images/room_acoustics.jpg' | relative_url }}" alt="Room acoustics simulation">
+      <img src="{{ '/images/room_acoustics.jpg' | relative_url }}" srcset="{{ '/images/responsive/room_acoustics-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/room_acoustics-800w.jpg' | relative_url }} 800w, {{ '/images/room_acoustics.jpg' | relative_url }} 1200w" sizes="100vw" alt="Room acoustics simulation">
     </div>
     <div class="hero__slide hero__slide--logo">
       <img src="{{ '/images/logo.svg' | relative_url }}" alt="ACUTE" class="hero__slide-logo">
     </div>
     <div class="hero__slide">
-      <img src="{{ '/images/mannequin.jpg' | relative_url }}" alt="Prosthetic feedback mannequin">
+      <img src="{{ '/images/mannequin.jpg' | relative_url }}" srcset="{{ '/images/responsive/mannequin-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/mannequin-800w.jpg' | relative_url }} 800w, {{ '/images/mannequin.jpg' | relative_url }} 1200w" sizes="100vw" alt="Prosthetic feedback mannequin">
     </div>
     <div class="hero__slide">
-      <img src="{{ '/images/scan_pattern.png' | relative_url }}" alt="Attention and foraging research">
+      <img src="{{ '/images/scan_pattern.png' | relative_url }}" srcset="{{ '/images/responsive/scan_pattern-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/scan_pattern-800w.jpg' | relative_url }} 800w, {{ '/images/scan_pattern.png' | relative_url }} 1200w" sizes="100vw" alt="Attention and foraging research">
     </div>
     <div class="hero__slide">
-      <img src="{{ '/images/KRI_sound_of_vision_170908_027.jpg' | relative_url }}" alt="Sound of Vision sensory substitution device">
+      <img src="{{ '/images/KRI_sound_of_vision_170908_027.jpg' | relative_url }}" srcset="{{ '/images/responsive/KRI_sound_of_vision_170908_027-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/KRI_sound_of_vision_170908_027-800w.jpg' | relative_url }} 800w, {{ '/images/KRI_sound_of_vision_170908_027.jpg' | relative_url }} 1200w" sizes="100vw" alt="Sound of Vision sensory substitution device">
     </div>
     <div class="hero__slide hero__slide--award">
-      <img src="{{ '/images/carousel_ICT-2018-Sound-of-Vision-Award-652x1024.jpg' | relative_url }}" alt="ICT 2018 Sound of Vision Award">
+      <img src="{{ '/images/carousel_ICT-2018-Sound-of-Vision-Award-652x1024.jpg' | relative_url }}" srcset="{{ '/images/responsive/carousel_ICT-2018-Sound-of-Vision-Award-652x1024-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/carousel_ICT-2018-Sound-of-Vision-Award-652x1024-800w.jpg' | relative_url }} 800w, {{ '/images/carousel_ICT-2018-Sound-of-Vision-Award-652x1024.jpg' | relative_url }} 1200w" sizes="100vw" alt="ICT 2018 Sound of Vision Award">
     </div>
   </div>
   <div class="hero__inner">
@@ -77,9 +77,10 @@ title: Home
     <div class="highlights__grid">
       {% for area in site.data.research %}
       {% assign num = forloop.index | prepend: "0" | slice: -2, 2 %}
+      {% assign hl_name = area.highlight_image | split: '/' | last | split: '.' | first %}
       <article class="highlight-card">
         <div class="highlight-card__img-wrap">
-          <img class="highlight-card__img" loading="lazy" src="{{ area.highlight_image | relative_url }}" alt="{{ area.title }}">
+          <img class="highlight-card__img" loading="lazy" src="{{ area.highlight_image | relative_url }}" srcset="{{ '/images/responsive/' | append: hl_name | append: '-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/' | append: hl_name | append: '-800w.jpg' | relative_url }} 800w, {{ area.highlight_image | relative_url }} 1200w" sizes="(max-width: 768px) 100vw, 33vw" alt="{{ area.title }}">
         </div>
         <div class="highlight-card__body">
           <div class="highlight-card__number">{{ num }}</div>
@@ -121,8 +122,9 @@ title: Home
     </div>
     <div class="gallery__strip">
       {% for item in site.data.gallery %}
+      {% assign img_name = item.image | split: '/' | last | split: '.' | first %}
       <figure class="gallery__item">
-        <img src="{{ item.image | relative_url }}" alt="{{ item.alt }}" loading="lazy">
+        <img src="{{ item.image | relative_url }}" srcset="{{ '/images/responsive/' | append: img_name | append: '-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/' | append: img_name | append: '-800w.jpg' | relative_url }} 800w, {{ item.image | relative_url }} 1200w" sizes="(max-width: 768px) 100vw, 33vw" alt="{{ item.alt }}" loading="lazy">
         <figcaption class="gallery__caption">{{ item.caption }}</figcaption>
       </figure>
       {% endfor %}
@@ -133,9 +135,10 @@ title: Home
 <!-- FEATURED RESEARCH -->
 <section class="feature">
   {% for feat in site.data.features %}
+  {% assign feat_name = feat.image | split: '/' | last | split: '.' | first %}
   <div class="feature__row{% if feat.reverse %} feature__row--reverse{% endif %}">
     <div class="feature__img-col">
-      <img src="{{ feat.image | relative_url }}" alt="{{ feat.image_alt }}" loading="lazy">
+      <img src="{{ feat.image | relative_url }}" srcset="{{ '/images/responsive/' | append: feat_name | append: '-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/' | append: feat_name | append: '-800w.jpg' | relative_url }} 800w, {{ feat.image | relative_url }} 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="{{ feat.image_alt }}" loading="lazy">
     </div>
     <div class="feature__text-col">
       <span class="section-label">{{ feat.label }}</span>

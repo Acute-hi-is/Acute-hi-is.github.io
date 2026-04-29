@@ -21,7 +21,7 @@
   year: 2026
   doi: 10.3390/biomimetics11020112
   topic: haptics
-  image: https://pub.mdpi-res.com/biomimetics/biomimetics-11-00112/article_deploy/html/images/biomimetics-11-00112-g001.png
+  image: /images/publications/biomimetics-11-00112-g001.jpg
   summary: >-
     A forearm-worn vibrotactile system can convey prosthetic knee-joint position to
     transfemoral amputees without visual monitoring. Healthy participants reliably detected
@@ -85,7 +85,7 @@
   year: 2025
   doi: 10.3390/bioengineering12090989
   topic: haptics
-  image: https://pub.mdpi-res.com/bioengineering/bioengineering-12-00989/article_deploy/html/images/bioengineering-12-00989-g001.png
+  image: /images/publications/bioengineering-12-00989-g001.jpg
   summary: >-
     A comprehensive review of haptic feedback systems for lower-limb prostheses, covering
     system architectures, user experience, and clinical outcomes. Tactile feedback on limb
@@ -122,7 +122,7 @@
   year: 2024
   doi: 10.3390/app14010043
   topic: haptics
-  image: https://pub.mdpi-res.com/applsci/applsci-14-00043/article_deploy/html/images/applsci-14-00043-g001.png
+  image: /images/publications/applsci-14-00043-g001.jpg
   summary: >-
     Sequential vibrotactile presentation vastly outperforms simultaneous delivery — pattern
     recognition jumped from 26 % (simultaneous) to 93 % (sequential) on a 2×3 forearm
@@ -159,7 +159,7 @@
   year: 2023
   doi: 10.3390/act12060224
   topic: haptics
-  image: https://pub.mdpi-res.com/actuators/actuators-12-00224/article_deploy/html/images/actuators-12-00224-g001.png
+  image: /images/publications/actuators-12-00224-g001.jpg
   summary: >-
     Frequency variation affects vibrotactile localization on the forearm — using a
     relative-point localization method with sequential stimuli at three forearm locations,
@@ -173,7 +173,7 @@
   year: 2023
   doi: 10.3390/acoustics5010015
   topic: acoustics
-  image: https://pub.mdpi-res.com/acoustics/acoustics-05-00015/article_deploy/html/images/acoustics-05-00015-g001.png
+  image: /images/publications/acoustics-05-00015-g001.jpg
   summary: >-
     Machine learning models can predict personalized HRTFs from anthropometric
     measurements, moving beyond the conventional amplitude-vs-frequency analysis. The

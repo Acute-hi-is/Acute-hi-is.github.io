@@ -10,3 +10,9 @@ published_papers/
 number_facts.md
 __pycache__/
 _cite/.cache/
+cms/node_modules/
+cms/server/node_modules/
+cms/client/node_modules/
+cms/client/dist/
+CLAUDE.md
+CMS_PLAN.md

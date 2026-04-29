@@ -34,6 +34,8 @@ exclude:
   - Mohammad_content/
   - .playwright-mcp/
   - _cite/
+  - cms/
+  - CMS_PLAN.md
 
 defaults:
   - scope:

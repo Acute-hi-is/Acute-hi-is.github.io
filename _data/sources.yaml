@@ -6,18 +6,18 @@
 - id: doi:10.3390/act15030164            # Makarov 2026 Actuators (amplitude vs frequency)
 
 - id: doi:10.3390/biomimetics11020112     # Karimi 2026 Biomimetics (forearm prosthetic interface)
-  image: https://pub.mdpi-res.com/biomimetics/biomimetics-11-00112/article_deploy/html/images/biomimetics-11-00112-g001.png
+  image: /images/publications/biomimetics-11-00112-g001.jpg
 
 - id: doi:10.3390/bioengineering12090989  # Karimi 2025 Bioengineering (haptic systems review)
-  image: https://pub.mdpi-res.com/bioengineering/bioengineering-12-00989/article_deploy/html/images/bioengineering-12-00989-g001.png
+  image: /images/publications/bioengineering-12-00989-g001.jpg
 
 - id: doi:10.1016/j.vrih.2025.06.001     # Yeganeh 2025 VRIH (interstimulus intervals)
 
 - id: doi:10.3390/app14010043             # Yeganeh 2024 Appl.Sci (sequential vs simultaneous)
-  image: https://pub.mdpi-res.com/applsci/applsci-14-00043/article_deploy/html/images/applsci-14-00043-g001.png
+  image: /images/publications/applsci-14-00043-g001.jpg
 
 - id: doi:10.3390/act12060224             # Yeganeh 2023 Actuators (frequency & location)
-  image: https://pub.mdpi-res.com/actuators/actuators-12-00224/article_deploy/html/images/actuators-12-00224-g001.png
+  image: /images/publications/actuators-12-00224-g001.jpg
 
 - id: doi:10.1145/3529259                 # Ævarsson 2022 ACM TAP (wrist thresholds)
 
@@ -33,7 +33,7 @@
 - id: doi:10.1080/23311916.2025.2536150   # Sumner 2025 Cogent Engineering (synthetic pinnae)
 
 - id: doi:10.3390/acoustics5010015        # Fernández 2023 Acoustics (HRTF machine learning)
-  image: https://pub.mdpi-res.com/acoustics/acoustics-05-00015/article_deploy/html/images/acoustics-05-00015-g001.png
+  image: /images/publications/acoustics-05-00015-g001.jpg
 
 - id: doi:10.1115/IMECE2022-97044         # Karlberg 2022 IMECE (echolocation BRAS)
 

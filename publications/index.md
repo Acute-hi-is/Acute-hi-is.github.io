@@ -30,7 +30,7 @@ description: "Peer-reviewed publications from ACUTE Lab — vibrotactile percept
     {% endif %}
     <div class="pub-item{% unless pub.image %} pub-item--no-img{% endunless %}" data-topic="{{ pub.topic }}" data-year="{{ pub.year }}">
       {% if pub.image %}
-      <img class="pub-thumb" src="{{ pub.image }}" alt="" loading="lazy">
+      <img class="pub-thumb" src="{{ pub.image | relative_url }}" alt="" loading="lazy">
       {% endif %}
       <div>
         <div class="pub-title"><a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">{{ pub.title }}</a></div>

@@ -36,6 +36,20 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Minify CSS
+        run: |
+          python3 -c "
+          import re
+          with open('_site/assets/css/main.css') as f:
+              css = f.read()
+          css = re.sub(r'/\*.*?\*/', '', css, flags=re.DOTALL)
+          css = re.sub(r'\s+', ' ', css)
+          css = re.sub(r'\s*([{}:;,>~+])\s*', r'\1', css)
+          css = re.sub(r';+}', '}', css)
+          with open('_site/assets/css/main.css', 'w') as f:
+              f.write(css.strip())
+          "
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
