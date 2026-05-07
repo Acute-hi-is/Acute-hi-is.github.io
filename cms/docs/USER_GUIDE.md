@@ -7,19 +7,20 @@ This guide explains how to use the ACUTE Content Manager (CMS) to edit the lab w
 ## Table of Contents
 
 1. [Getting Started](#1-getting-started)
-2. [The Dashboard](#2-the-dashboard)
-3. [Managing Publications](#3-managing-publications)
-4. [Managing Team Members](#4-managing-team-members)
-5. [Managing Blog Posts](#5-managing-blog-posts)
-6. [Managing Research Areas](#6-managing-research-areas)
-7. [Managing Featured Research](#7-managing-featured-research)
-8. [Managing the Gallery](#8-managing-the-gallery)
-9. [Managing the Stats Ticker](#9-managing-the-stats-ticker)
-10. [Managing Partners & Funders](#10-managing-partners--funders)
-11. [Image Manager](#11-image-manager)
-12. [Previewing the Website](#12-previewing-the-website)
-13. [Publishing Your Changes](#13-publishing-your-changes)
-14. [Troubleshooting](#14-troubleshooting)
+2. [Setting Up SSH for GitHub](#2-setting-up-ssh-for-github)
+3. [The Dashboard](#3-the-dashboard)
+4. [Managing Publications](#4-managing-publications)
+5. [Managing Team Members](#5-managing-team-members)
+6. [Managing Blog Posts](#6-managing-blog-posts)
+7. [Managing Research Areas](#7-managing-research-areas)
+8. [Managing Featured Research](#8-managing-featured-research)
+9. [Managing the Gallery](#9-managing-the-gallery)
+10. [Managing the Stats Ticker](#10-managing-the-stats-ticker)
+11. [Managing Partners & Funders](#11-managing-partners--funders)
+12. [Image Manager](#12-image-manager)
+13. [Previewing the Website](#13-previewing-the-website)
+14. [Publishing Your Changes](#14-publishing-your-changes)
+15. [Troubleshooting](#15-troubleshooting)
 
 ---
 
@@ -31,7 +32,8 @@ You need the following installed on your computer:
 
 - **Node.js** (version 20 or higher) — [download here](https://nodejs.org) (Windows: use the `.msi` installer, keep all defaults)
 - **Git** — [download here](https://gitforwindows.org/) (Windows: install "Git for Windows", keep all defaults — this includes Git Bash)
-- **Ruby + Jekyll** — only needed for the Preview feature (optional, see [Section 12](#12-previewing-the-website))
+- **SSH key** — needed to publish changes to GitHub. See [Section 2: Setting Up SSH](#2-setting-up-ssh-for-github)
+- **Ruby + Jekyll** — only needed for the Preview feature (optional, see [Section 13](#13-previewing-the-website))
 
 ### Which terminal to use
 
@@ -79,7 +81,107 @@ Press **Ctrl+C** in the terminal.
 
 ---
 
-## 2. The Dashboard
+## 2. Setting Up SSH for GitHub
+
+To publish changes from the CMS, your computer needs an SSH key linked to your GitHub account. You only need to do this **once per computer**.
+
+If you can already push to GitHub (test with `ssh -T git@github.com`), skip this section.
+
+### Step 1: Open your terminal
+
+- **Windows:** Open **Git Bash** (search for it in the Start menu)
+- **macOS:** Open **Terminal** (Applications > Utilities > Terminal)
+
+### Step 2: Check if you already have an SSH key
+
+Type:
+
+```bash
+ls ~/.ssh/id_ed25519.pub
+```
+
+- If you see a file path, **you already have a key** — skip to Step 4
+- If you see "No such file or directory", continue to Step 3
+
+### Step 3: Generate a new SSH key
+
+Type (replace with your email):
+
+```bash
+ssh-keygen -t ed25519 -C "your-name@hi.is"
+```
+
+You will be asked three questions. **Press Enter for all three** to accept the defaults:
+
+```
+Enter file in which to save the key (/c/Users/YourName/.ssh/id_ed25519): [press Enter]
+Enter passphrase (empty for no passphrase): [press Enter]
+Enter same passphrase again: [press Enter]
+```
+
+You should see output like:
+
+```
+Your identification has been saved in /c/Users/YourName/.ssh/id_ed25519
+Your public key has been saved in /c/Users/YourName/.ssh/id_ed25519.pub
+```
+
+### Step 4: Copy your public key
+
+Type:
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+This prints a long line starting with `ssh-ed25519 AAAA...` and ending with your email.
+
+**Select the entire line** and copy it:
+- **Windows (Git Bash):** select with mouse, right-click > Copy (or Ctrl+Insert)
+- **macOS:** select with mouse, Cmd+C
+
+### Step 5: Add the key to GitHub
+
+1. Open your browser and go to: **https://github.com/settings/keys**
+   - If you're not logged in, log in first
+2. Click the green **New SSH key** button
+3. Fill in:
+   - **Title**: a name for this computer (e.g. "Lab laptop" or "Office PC")
+   - **Key type**: keep as "Authentication Key"
+   - **Key**: paste the key you copied in Step 4
+4. Click **Add SSH key**
+5. GitHub may ask you to confirm your password
+
+### Step 6: Test the connection
+
+Back in your terminal, type:
+
+```bash
+ssh -T git@github.com
+```
+
+If this is your first time connecting, you'll see:
+
+```
+The authenticity of host 'github.com' can't be established.
+Are you sure you want to continue connecting (yes/no)?
+```
+
+Type **yes** and press Enter.
+
+You should then see:
+
+```
+Hi YourUsername! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+If you see this message, **you're done**. You can now push changes from the CMS.
+
+If it doesn't work, see [Section 15: Troubleshooting](#15-troubleshooting).
+
+---
+
+## 3. The Dashboard
 
 When you open the CMS, you land on the **Dashboard**.
 
@@ -93,7 +195,7 @@ The dashboard shows:
 
 ---
 
-## 3. Managing Publications
+## 4. Managing Publications
 
 Click **Publications** in the sidebar.
 
@@ -136,7 +238,7 @@ Click the trash icon on any row. A confirmation dialog appears — click **Delet
 
 ---
 
-## 4. Managing Team Members
+## 5. Managing Team Members
 
 Click **Team** in the sidebar.
 
@@ -173,7 +275,7 @@ Click the pencil icon on any member. The bio field supports Markdown:
 
 ---
 
-## 5. Managing Blog Posts
+## 6. Managing Blog Posts
 
 Click **Posts** in the sidebar.
 
@@ -194,7 +296,7 @@ The post filename is auto-generated from the date and title.
 
 ---
 
-## 6. Managing Research Areas
+## 7. Managing Research Areas
 
 Click **Research Areas** in the sidebar.
 
@@ -214,7 +316,7 @@ Each research area has a title, summary, description paragraphs, and linked publ
 
 ---
 
-## 7. Managing Featured Research
+## 8. Managing Featured Research
 
 Click **Features** in the sidebar.
 
@@ -232,7 +334,7 @@ Click the pencil icon. You can change the label, title, description text, DOI li
 
 ---
 
-## 8. Managing the Gallery
+## 9. Managing the Gallery
 
 Click **Gallery** in the sidebar.
 
@@ -253,7 +355,7 @@ Use the up/down arrows to change the carousel order.
 
 ---
 
-## 9. Managing the Stats Ticker
+## 10. Managing the Stats Ticker
 
 Click **Stats Ticker** in the sidebar.
 
@@ -274,7 +376,7 @@ Use the up/down arrows to change the scroll order.
 
 ---
 
-## 10. Managing Partners & Funders
+## 11. Managing Partners & Funders
 
 Click **Partners** in the sidebar.
 
@@ -297,7 +399,7 @@ Logos are auto-compressed to 300x150 pixels.
 
 ---
 
-## 11. Image Manager
+## 12. Image Manager
 
 Click **Image Manager** in the sidebar.
 
@@ -325,7 +427,7 @@ Click the trash icon below any image and confirm.
 
 ---
 
-## 12. Previewing the Website
+## 13. Previewing the Website
 
 Click **Preview** in the sidebar.
 
@@ -354,7 +456,7 @@ Every time you save content in the CMS, the preview updates automatically.
 
 ---
 
-## 13. Publishing Your Changes
+## 14. Publishing Your Changes
 
 When you're happy with your edits, click **Deploy** in the sidebar.
 
@@ -385,7 +487,7 @@ After pushing, the website updates automatically.
 
 ---
 
-## 14. Troubleshooting
+## 15. Troubleshooting
 
 ### The CMS won't start
 
@@ -413,8 +515,9 @@ After pushing, the website updates automatically.
 ### "Permission denied (publickey)" when pushing
 
 - Your SSH key is not set up for GitHub
-- Ask a team member to help you add your SSH key to the ACUTE GitHub organization
-- Alternative: use HTTPS instead of SSH — ask your team lead for instructions
+- Follow [Section 2: Setting Up SSH for GitHub](#2-setting-up-ssh-for-github) to create and add your key
+- If you've already set up a key, try running `ssh-add ~/.ssh/id_ed25519` in your terminal, then try again
+- If the issue persists, ask Stefanos for help
 
 ### Images look wrong or don't upload
 
@@ -436,6 +539,6 @@ After pushing, the website updates automatically.
 | Preview the site | Preview page | Start |
 | Publish changes | Deploy page | Build + Commit + Push |
 
-**Website:** [https://acute-hi-is.github.io](https://acute-hi-is.github.io)
+**Website:** [https://acute.hi.is](https://acute.hi.is)
 
 **Start the CMS:** `cd cms && npm run dev` then open http://localhost:3000
