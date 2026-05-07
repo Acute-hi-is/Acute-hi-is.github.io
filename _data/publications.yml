@@ -2,19 +2,40 @@
 # To add a publication: add a new entry here. The template handles rendering.
 # Fields: title, authors, venue, year, doi, topic (haptics|acoustics|perception), summary, image (optional)
 
+- title: "Discrimination of Vibrotactile Stimuli: Effects of Frequency Variation"
+  authors: N. Yeganeh, I. Makarov, Á. Kristjánsson, R. Unnthorsson
+  venue: ASME 2023 International Mechanical Engineering Congress and Exposition
+  year: 2023
+  doi: https://doi.org/10.1115/IMECE2023-112457
+  topic: haptics
+  summary: This study examined how stimulus frequency and forearm location affect vibrotactile spatial localization. Using an array of actuators, participants judged the relative position of sequential stimuli presented at 100, 200, and 250 Hz. Results showed that frequency had minimal impact on localization accuracy when amplitude was constant, whereas stimulus location on the forearm significantly affected performance. These findings indicate that actuator placement is more critical than frequency tuning for optimizing spatial resolution in tactile display design.
+  image: ""
+  pdf: ""
+- title: Evaluating the Optimum Distance between Voice Coil Actuators Using the Relative Point Localization Method on the Forearm
+  authors: N. Yeganeh, I. Makarov, Á. Kristjánsson, R. Unnthorsson
+  venue: "Actuators "
+  year: 2023
+  doi: 10.3390/act12010006
+  topic: haptics
+  summary: This study evaluated vibrotactile spatial resolution on the forearm to determine optimal actuator spacing for sensory substitution. Using three Lofelt L5 voice-coil actuators embedded in a wearable sleeve, participants performed relative point localization tasks on both the upper and underside of the forearm. Results showed that an inter-actuator distance of 20 mm provided the highest discrimination accuracy, with no significant difference between forearm sides.
+  image: ""
+  pdf: ""
+- title: Assessing Spatial and Spatiotemporal Tactile Working Memory Using Adaptive Staircase Procedures
+  authors: "N. Yeganeh, I. Makarov,R. Unnthorsson, Á. Kristjánsson, "
+  venue: Sensors
+  year: 2026
+  doi: 10.3390/s26082361
+  topic: haptics
+  summary: This study examined tactile working memory using sequential vibrotactile stimuli applied to the forearm. Capacity was approximately 4 items for ordered (spatiotemporal) recall and 5 items for unordered (spatial) recall, demonstrating that temporal order requirements impose additional cognitive load and reduce effective memory capacity. The findings define key limits of tactile working memory and underscore the need to limit information complexity in haptic system design.
+  image: ""
+  pdf: ""
 - title: "Discriminating Vibrotactile Signals: The Relative Roles of Amplitude and Frequency"
   authors: I. Makarov, Á. Kristjánsson, R. Unnthorsson
   venue: Actuators
   year: 2026
   doi: 10.3390/act15030164
   topic: haptics
-  summary: >-
-    Amplitude differences drive vibrotactile discrimination — participants reliably
-    distinguished wrist-delivered signals differing in amplitude, while frequency-only
-    changes were near chance. Combined amplitude + frequency cues offered no additional
-    benefit, indicating amplitude is the dominant perceptual channel for vibrotactile
-    interfaces.
-
+  summary: Amplitude differences drive vibrotactile discrimination — participants reliably distinguished wrist-delivered signals differing in amplitude, while frequency-only changes were near chance. Combined amplitude + frequency cues offered no additional benefit, indicating amplitude is the dominant perceptual channel for vibrotactile interfaces.
 - title: Perceptual Design and Evaluation of a Forearm-Based Vibrotactile Interface for Transfemoral Prosthetic Feedback
   authors: M. Karimi, S. Brynjólfsson, K. Briem, Á. Kristjánsson, R. Unnthorsson
   venue: Biomimetics
@@ -22,24 +43,14 @@
   doi: 10.3390/biomimetics11020112
   topic: haptics
   image: /images/publications/biomimetics-11-00112-g001.jpg
-  summary: >-
-    A forearm-worn vibrotactile system can convey prosthetic knee-joint position to
-    transfemoral amputees without visual monitoring. Healthy participants reliably detected
-    dual-actuator tactile cues encoding joint angles, validating the design parameters for
-    a non-invasive proprioceptive feedback interface.
-
+  summary: A forearm-worn vibrotactile system can convey prosthetic knee-joint position to transfemoral amputees without visual monitoring. Healthy participants reliably detected dual-actuator tactile cues encoding joint angles, validating the design parameters for a non-invasive proprioceptive feedback interface.
 - title: "Stable Model Reduction for Time-Domain Room Acoustics: A Structure-Preserving Formulation for Complex Boundaries"
   authors: S. Bonthu, H. Sampedro Llopis, S. Thrastarson, F. Pind, R. Unnthorsson
   venue: Int. J. Numerical Methods in Engineering
   year: 2026
   doi: 10.1002/nme.70295
   topic: acoustics
-  summary: >-
-    A new structure-preserving model-order reduction for time-domain room acoustics based
-    on the Linearized Euler Equations. The formulation eliminates instabilities present in
-    conventional approaches and achieves a 3.5× speedup for full-order models, enabling
-    faster yet stable acoustic simulations with complex boundary conditions.
-
+  summary: A new structure-preserving model-order reduction for time-domain room acoustics based on the Linearized Euler Equations. The formulation eliminates instabilities present in conventional approaches and achieves a 3.5× speedup for full-order models, enabling faster yet stable acoustic simulations with complex boundary conditions.
 - title: Sensory Substitution Through Vibrotactile Stimulation
   authors: Á. Kristjánsson, I. Makarov, N. Yeganeh, R. Unnthorsson
   venue: Signals and Communication Technology · Springer
@@ -47,38 +58,21 @@
   doi: 10.1007/978-3-031-91550-5_8
   pdf: /papers/Kristjansson_Chapter_2026.pdf
   topic: haptics
-  summary: >-
-    A decade-spanning review of vibrotactile sensory substitution research, arguing that
-    successful devices require a thorough understanding of the underlying perceptual
-    channels. Covers the capacity and limitations of vibrotactile stimulation for conveying
-    information from a missing sense — particularly vision — to support mobility in
-    visually impaired people.
-
+  summary: A decade-spanning review of vibrotactile sensory substitution research, arguing that successful devices require a thorough understanding of the underlying perceptual channels. Covers the capacity and limitations of vibrotactile stimulation for conveying information from a missing sense — particularly vision — to support mobility in visually impaired people.
 - title: "Vibrotactile Pattern Recognition: Influence of Interstimulus Intervals"
   authors: N. Yeganeh, I. Makarov, Á. Kristjánsson, R. Unnthorsson
-  venue: "Virtual Reality & Intelligent Hardware"
+  venue: Virtual Reality & Intelligent Hardware
   year: 2025
   doi: 10.1016/j.vrih.2025.06.001
   topic: haptics
-  summary: >-
-    Timing between vibrotactile pulses critically determines pattern recognition accuracy.
-    Using a 6-actuator forearm array delivering Braille-based patterns, short patterns
-    peaked at 92–98 % accuracy with 300 ms intervals, while longer patterns peaked at
-    86–94 % at 400 ms. Performance improved with training, highlighting the importance of
-    optimized interstimulus intervals for vibrotactile displays.
-
+  summary: Timing between vibrotactile pulses critically determines pattern recognition accuracy. Using a 6-actuator forearm array delivering Braille-based patterns, short patterns peaked at 92–98 % accuracy with 300 ms intervals, while longer patterns peaked at 86–94 % at 400 ms. Performance improved with training, highlighting the importance of optimized interstimulus intervals for vibrotactile displays.
 - title: Design and Manufacture of Synthetic Pinnæ for Studying Head-Related Transfer Functions (HRTFs)
   authors: E. M. Sumner, M. Riedel, R. Unnthorsson
   venue: Cogent Engineering
   year: 2025
   doi: 10.1080/23311916.2025.2536150
   topic: acoustics
-  summary: >-
-    Synthetic pinnae manufactured to precise specifications allow controlled HRTF
-    experiments by isolating the effect of individual anthropometric properties — something
-    impossible with natural ears. The approach opens a path to systematically studying how
-    pinna geometry shapes spatial hearing cues.
-
+  summary: Synthetic pinnae manufactured to precise specifications allow controlled HRTF experiments by isolating the effect of individual anthropometric properties — something impossible with natural ears. The approach opens a path to systematically studying how pinna geometry shapes spatial hearing cues.
 - title: "Haptic Feedback Systems for Lower-Limb Prosthetic Applications: A Review of System Design, User Experience, and Clinical Insights"
   authors: M. Karimi, N. Yeganeh, I. Makarov, A. Ö. Sverrisson, K. F. Gunnarsson, K. Briem, S. Brynjólfsson, Á. Kristjánsson, R. Unnthorsson
   venue: Bioengineering
@@ -86,36 +80,21 @@
   doi: 10.3390/bioengineering12090989
   topic: haptics
   image: /images/publications/bioengineering-12-00989-g001.jpg
-  summary: >-
-    A comprehensive review of haptic feedback systems for lower-limb prostheses, covering
-    system architectures, user experience, and clinical outcomes. Tactile feedback on limb
-    position, gait events, and environmental contact significantly improves amputee
-    mobility and device confidence — but standardized evaluation protocols are still needed.
-
+  summary: A comprehensive review of haptic feedback systems for lower-limb prostheses, covering system architectures, user experience, and clinical outcomes. Tactile feedback on limb position, gait events, and environmental contact significantly improves amputee mobility and device confidence — but standardized evaluation protocols are still needed.
 - title: Cross-Modal Cues Improve the Detection of Synchronized Targets During Human Foraging
   authors: I. Makarov, R. Unnthorsson, Á. Kristjánsson, I. M. Thornton
   venue: Multisensory Research
   year: 2024
   doi: 10.1163/22134808-bja10135
   topic: perception
-  summary: >-
-    Auditory and vibrotactile cues synchronized to target rotation halved detection times
-    during multi-target foraging in a 6×6 grid. A visual cue (frame polarity change) did
-    not produce the same benefit — demonstrating that cross-modal, but not intra-modal,
-    synchrony cues effectively guide attention when targets are defined by shared motion.
-
+  summary: Auditory and vibrotactile cues synchronized to target rotation halved detection times during multi-target foraging in a 6×6 grid. A visual cue (frame polarity change) did not produce the same benefit — demonstrating that cross-modal, but not intra-modal, synchrony cues effectively guide attention when targets are defined by shared motion.
 - title: The Effects of Visual and Auditory Synchrony on Human Foraging
   authors: I. Makarov, R. Unnthorsson, Á. Kristjánsson, I. M. Thornton
-  venue: "Attention, Perception, & Psychophysics"
+  venue: Attention, Perception, & Psychophysics
   year: 2024
   doi: 10.3758/s13414-023-02840-z
   topic: perception
-  summary: >-
-    Visual synchrony — targets changing color in unison — significantly shortened foraging
-    times in multi-target search, grouping synchronized items perceptually. Contrary to the
-    "pip-and-pop" effect, adding a synchronized auditory cue provided no additional benefit,
-    even when task difficulty was substantially increased.
-
+  summary: Visual synchrony — targets changing color in unison — significantly shortened foraging times in multi-target search, grouping synchronized items perceptually. Contrary to the "pip-and-pop" effect, adding a synchronized auditory cue provided no additional benefit, even when task difficulty was substantially increased.
 - title: Discrimination Accuracy of Sequential Versus Simultaneous Vibrotactile Stimulation on the Forearm
   authors: N. Yeganeh, I. Makarov, Á. Kristjánsson, R. Unnthorsson
   venue: Applied Sciences
@@ -123,36 +102,21 @@
   doi: 10.3390/app14010043
   topic: haptics
   image: /images/publications/applsci-14-00043-g001.jpg
-  summary: >-
-    Sequential vibrotactile presentation vastly outperforms simultaneous delivery — pattern
-    recognition jumped from 26 % (simultaneous) to 93 % (sequential) on a 2×3 forearm
-    actuator array. Patterns activating 2–3 actuators were recognized most reliably,
-    providing clear design guidance for vibrotactile communication systems.
-
+  summary: Sequential vibrotactile presentation vastly outperforms simultaneous delivery — pattern recognition jumped from 26 % (simultaneous) to 93 % (sequential) on a 2×3 forearm actuator array. Patterns activating 2–3 actuators were recognized most reliably, providing clear design guidance for vibrotactile communication systems.
 - title: The Haptic Intensity Order Illusion Is Caused by Amplitude Changes
   authors: I. Makarov, R. Hoffmann, R. Unnthorsson, Á. Kristjánsson
   venue: ACM Transactions on Applied Perception
   year: 2023
   doi: 10.1145/3626237
   topic: perception
-  summary: >-
-    The intensity order illusion — where sequential vibrotactile stimuli of different
-    intensities are systematically mislocalized on the lower back — is driven by amplitude
-    changes alone, not frequency. This pins down the perceptual mechanism behind the
-    illusion and informs the design of spatially accurate haptic displays.
-
+  summary: The intensity order illusion — where sequential vibrotactile stimuli of different intensities are systematically mislocalized on the lower back — is driven by amplitude changes alone, not frequency. This pins down the perceptual mechanism behind the illusion and informs the design of spatially accurate haptic displays.
 - title: "Sensory Substitution: Visual Information via Haptics"
   authors: J. Brooks, Á. Kristjánsson, R. Unnthorsson
   venue: Somatosensory Research Methods · Springer
   year: 2023
   doi: 10.1007/978-1-0716-3068-6_14
   topic: haptics
-  summary: >-
-    A methodological guide to building and evaluating haptic sensory-substitution devices
-    that convey visual information through touch. Covers device design principles,
-    psychophysical evaluation strategies, and practical considerations for translating
-    laboratory prototypes into real-world assistive technology.
-
+  summary: A methodological guide to building and evaluating haptic sensory-substitution devices that convey visual information through touch. Covers device design principles, psychophysical evaluation strategies, and practical considerations for translating laboratory prototypes into real-world assistive technology.
 - title: Effects of Stimulus Frequency and Location on Vibrotactile Discrimination Performance Using Voice Coil Actuators on the Forearm
   authors: N. Yeganeh, I. Makarov, R. Unnthorsson, Á. Kristjánsson
   venue: Actuators
@@ -160,13 +124,7 @@
   doi: 10.3390/act12060224
   topic: haptics
   image: /images/publications/actuators-12-00224-g001.jpg
-  summary: >-
-    Frequency variation affects vibrotactile localization on the forearm — using a
-    relative-point localization method with sequential stimuli at three forearm locations,
-    participants showed that discrimination accuracy depends on both the frequency of
-    stimulation and the spatial separation between actuators, informing optimal actuator
-    placement for wearable haptic devices.
-
+  summary: Frequency variation affects vibrotactile localization on the forearm — using a relative-point localization method with sequential stimuli at three forearm locations, participants showed that discrimination accuracy depends on both the frequency of stimulation and the spatial separation between actuators, informing optimal actuator placement for wearable haptic devices.
 - title: Prediction of Head Related Transfer Functions Using Machine Learning Approaches
   authors: R. Fernandez Martinez, P. Jimbert, E. M. Sumner, M. Riedel, R. Unnthorsson
   venue: Acoustics
@@ -174,12 +132,7 @@
   doi: 10.3390/acoustics5010015
   topic: acoustics
   image: /images/publications/acoustics-05-00015-g001.jpg
-  summary: >-
-    Machine learning models can predict personalized HRTFs from anthropometric
-    measurements, moving beyond the conventional amplitude-vs-frequency analysis. The
-    approach targets significant elevation cues in the spectral domain, offering a path
-    toward individualized spatial audio without full HRTF measurement sessions.
-
+  summary: Machine learning models can predict personalized HRTFs from anthropometric measurements, moving beyond the conventional amplitude-vs-frequency analysis. The approach targets significant elevation cues in the spectral domain, offering a path toward individualized spatial audio without full HRTF measurement sessions.
 - title: "Preserving Auditory Cues for Human Echolocation Training: A Geometrical Acoustics Study Using a Benchmark Dataset (BRAS)"
   authors: J. Karlberg, A. Milo, F. Pind, R. Unnthorsson
   venue: ASME IMECE · Acoustics, Vibration, and Phononics
@@ -187,81 +140,46 @@
   doi: 10.1115/IMECE2022-97044
   pdf: /papers/10-IMECE2022-97044.pdf
   topic: acoustics
-  summary: >-
-    Geometrical acoustics simulations can preserve the auditory cues essential for human
-    echolocation, validated against the BRAS benchmark dataset. The work establishes
-    requirements for virtual training environments that accurately reproduce echo-based
-    spatial information used by blind echolocators.
-
+  summary: Geometrical acoustics simulations can preserve the auditory cues essential for human echolocation, validated against the BRAS benchmark dataset. The work establishes requirements for virtual training environments that accurately reproduce echo-based spatial information used by blind echolocators.
 - title: Replicating Human Sound Localization with a Multi-Layer Perceptron
   authors: E. M. Sumner, R. Unnthorsson, M. Riedel
   venue: SMC · Sound and Music Computing
   year: 2022
   doi: 10.5281/zenodo.6797854
   topic: acoustics
-  summary: >-
-    A multi-layer perceptron trained on HRTFs from 48 individuals can replicate human
-    sound-localization performance — determining the direction of an audio source from
-    eardrum waveforms. Feature vectors derived from acoustical properties enable the model
-    to match individual listeners' spatial hearing patterns.
-
+  summary: A multi-layer perceptron trained on HRTFs from 48 individuals can replicate human sound-localization performance — determining the direction of an audio source from eardrum waveforms. Feature vectors derived from acoustical properties enable the model to match individual listeners' spatial hearing patterns.
 - title: Vibrotactile Threshold Measurements at the Wrist Using Parallel Vibration Actuators
   authors: E. A. Ævarsson, Þ. Ásgeirsdóttir, F. Pind, Á. Kristjánsson, R. Unnthorsson
   venue: ACM Transactions on Applied Perception
   year: 2022
   doi: 10.1145/3529259
   topic: haptics
-  summary: >-
-    First systematic measurement of vibrotactile detection thresholds at the wrist
-    (25–1000 Hz) using parallel-vibration actuators. Thresholds varied across frequencies
-    and differed between the inner and outer wrist, providing essential reference data for
-    designing wrist-worn haptic wearables.
-
+  summary: First systematic measurement of vibrotactile detection thresholds at the wrist (25–1000 Hz) using parallel-vibration actuators. Thresholds varied across frequencies and differed between the inner and outer wrist, providing essential reference data for designing wrist-worn haptic wearables.
 - title: Vibrotactile Sleeve to Improve Music Enjoyment of Cochlear Implant Users
   authors: N. Yeganeh, I. Makarov, S. S. S. Thors, H. Ásgeirsson, Á. Kristjánsson, R. Unnþórsson
   venue: ASME IMECE · Acoustics, Vibration, and Phononics
   year: 2022
   doi: 10.1115/imece2022-95591
   topic: haptics
-  summary: >-
-    A wearable sleeve with three voice-coil actuators delivers tactile accompaniment to
-    music, creating an audio-tactile experience for cochlear implant users. Experiments
-    showed the device enhances music perception beyond what the cochlear implant alone
-    provides.
-
+  summary: A wearable sleeve with three voice-coil actuators delivers tactile accompaniment to music, creating an audio-tactile experience for cochlear implant users. Experiments showed the device enhances music perception beyond what the cochlear implant alone provides.
 - title: Estimation of Spectral Notches from Pinna Meshes
   authors: S. Spagnol, R. Miccini, M. G. Onofrei, R. Unnthorsson, S. Serafin
   venue: IEEE/ACM Transactions on Audio, Speech, and Language Processing
   year: 2021
   doi: 10.1109/TASLP.2021.3101928
   topic: acoustics
-  summary: >-
-    A simple computational model predicts the lowest-frequency pinna notch from 3D ear
-    meshes with improved accuracy over prior methods. Higher-order notches remain harder to
-    predict, but the model advances understanding of how pinna geometry generates the
-    spectral cues essential for HRTF individualization.
-
+  summary: A simple computational model predicts the lowest-frequency pinna notch from 3D ear meshes with improved accuracy over prior methods. Higher-order notches remain harder to predict, but the model advances understanding of how pinna geometry generates the spectral cues essential for HRTF individualization.
 - title: The Viking HRTF Dataset v2
   authors: S. Spagnol, R. Miccini, R. Unnthorsson
   venue: Zenodo · Dataset
   year: 2020
   doi: 10.5281/zenodo.4160401
   topic: acoustics
-  summary: >-
-    A public full-sphere HRTF dataset measured at 1 513 spatial positions on a KEMAR
-    mannequin fitted with different custom-molded artificial pinnae. Provides a controlled
-    resource for studying how pinna shape influences spatial hearing cues, enabling
-    reproducible HRTF research.
-
+  summary: A public full-sphere HRTF dataset measured at 1 513 spatial positions on a KEMAR mannequin fitted with different custom-molded artificial pinnae. Provides a controlled resource for studying how pinna shape influences spatial hearing cues, enabling reproducible HRTF research.
 - title: "The Intensity Order Illusion: Temporal Order of Different Vibrotactile Intensity Causes Systematic Localization Errors"
   authors: R. Hoffmann, M. A. B. Brinkhuis, R. Unnthorsson, Á. Kristjánsson
   venue: Journal of Neurophysiology
   year: 2019
   doi: 10.1152/jn.00125.2019
   topic: perception
-  summary: >-
-    Discovery of a new haptic illusion: when two sequential vibrotactile stimuli of
-    different intensities are applied to the lower back, participants systematically
-    mislocalize the stronger stimulus in the direction of intensity increase. The illusion
-    persists across motor types and spatial separations, revealing an intensity-order bias
-    in tactile spatial processing.
+  summary: "Discovery of a new haptic illusion: when two sequential vibrotactile stimuli of different intensities are applied to the lower back, participants systematically mislocalize the stronger stimulus in the direction of intensity increase. The illusion persists across motor types and spatial separations, revealing an intensity-order bias in tactile spatial processing."

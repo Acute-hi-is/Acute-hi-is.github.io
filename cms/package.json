@@ -10,6 +10,19 @@
     "start": "npm run dev"
   },
   "dependencies": {
-    "concurrently": "^9.1.2"
+    "@vitejs/plugin-react": "^6.0.1",
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.6",
+    "express": "^4.22.1",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.1",
+    "lucide-react": "^1.14.0",
+    "multer": "^2.1.1",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-router-dom": "^7.14.2",
+    "sharp": "^0.34.5",
+    "simple-git": "^3.36.0",
+    "ws": "^8.20.0"
   }
 }
