@@ -1,0 +1,98 @@
+---
+layout: default
+---
+
+{%- assign status_label = page.status | capitalize -%}
+{%- assign all_projects = site.projects | sort: 'order' -%}
+{%- for p in all_projects -%}
+  {%- if p.url == page.url -%}
+    {%- assign num = forloop.index | prepend: "0" | slice: -2, 2 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<section class="page-hero">
+  <div class="page-hero__inner">
+    <p class="page-hero__eyebrow">Project {{ num }}</p>
+    <h1 class="page-hero__title">{{ page.title }}</h1>
+    <div class="project-hero__tags">
+      <span class="proj-card__tag proj-card__tag--{{ page.status }}">{{ status_label }}</span>
+      {% for tag in page.tags %}<span class="proj-card__tag">{{ tag }}</span>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="project-detail">
+  <div class="container">
+    <div class="project-detail__grid">
+      <div class="project-detail__body">
+        {{ content }}
+      </div>
+      <aside class="project-detail__meta">
+        {% if page.team and page.team != "" %}
+        <div class="proj-card__meta-block">
+          <span class="proj-card__meta-label">Team</span>
+          <span>{{ page.team }}</span>
+        </div>
+        {% endif %}
+        {% if page.partners and page.partners != "" %}
+        <div class="proj-card__meta-block">
+          <span class="proj-card__meta-label">Partners</span>
+          <span>{{ page.partners }}</span>
+        </div>
+        {% endif %}
+        {% if page.funding and page.funding != "" %}
+        <div class="proj-card__meta-block">
+          <span class="proj-card__meta-label">Funding</span>
+          <span>{{ page.funding }}</span>
+        </div>
+        {% endif %}
+        {% if page.pubs and page.pubs.size > 0 %}
+        <div class="proj-card__meta-block">
+          <span class="proj-card__meta-label">Key publications</span>
+          <ul class="proj-card__pubs">
+            {% for pub in page.pubs %}
+            <li><a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">{{ pub.text }}{% if pub.venue %} &middot; <em>{{ pub.venue }}</em>{% endif %}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </aside>
+    </div>
+  </div>
+</section>
+
+{% if page.gallery_enabled and page.gallery and page.gallery.size > 0 %}
+<section class="project-gallery">
+  <div class="container">
+    <div class="project-gallery__header">
+      <span class="section-label">Gallery</span>
+      <h2>Photos &amp; video</h2>
+    </div>
+    <div class="project-gallery__grid">
+      {% for item in page.gallery %}
+        {% if item.type == "video" %}
+          <figure class="project-gallery__item project-gallery__item--video">
+            <div class="project-gallery__video-wrap">
+              <iframe src="{{ item.video_url }}" title="{{ item.caption | default: page.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            {% if item.caption and item.caption != "" %}<figcaption class="project-gallery__caption">{{ item.caption }}</figcaption>{% endif %}
+          </figure>
+        {% else %}
+          <figure class="project-gallery__item">
+            <a href="{{ item.image | relative_url }}" target="_blank" rel="noopener">
+              <img src="{{ item.image | relative_url }}" alt="{{ item.alt | default: item.caption }}" loading="lazy">
+            </a>
+            {% if item.caption and item.caption != "" %}<figcaption class="project-gallery__caption">{{ item.caption }}</figcaption>{% endif %}
+          </figure>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="project-detail__nav">
+  <div class="container">
+    <a href="{{ '/projects/' | relative_url }}" class="member-profile__back">&larr; All projects</a>
+  </div>
+</section>

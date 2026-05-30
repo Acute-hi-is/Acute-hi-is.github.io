@@ -8,30 +8,95 @@ interface ProcessOptions {
   maxHeight?: number;
   quality: number;
   format: 'jpeg' | 'png';
+  watermark?: boolean;
 }
 
 const PRESETS: Record<string, ProcessOptions> = {
   team: { maxWidth: 400, maxHeight: 400, quality: 80, format: 'jpeg' },
   partners: { maxWidth: 300, maxHeight: 150, quality: 90, format: 'png' },
+  project: { maxWidth: 1400, quality: 82, format: 'jpeg', watermark: true },
   default: { maxWidth: 1200, quality: 80, format: 'jpeg' },
 };
+
+const WATERMARK_LOGO = path.join(PATHS.images, 'logo_horizontal_white.svg');
+
+async function buildWatermark(targetWidth: number): Promise<Buffer> {
+  // Watermark is ~16% of image width, capped at 220px
+  const wmWidth = Math.max(80, Math.min(220, Math.round(targetWidth * 0.16)));
+  // Margin scales with image
+  const margin = Math.max(12, Math.round(targetWidth * 0.02));
+
+  // Render the white SVG logo, resize, then knock alpha down to ~45%
+  const base = sharp(WATERMARK_LOGO, { density: 220 })
+    .resize({ width: wmWidth })
+    .ensureAlpha();
+
+  const dimmed = await base
+    .composite([
+      {
+        // Solid translucent layer; 'dest-in' keeps only intersection,
+        // which effectively multiplies the alpha channel by ~115/255 ≈ 0.45.
+        input: Buffer.from([255, 255, 255, 115]),
+        raw: { width: 1, height: 1, channels: 4 },
+        tile: true,
+        blend: 'dest-in',
+      },
+    ])
+    .png()
+    .toBuffer();
+
+  // Pad the watermark with margin space so it sits inset from the bottom-right
+  // when composited with gravity: 'southeast'.
+  return sharp(dimmed)
+    .extend({
+      top: 0,
+      bottom: margin,
+      left: 0,
+      right: margin,
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+    })
+    .png()
+    .toBuffer();
+}
 
 export async function processImage(
   inputBuffer: Buffer,
   outputPath: string,
-  preset: string = 'default'
+  preset: string = 'default',
+  watermarkOverride?: boolean
 ): Promise<string> {
-  const opts = PRESETS[preset] || PRESETS.default;
+  const baseOpts = PRESETS[preset] || PRESETS.default;
+  const opts: ProcessOptions = {
+    ...baseOpts,
+    watermark:
+      watermarkOverride === undefined ? baseOpts.watermark : watermarkOverride,
+  };
   let pipeline = sharp(inputBuffer).rotate(); // auto-rotate from EXIF
 
   if (opts.maxHeight) {
-    pipeline = pipeline.resize(opts.maxWidth, opts.maxHeight, { fit: 'inside', withoutEnlargement: true });
+    pipeline = pipeline.resize(opts.maxWidth, opts.maxHeight, {
+      fit: 'inside',
+      withoutEnlargement: true,
+    });
   } else {
-    pipeline = pipeline.resize(opts.maxWidth, undefined, { fit: 'inside', withoutEnlargement: true });
+    pipeline = pipeline.resize(opts.maxWidth, undefined, {
+      fit: 'inside',
+      withoutEnlargement: true,
+    });
   }
 
   // Strip EXIF
   pipeline = pipeline.withMetadata({ orientation: undefined } as any);
+
+  // Apply watermark before format conversion so we keep alpha
+  if (opts.watermark && fs.existsSync(WATERMARK_LOGO)) {
+    const resizedPng = await pipeline.png().toBuffer();
+    const meta = await sharp(resizedPng).metadata();
+    const watermark = await buildWatermark(meta.width || opts.maxWidth);
+    pipeline = sharp(resizedPng).composite([
+      { input: watermark, gravity: 'southeast' },
+    ]);
+  }
 
   if (opts.format === 'jpeg') {
     pipeline = pipeline.jpeg({ quality: opts.quality });

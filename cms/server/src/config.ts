@@ -9,6 +9,7 @@ export const JEKYLL_ROOT = path.resolve(__dirname, '..', '..', '..');
 export const PATHS = {
   data: path.join(JEKYLL_ROOT, '_data'),
   team: path.join(JEKYLL_ROOT, '_team'),
+  projects: path.join(JEKYLL_ROOT, '_projects'),
   posts: path.join(JEKYLL_ROOT, '_posts'),
   images: path.join(JEKYLL_ROOT, 'images'),
   config: path.join(JEKYLL_ROOT, '_config.yml'),

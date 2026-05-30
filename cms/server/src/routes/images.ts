@@ -24,6 +24,10 @@ router.post('/upload', upload.single('file'), async (req: Request, res: Response
     const subdir = (req.body.dir as string) || '';
     const preset = (req.body.preset as string) || 'default';
     const filename = (req.body.filename as string) || req.file.originalname;
+    // watermark form field is a string ("true" / "false") if supplied; undefined means follow the preset default
+    const watermarkRaw = req.body.watermark as string | undefined;
+    const watermarkOverride =
+      watermarkRaw === undefined ? undefined : watermarkRaw === 'true';
 
     const outputDir = path.join(PATHS.images, subdir);
     if (!fs.existsSync(outputDir)) {
@@ -31,7 +35,7 @@ router.post('/upload', upload.single('file'), async (req: Request, res: Response
     }
 
     const outputPath = path.join(outputDir, filename);
-    const relativePath = await processImage(req.file.buffer, outputPath, preset);
+    const relativePath = await processImage(req.file.buffer, outputPath, preset, watermarkOverride);
 
     res.json({ success: true, path: '/images' + (subdir ? '/' + subdir : '') + '/' + path.basename(outputPath).replace(path.extname(outputPath), '.' + (preset === 'partners' ? 'png' : 'jpeg')) });
   } catch (err) {

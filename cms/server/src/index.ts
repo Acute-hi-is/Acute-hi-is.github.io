@@ -13,6 +13,7 @@ import partnersRouter from './routes/partners.js';
 import researchRouter from './routes/research.js';
 import teamRouter from './routes/team.js';
 import postsRouter from './routes/posts.js';
+import projectsRouter from './routes/projects.js';
 import imagesRouter from './routes/images.js';
 import deployRouter from './routes/deploy.js';
 
@@ -30,6 +31,7 @@ app.use('/api/partners', partnersRouter);
 app.use('/api/research', researchRouter);
 app.use('/api/team', teamRouter);
 app.use('/api/posts', postsRouter);
+app.use('/api/projects', projectsRouter);
 app.use('/api/images', imagesRouter);
 app.use('/api/deploy', deployRouter);
 

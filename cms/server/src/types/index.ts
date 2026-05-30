@@ -82,3 +82,36 @@ export interface Post {
   category: string;
   content: string;
 }
+
+export interface ProjectPub {
+  text: string;
+  venue?: string;
+  doi: string;
+}
+
+export interface ProjectGalleryItem {
+  type: 'photo' | 'video';
+  image?: string;
+  video_url?: string;
+  alt?: string;
+  caption?: string;
+}
+
+export interface ProjectFrontmatter {
+  title: string;
+  status: 'active' | 'completed' | 'emerging';
+  tags: string[];
+  order: number;
+  team?: string;
+  partners?: string;
+  funding?: string;
+  pubs?: ProjectPub[];
+  gallery_enabled?: boolean;
+  gallery?: ProjectGalleryItem[];
+}
+
+export interface Project {
+  slug: string;
+  frontmatter: ProjectFrontmatter;
+  content: string;
+}

@@ -8,10 +8,19 @@ interface Props {
   onChange: (path: string) => void;
   dir?: string;
   preset?: string;
+  /** When true, render a "Apply ACUTE watermark" checkbox above the upload button (default checked). */
+  allowWatermarkToggle?: boolean;
 }
 
-export function ImagePicker({ value, onChange, dir = '', preset = 'default' }: Props) {
+export function ImagePicker({
+  value,
+  onChange,
+  dir = '',
+  preset = 'default',
+  allowWatermarkToggle = false,
+}: Props) {
   const [uploading, setUploading] = useState(false);
+  const [watermark, setWatermark] = useState(true);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,7 +28,13 @@ export function ImagePicker({ value, onChange, dir = '', preset = 'default' }: P
     if (!file) return;
     setUploading(true);
     try {
-      const result = await api.upload(file, dir, preset);
+      const result = await api.upload(
+        file,
+        dir,
+        preset,
+        undefined,
+        allowWatermarkToggle ? watermark : undefined
+      );
       onChange(result.path);
       showToast('Image uploaded');
     } catch {
@@ -57,6 +72,25 @@ export function ImagePicker({ value, onChange, dir = '', preset = 'default' }: P
           style={{ display: 'none' }}
         />
       </div>
+      {allowWatermarkToggle && (
+        <label
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.4rem',
+            marginTop: '0.45rem',
+            fontSize: '0.8rem',
+            color: 'var(--text-muted)',
+          }}
+        >
+          <input
+            type="checkbox"
+            checked={watermark}
+            onChange={(e) => setWatermark(e.target.checked)}
+          />
+          <span>Apply ACUTE watermark to next upload</span>
+        </label>
+      )}
       {value && (
         <img
           src={`/api/images/preview?path=${encodeURIComponent(value)}`}

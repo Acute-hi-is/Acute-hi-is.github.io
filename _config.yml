@@ -13,6 +13,10 @@ collections:
     output: true
     permalink: /team/:name/
     sort_by: order
+  projects:
+    output: true
+    permalink: /projects/:name/
+    sort_by: order
 
 plugins:
   - jekyll-sitemap

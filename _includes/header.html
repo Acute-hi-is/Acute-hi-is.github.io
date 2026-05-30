@@ -1,8 +1,14 @@
 <header class="site-header">
   <div class="container site-header__inner">
-    <a href="{{ '/' | relative_url }}" class="site-logo">
-      <img src="{{ '/images/logo_horizontal_white.svg' | relative_url }}" alt="ACUTE Research Laboratories">
-    </a>
+    <div class="site-header__brand">
+      <a href="{{ '/' | relative_url }}" class="site-logo">
+        <img src="{{ '/images/logo_horizontal_white.svg' | relative_url }}" alt="ACUTE Research Laboratories">
+      </a>
+      <span class="site-header__divider" aria-hidden="true"></span>
+      <a href="https://www.hi.is" class="site-header__hi" target="_blank" rel="noopener" title="University of Iceland — Háskóli Íslands">
+        <img src="{{ '/images/partners/hi_white.png' | relative_url }}" alt="University of Iceland">
+      </a>
+    </div>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>

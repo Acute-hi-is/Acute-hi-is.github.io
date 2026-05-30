@@ -20,12 +20,19 @@ export const api = {
     request<T>(path, { method: 'PUT', body: JSON.stringify(body) }),
   del: <T>(path: string) => request<T>(path, { method: 'DELETE' }),
 
-  upload: async (file: File, dir: string, preset: string, filename?: string) => {
+  upload: async (
+    file: File,
+    dir: string,
+    preset: string,
+    filename?: string,
+    watermark?: boolean
+  ) => {
     const form = new FormData();
     form.append('file', file);
     form.append('dir', dir);
     form.append('preset', preset);
     if (filename) form.append('filename', filename);
+    if (watermark !== undefined) form.append('watermark', String(watermark));
     const res = await fetch(BASE + '/images/upload', { method: 'POST', body: form });
     if (!res.ok) throw new Error('Upload failed');
     return res.json();
