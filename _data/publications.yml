@@ -6,11 +6,9 @@
   authors: N. Yeganeh, I. Makarov, Á. Kristjánsson, R. Unnthorsson
   venue: ASME 2023 International Mechanical Engineering Congress and Exposition
   year: 2023
-  doi: https://doi.org/10.1115/IMECE2023-112457
+  doi: 10.1115/IMECE2023-112457
   topic: haptics
   summary: This study examined how stimulus frequency and forearm location affect vibrotactile spatial localization. Using an array of actuators, participants judged the relative position of sequential stimuli presented at 100, 200, and 250 Hz. Results showed that frequency had minimal impact on localization accuracy when amplitude was constant, whereas stimulus location on the forearm significantly affected performance. These findings indicate that actuator placement is more critical than frequency tuning for optimizing spatial resolution in tactile display design.
-  image: ""
-  pdf: ""
 - title: Evaluating the Optimum Distance between Voice Coil Actuators Using the Relative Point Localization Method on the Forearm
   authors: N. Yeganeh, I. Makarov, Á. Kristjánsson, R. Unnthorsson
   venue: "Actuators "
@@ -18,8 +16,6 @@
   doi: 10.3390/act12010006
   topic: haptics
   summary: This study evaluated vibrotactile spatial resolution on the forearm to determine optimal actuator spacing for sensory substitution. Using three Lofelt L5 voice-coil actuators embedded in a wearable sleeve, participants performed relative point localization tasks on both the upper and underside of the forearm. Results showed that an inter-actuator distance of 20 mm provided the highest discrimination accuracy, with no significant difference between forearm sides.
-  image: ""
-  pdf: ""
 - title: Assessing Spatial and Spatiotemporal Tactile Working Memory Using Adaptive Staircase Procedures
   authors: "N. Yeganeh, I. Makarov,R. Unnthorsson, Á. Kristjánsson, "
   venue: Sensors
@@ -27,8 +23,6 @@
   doi: 10.3390/s26082361
   topic: haptics
   summary: This study examined tactile working memory using sequential vibrotactile stimuli applied to the forearm. Capacity was approximately 4 items for ordered (spatiotemporal) recall and 5 items for unordered (spatial) recall, demonstrating that temporal order requirements impose additional cognitive load and reduce effective memory capacity. The findings define key limits of tactile working memory and underscore the need to limit information complexity in haptic system design.
-  image: ""
-  pdf: ""
 - title: "Discriminating Vibrotactile Signals: The Relative Roles of Amplitude and Frequency"
   authors: I. Makarov, Á. Kristjánsson, R. Unnthorsson
   venue: Actuators
