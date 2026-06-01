@@ -29,10 +29,8 @@ description: "Peer-reviewed publications from ACUTE Lab — vibrotactile percept
       <h2 class="pub-year-heading" data-year="{{ pub.year }}">{{ pub.year }}</h2>
     {% endif %}
     {%- comment -%}
-      Use `!= blank` instead of plain truthiness: in Liquid an empty
-      string "" is truthy, so a `{% if pub.image %}` would render
-      <img src=""> for pubs whose image field was set to "" by the CMS.
-      `blank` matches nil, "", and whitespace-only strings.
+      We compare with `!= blank` (matches nil, empty string, and whitespace-only).
+      Plain truthiness would render an empty img/link when the CMS writes image:"" or pdf:"".
     {%- endcomment -%}
     {%- assign doi_clean = pub.doi | remove_first: 'https://doi.org/' | remove_first: 'http://doi.org/' | remove_first: 'doi:' -%}
     <div class="pub-item{% if pub.image == blank %} pub-item--no-img{% endif %}" data-topic="{{ pub.topic }}" data-year="{{ pub.year }}">
