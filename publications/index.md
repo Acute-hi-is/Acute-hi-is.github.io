@@ -21,8 +21,14 @@ description: "Peer-reviewed publications from ACUTE Lab — vibrotactile percept
       <button class="pub-filter" data-filter="perception">Perception &amp; Foraging</button>
     </div>
 
+    {%- comment -%}
+      Sort by year descending here, instead of relying on the YAML being in order.
+      The CMS appends new pubs, so the file can easily fall out of order; this
+      keeps the year headings monotonic regardless of insertion order.
+    {%- endcomment -%}
+    {% assign sorted_pubs = site.data.publications | sort: 'year' | reverse %}
     {% assign current_year = "" %}
-    {% for pub in site.data.publications %}
+    {% for pub in sorted_pubs %}
     {% assign pub_year = pub.year | toString %}
     {% if pub_year != current_year %}
       {% assign current_year = pub_year %}
