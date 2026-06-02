@@ -28,20 +28,18 @@ description: "Peer-reviewed publications from ACUTE Lab — vibrotactile percept
       {% assign current_year = pub_year %}
       <h2 class="pub-year-heading" data-year="{{ pub.year }}">{{ pub.year }}</h2>
     {% endif %}
-    {%- comment -%}
-      We compare with `!= blank` (matches nil, empty string, and whitespace-only).
-      Plain truthiness would render an empty img/link when the CMS writes image:"" or pdf:"".
-    {%- endcomment -%}
     {%- assign doi_clean = pub.doi | remove_first: 'https://doi.org/' | remove_first: 'http://doi.org/' | remove_first: 'doi:' -%}
-    <div class="pub-item{% if pub.image == blank %} pub-item--no-img{% endif %}" data-topic="{{ pub.topic }}" data-year="{{ pub.year }}">
-      {% if pub.image != blank %}
+    {%- assign has_image = false -%}{%- if pub.image and pub.image != "" -%}{%- assign has_image = true -%}{%- endif -%}
+    {%- assign has_pdf = false -%}{%- if pub.pdf and pub.pdf != "" -%}{%- assign has_pdf = true -%}{%- endif -%}
+    <div class="pub-item{% unless has_image %} pub-item--no-img{% endunless %}" data-topic="{{ pub.topic }}" data-year="{{ pub.year }}">
+      {% if has_image %}
       <img class="pub-thumb" src="{{ pub.image | relative_url }}" alt="" loading="lazy">
       {% endif %}
       <div>
         <div class="pub-title"><a href="https://doi.org/{{ doi_clean }}" target="_blank" rel="noopener">{{ pub.title }}</a></div>
         <div class="pub-authors">{{ pub.authors }}</div>
         <div class="pub-venue"><span>{{ pub.venue }}</span> · {{ pub.year }}</div>
-        <a href="https://doi.org/{{ doi_clean }}" class="pub-doi" target="_blank" rel="noopener">doi:{{ doi_clean }} →</a>{% if pub.pdf != blank %}<a href="{{ pub.pdf | relative_url }}" class="pub-doi pub-pdf" target="_blank" rel="noopener">PDF</a>{% endif %}
+        <a href="https://doi.org/{{ doi_clean }}" class="pub-doi" target="_blank" rel="noopener">doi:{{ doi_clean }} →</a>{% if has_pdf %}<a href="{{ pub.pdf | relative_url }}" class="pub-doi pub-pdf" target="_blank" rel="noopener">PDF</a>{% endif %}
         {% if pub.summary %}
           <p class="pub-summary">{{ pub.summary }}</p>
         {% endif %}
