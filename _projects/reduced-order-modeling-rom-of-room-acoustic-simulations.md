@@ -1,18 +1,20 @@
 ---
 layout: project
-title: Room Acoustics Model Reduction
+title: Reduced Order Modeling (ROM) of Room Acoustic Simulations
 status: active
 tags:
   - Acoustics
   - Simulation
 order: 60
-team: "Satish Kumar Bonthu, H. Sampedro Llopis, S. Thrastarson, F. Pind, Rúnar Unnþórsson"
-partners: "Treble Technologies"
-funding: "RANNÍS — Icelandic Research Fund"
+team: >-
+  Satish Kumar Bonthu, H. Sampedro Llopis, S. Thrastarson, F. Pind, Rúnar
+  Unnþórsson
+partners: Treble Technologies
+funding: RANNÍS — Icelandic Research Fund
 pubs:
-  - text: "Bonthu et al. (2026)"
-    venue: "Int. J. Numerical Methods in Engineering"
-    doi: "10.1002/nme.70295"
+  - text: Bonthu et al. (2026)
+    venue: Int. J. Numerical Methods in Engineering
+    doi: 10.1002/nme.70295
 gallery_enabled: false
 gallery: []
 ---
