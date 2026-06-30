@@ -36,6 +36,17 @@ You need the following installed on your computer:
 - **SSH key** — needed to publish changes to GitHub. See [Section 2: Setting Up SSH](#2-setting-up-ssh-for-github)
 - **Ruby + Jekyll** — only needed for the Preview feature (optional, see [Section 14](#14-previewing-the-website))
 
+### Installing Node.js (Windows)
+
+The [nodejs.org](https://nodejs.org) download page offers several options — here is exactly what to pick:
+
+1. Choose the big **LTS** button (not "Current"). LTS is the stable, long-term-support release. The exact version number doesn't matter as long as it's the current LTS — this project works on any LTS (20, 22, or newer).
+2. Download the **Windows Installer (.msi)**, **64-bit** version. This is correct for virtually every Windows laptop. Only choose **ARM64** if you have an ARM-based PC (e.g. a Snapdragon device) — this is rare.
+3. Run the installer and **keep all the defaults**. You do **not** need to tick the optional "Tools for Native Modules" / Chocolatey checkbox.
+4. To confirm it worked, open **Git Bash** and run `node -v` — you should see a version number.
+
+> **You do not need Docker.** The CMS is a plain Node.js app — just install Node.js and run `npm install`. Docker would add a large download and extra complexity for no benefit here.
+
 ### Which terminal to use
 
 | Operating System | Terminal |
