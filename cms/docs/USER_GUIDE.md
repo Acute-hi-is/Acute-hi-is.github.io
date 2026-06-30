@@ -51,13 +51,13 @@ All commands in this guide work in both Git Bash (Windows) and Terminal (macOS).
 
 ```bash
 cd ~/Documents
-git clone git@github.com:Acute-hi-is/Acute-hi-is.github.io.git acute_website_v2
+git clone git@github.com:Acute-hi-is/Acute-hi-is.github.io.git acute_web
 ```
 
 2. **Install CMS dependencies**:
 
 ```bash
-cd acute_website_v2/cms
+cd acute_web/cms
 npm install
 ```
 
@@ -68,7 +68,7 @@ This only needs to be done once (or after updates to the CMS).
 Every time you want to edit content:
 
 ```bash
-cd ~/Documents/acute_website_v2
+cd ~/Documents/acute_web
 git pull origin main       # get the latest changes
 cd cms
 npm run dev                # start the CMS
@@ -506,8 +506,8 @@ Click **Preview** in the sidebar.
 
 | OS | How to install |
 |----|---------------|
-| **Windows** | Download [RubyInstaller](https://rubyinstaller.org/) (Ruby+Devkit version). After install, open a new Git Bash and run: `gem install jekyll bundler` then `cd ~/Documents/acute_website_v2 && bundle install` |
-| **macOS** | Ruby is pre-installed. Run: `gem install jekyll bundler` then `cd ~/Documents/acute_website_v2 && bundle install` |
+| **Windows** | Download [RubyInstaller](https://rubyinstaller.org/) (Ruby+Devkit version). After install, open a new Git Bash and run: `gem install jekyll bundler` then `cd ~/Documents/acute_web && bundle install` |
+| **macOS** | Ruby is pre-installed. Run: `gem install jekyll bundler` then `cd ~/Documents/acute_web && bundle install` |
 
 **Using Preview:**
 
