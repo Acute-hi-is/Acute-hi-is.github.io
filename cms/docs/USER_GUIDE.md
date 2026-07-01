@@ -339,8 +339,18 @@ Members are grouped into **Current Members** and **Past Members**.
    - **Profile URL** — optional link to university page
    - **Status** — "current" or "past"
    - **Order** — display order (lower numbers appear first)
+   - **Research Project** — optional; pick the member's main project from the dropdown (choose "— None —" to leave it unset)
    - **Bio** — write in the text area. This supports Markdown formatting
 3. Click **Save**
+
+### Linking a member to their research project
+
+The **Research Project** dropdown ties a member to one of the projects on the [Projects page](#8-managing-projects). When set, a link to that project appears:
+
+- on the **homepage**, in the pop-up bio panel that opens when you click a team member (next to "Read more"), and
+- on the member's own **profile page**, below their bio.
+
+The dropdown lists every project you've created. Leave it on **"— None —"** for people without a single main project (e.g. principal investigators or external collaborators). To change or remove the link later, edit the member, pick a different project (or "— None —"), and save.
 
 ### Moving a member to "Past"
 
@@ -451,6 +461,8 @@ Each project page can show an optional gallery at the bottom.
 - Videos render as a responsive 16:9 embed in the gallery grid.
 
 5. Click **Save**
+
+> **Where the gallery appears:** the full gallery (photos and videos) shows at the bottom of the project's own page. In addition, the gallery **photos** now appear as a thumbnail strip on the project's card on the main [Projects page](acute.hi.is/projects/), so visitors get a preview without opening the project. Videos are shown on the project page only.
 
 ### Disabling the gallery
 
