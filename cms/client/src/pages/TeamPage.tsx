@@ -16,17 +16,24 @@ interface TeamMember {
     profile?: string;
     status: string;
     order: number;
+    project?: string;
   };
   content: string;
 }
 
+interface ProjectSummary {
+  slug: string;
+  frontmatter: { title: string };
+}
+
 const EMPTY_FM = {
   title: '', role: '', photo: '', email: '', profile: '',
-  status: 'current', order: 10,
+  status: 'current', order: 10, project: '',
 };
 
 export function TeamPage() {
   const { data: members, reload } = useData<TeamMember[]>('/team');
+  const { data: projects } = useData<ProjectSummary[]>('/projects');
   const [editing, setEditing] = useState<TeamMember | null>(null);
   const [creating, setCreating] = useState(false);
   const [fm, setFm] = useState<any>(EMPTY_FM);
@@ -131,6 +138,16 @@ export function TeamPage() {
               <label>Display Order</label>
               <input className="form-control" type="number" value={fm.order} onChange={e => updateFm('order', parseInt(e.target.value))} />
             </div>
+          </div>
+          <div className="form-group">
+            <label>Research Project</label>
+            <select className="form-control" value={fm.project || ''} onChange={e => updateFm('project', e.target.value)}>
+              <option value="">— None —</option>
+              {(projects || []).map(p => (
+                <option key={p.slug} value={p.slug}>{p.frontmatter.title}</option>
+              ))}
+            </select>
+            <small style={{ color: 'var(--text-muted)' }}>Links this member to their main project on the homepage and profile page.</small>
           </div>
           <div className="form-group">
             <label>Bio (Markdown)</label>

@@ -20,6 +20,19 @@ layout: default
       {% endif %}
       <div class="member-profile__body">
         {{ content }}
+        {% if page.project and page.project != "" %}
+          {% assign member_project = nil %}
+          {% for p in site.projects %}
+            {% assign pslug = p.path | split: "/" | last | split: "." | first %}
+            {% if pslug == page.project %}{% assign member_project = p %}{% endif %}
+          {% endfor %}
+          {% if member_project %}
+          <div class="member-profile__project">
+            <span class="member-profile__project-label">Research project</span>
+            <a href="{{ member_project.url | relative_url }}">{{ member_project.title }} &rarr;</a>
+          </div>
+          {% endif %}
+        {% endif %}
         {% if page.email or page.profile or page.scholar or page.thesis %}
         <div class="member-profile__links">
           {% if page.email %}<a href="mailto:{{ page.email }}">{{ page.email }}</a>{% endif %}

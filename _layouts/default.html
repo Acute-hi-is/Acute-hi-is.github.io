@@ -79,6 +79,7 @@
     var role  = drawer.querySelector('.bio-drawer__role');
     var text  = drawer.querySelector('.bio-drawer__text');
     var more  = drawer.querySelector('.bio-drawer__more');
+    var proj  = drawer.querySelector('.bio-drawer__project');
     var close = drawer.querySelector('.bio-drawer__close');
     var active = null;
 
@@ -96,6 +97,15 @@
         more.style.display = '';
       } else if (more) {
         more.style.display = 'none';
+      }
+      if (proj) {
+        if (card.dataset.projectUrl) {
+          proj.href = card.dataset.projectUrl;
+          proj.textContent = 'Project: ' + card.dataset.projectTitle + ' →';
+          proj.hidden = false;
+        } else {
+          proj.hidden = true;
+        }
       }
       /* Move drawer right after the grid so it appears below all cards */
       card.closest('.team__grid').after(drawer);
