@@ -161,7 +161,14 @@ title: Home
     <div class="team__grid">
       {% assign current_members = site.team | where: "status", "current" | sort: "order" %}
       {% for member in current_members %}
-      <div class="person-card" data-bio="{{ member.excerpt | strip_html | strip_newlines }}" data-url="{{ member.url | relative_url }}">
+      {% assign member_project = nil %}
+      {% if member.project and member.project != "" %}
+        {% for p in site.projects %}
+          {% assign pslug = p.path | split: "/" | last | split: "." | first %}
+          {% if pslug == member.project %}{% assign member_project = p %}{% endif %}
+        {% endfor %}
+      {% endif %}
+      <div class="person-card" data-bio="{{ member.excerpt | strip_html | strip_newlines }}" data-url="{{ member.url | relative_url }}"{% if member_project %} data-project-url="{{ member_project.url | relative_url }}" data-project-title="{{ member_project.title | escape }}"{% endif %}>
         <div class="person-card__photo-wrap">
           <img src="{{ member.photo | relative_url }}" alt="{{ member.title }}" loading="lazy">
         </div>
@@ -186,7 +193,10 @@ title: Home
           <div class="bio-drawer__name"></div>
           <div class="bio-drawer__role"></div>
           <p class="bio-drawer__text"></p>
-          <a class="bio-drawer__more" href="">Read more &rarr;</a>
+          <div class="bio-drawer__links">
+            <a class="bio-drawer__more" href="">Read more &rarr;</a>
+            <a class="bio-drawer__project" href="" hidden></a>
+          </div>
         </div>
       </div>
     </div>

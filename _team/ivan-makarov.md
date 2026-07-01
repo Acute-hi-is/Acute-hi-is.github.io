@@ -5,6 +5,7 @@ role: Postdoctoral Researcher
 photo: /images/team/ivan.jpg
 status: current
 order: 3
+project: haptic-harmony
 ---
 
 Dr. Makarov earned his PhD in Psychology from the University of Iceland (2024), with dissertation research on using multimodal attention to design sensory substitution devices. He holds an MSc in Applied Cognitive Psychology from Utrecht University.

@@ -62,6 +62,19 @@ description: "Active and emerging research projects at ACUTE Lab — from vibrot
           {% endif %}
         </aside>
       </div>
+      {% if project.gallery_enabled and project.gallery and project.gallery.size > 0 %}
+      {% assign has_photos = false %}
+      {% for item in project.gallery %}{% if item.type != "video" and item.image %}{% assign has_photos = true %}{% endif %}{% endfor %}
+      {% if has_photos %}
+      <div class="proj-card__gallery">
+        {% for item in project.gallery %}
+          {% if item.type != "video" and item.image %}
+          <img src="{{ item.image | relative_url }}" alt="{{ item.alt | default: item.caption | default: project.title }}" class="proj-card__gallery-img" loading="lazy">
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endif %}
     </a>
     {% endfor %}
   </div>

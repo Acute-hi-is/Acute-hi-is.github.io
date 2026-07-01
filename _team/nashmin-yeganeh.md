@@ -7,6 +7,7 @@ status: current
 order: 4
 email: nashmin@hi.is
 profile: 'https://english.hi.is/staff/nashmin'
+project: vibrosleeve
 ---
 
 Nashmin is a PhD student specializing in wearable technology, haptics, and human-computer interaction. She holds BSc and MSc degrees in Mechanical Engineering, with expertise in signal processing, system optimization, and haptic systems evaluation.
