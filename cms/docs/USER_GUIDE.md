@@ -6,6 +6,8 @@ This guide explains how to use the ACUTE Content Manager (CMS) to edit the lab w
 
 ## Table of Contents
 
+**Already set up?** Jump straight to [Quick Start](#quick-start-already-set-up).
+
 1. [Getting Started](#1-getting-started)
 2. [Setting Up SSH for GitHub](#2-setting-up-ssh-for-github)
 3. [The Dashboard](#3-the-dashboard)
@@ -25,18 +27,60 @@ This guide explains how to use the ACUTE Content Manager (CMS) to edit the lab w
 
 ---
 
+## Quick Start (Already Set Up?)
+
+If this computer has **already** been through the one-time setup — tools installed, SSH key added, and the website cloned — you can skip the rest of Getting Started. This is the entire day-to-day workflow:
+
+1. Open your terminal — **Git Bash** on Windows, **Terminal** on macOS.
+2. Go to your website folder, pull the latest changes, and start the CMS:
+
+```bash
+cd <your website folder>/acute_web    # e.g. /d/work/acute_web — the folder you cloned earlier
+git pull origin main                  # get colleagues' latest changes
+cd cms
+npm run dev                           # start the CMS
+```
+
+3. Open your browser at **http://localhost:3000** and edit content.
+4. When done, **publish** from the **Deploy** page (or the orange **Build + Commit + Push** button — see [Section 15](#15-publishing-your-changes)).
+5. Back in the terminal, press **Ctrl+C** to stop the CMS.
+
+> **Tip (Windows):** skip typing the folder path — in File Explorer, right-click inside your `acute_web` folder and choose **Git Bash Here** to open a terminal already in the right place.
+>
+> **First time on this computer, or unsure where your folder is?** Start with [Section 1: Getting Started](#1-getting-started).
+
+---
+
 ## 1. Getting Started
 
-### Prerequisites
+First-time setup on a new computer happens in **four stages**. Do Stages A–C in order; Stage D is optional. After this one-time setup you only ever repeat the [Quick Start](#quick-start-already-set-up) workflow.
 
-You need the following installed on your computer:
+| Stage | What you do | What it's for | Required? |
+|-------|-------------|---------------|-----------|
+| **A — Install the tools** | Install **Node.js** + **Git** | Running the CMS on your computer | ✅ Required |
+| **B — Set up SSH** | Add a GitHub **SSH key** | **Publishing** (pushing) your changes | ✅ Required |
+| **C — Get the website** | **Clone** the repo into a folder you choose | Having the website files locally to edit | ✅ Required (once) |
+| **D — Ruby + Jekyll** | Install **Ruby + Jekyll** | The optional local **Preview** only | ⬜ Optional |
 
-- **Node.js** (version 20 or higher) — [download here](https://nodejs.org) (Windows: use the `.msi` installer, keep all defaults)
-- **Git** — [download here](https://gitforwindows.org/) (Windows: install "Git for Windows", keep all defaults — this includes Git Bash)
-- **SSH key** — needed to publish changes to GitHub. See [Section 2: Setting Up SSH](#2-setting-up-ssh-for-github)
-- **Ruby + Jekyll** — only needed for the Preview feature (optional, see [Section 14](#14-previewing-the-website))
+You can edit and publish the whole website with just Stages A–C. Stage D only adds the in-browser **Preview** and is covered in [Section 14](#14-previewing-the-website) — feel free to skip it for now.
 
-### Installing Node.js (Windows)
+### Which terminal to use
+
+| Operating System | Terminal |
+|-----------------|----------|
+| **Windows** | Open **Git Bash** (installed with Git for Windows). Search for "Git Bash" in the Start menu, or right-click inside a folder and choose **Git Bash Here**. |
+| **macOS** | Open **Terminal** (Applications > Utilities > Terminal) |
+
+All commands in this guide work in both Git Bash (Windows) and Terminal (macOS). **Windows users: use Git Bash, not Command Prompt (cmd).**
+
+### Stage A — Install the tools
+
+Install both of these:
+
+- **Node.js** (version 20 or higher) — [download here](https://nodejs.org) — runs the CMS.
+- **Git** — [download here](https://gitforwindows.org/) — downloads and publishes the website. On Windows, install **"Git for Windows"** with all defaults; this also gives you **Git Bash**.
+
+#### Installing Node.js (Windows)
 
 The [nodejs.org](https://nodejs.org) download page offers several options — here is exactly what to pick:
 
@@ -47,45 +91,71 @@ The [nodejs.org](https://nodejs.org) download page offers several options — he
 
 > **You do not need Docker.** The CMS is a plain Node.js app — just install Node.js and run `npm install`. Docker would add a large download and extra complexity for no benefit here.
 
-### Which terminal to use
+### Stage B — Set up an SSH key
 
-| Operating System | Terminal |
-|-----------------|----------|
-| **Windows** | Open **Git Bash** (installed with Git for Windows). Right-click on your desktop and select "Git Bash Here", or search for "Git Bash" in the Start menu. |
-| **macOS** | Open **Terminal** (Applications > Utilities > Terminal) |
+You need a GitHub SSH key to **publish** your changes. This is a one-time setup per computer. Follow **[Section 2: Setting Up SSH for GitHub](#2-setting-up-ssh-for-github)** now, then come back here for Stage C.
 
-All commands in this guide work in both Git Bash (Windows) and Terminal (macOS).
+### Stage C — Get the website (clone)
 
-### First-Time Setup
+#### Step 1 — Choose where to store the website
 
-1. **Clone the repository** (only the first time):
+The website folder can live **anywhere you like** — it does **not** have to be in Documents. Another drive (e.g. `D:`) or an external disk is fine. Just pick a spot you'll remember, and ideally:
+
+- **avoid** folders synced by OneDrive / Dropbox / iCloud (syncing can corrupt the project files), and
+- **avoid spaces** in the folder path where possible.
+
+#### Step 2 — Open a terminal *inside* that folder
+
+The clone command downloads into wherever your terminal currently is, so get your terminal into your chosen folder first. The easiest ways avoid typing any path by hand:
+
+**Windows — "Git Bash Here" (recommended):**
+
+1. In File Explorer, open (or create) the folder where you want the website to live.
+2. Right-click an empty area inside it → on Windows 11 click **Show more options** first → choose **Git Bash Here**.
+3. A terminal opens already located in that folder. Done — go to Step 3.
+
+**Windows — copy the path instead:**
+
+1. In File Explorer, click once in the **address bar** at the top; it turns into text like `D:\work`. Copy it (**Ctrl+C**).
+2. In Git Bash, type `cd ` (with a trailing space), then paste (**Shift+Insert**, or right-click → Paste).
+3. Git Bash expects forward slashes and a lowercase drive letter, so convert `D:\work` → `/d/work`, and press Enter. Example: `cd /d/work`
+
+**macOS:**
+
+- Type `cd ` (with a trailing space) in Terminal, then **drag the folder from Finder onto the Terminal window** — the full path is inserted automatically. Press Enter.
+- Or right-click the folder in Finder, hold **⌥ Option**, choose **Copy "…" as Pathname**, then paste after `cd `.
+
+#### Step 3 — Clone the website
+
+With your terminal now inside your chosen folder, download the website:
 
 ```bash
-cd ~/Documents
 git clone git@github.com:Acute-hi-is/Acute-hi-is.github.io.git acute_web
 ```
 
-2. **Install CMS dependencies**:
+This creates a new **`acute_web`** folder inside your chosen location, containing the whole website.
+
+> **Write down your path.** From now on the website lives at *your folder* + `/acute_web`, and you'll go there every time you work. Example: Windows `D:\work` → in Git Bash that's **`/d/work/acute_web`**.
+
+#### Step 4 — Install the CMS (one time)
 
 ```bash
 cd acute_web/cms
 npm install
 ```
 
-This only needs to be done once (or after updates to the CMS).
+This downloads everything the CMS needs. It only has to be done once (and again after any CMS update).
 
-### Starting the CMS
-
-Every time you want to edit content:
+### Starting the CMS (every time)
 
 ```bash
-cd ~/Documents/acute_web
-git pull origin main       # get the latest changes
+cd <your website folder>/acute_web    # e.g. /d/work/acute_web  (or use "Git Bash Here")
+git pull origin main                  # get colleagues' latest changes
 cd cms
-npm run dev                # start the CMS
+npm run dev                           # start the CMS
 ```
 
-Open your browser and go to **http://localhost:3000**
+Open your browser and go to **http://localhost:3000**.
 
 ### Stopping the CMS
 
@@ -511,14 +581,16 @@ Click **Preview** in the sidebar.
 
 ![Preview page](screenshots/14-preview.png)
 
-**Note:** This feature requires Ruby and Jekyll installed on your computer. This is optional — you can skip it and your changes will still work after publishing.
+**Note:** This feature requires Ruby and Jekyll installed on your computer — this is the optional **Stage D** from [Getting Started](#1-getting-started). You can skip it entirely and your changes will still work after publishing.
 
 **Installing Ruby + Jekyll (if you want Preview):**
 
+In the commands below, replace `<your website folder>/acute_web` with the actual path to your cloned website (e.g. `/d/work/acute_web`).
+
 | OS | How to install |
 |----|---------------|
-| **Windows** | Download [RubyInstaller](https://rubyinstaller.org/) (Ruby+Devkit version). After install, open a new Git Bash and run: `gem install jekyll bundler` then `cd ~/Documents/acute_web && bundle install` |
-| **macOS** | Ruby is pre-installed. Run: `gem install jekyll bundler` then `cd ~/Documents/acute_web && bundle install` |
+| **Windows** | Download [RubyInstaller](https://rubyinstaller.org/) (Ruby+Devkit version). After install, open a new Git Bash and run: `gem install jekyll bundler` then `cd <your website folder>/acute_web && bundle install` |
+| **macOS** | Ruby is pre-installed. Run: `gem install jekyll bundler` then `cd <your website folder>/acute_web && bundle install` |
 
 **Using Preview:**
 
