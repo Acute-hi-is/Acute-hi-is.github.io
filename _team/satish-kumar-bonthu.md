@@ -5,6 +5,7 @@ role: PhD Candidate
 photo: /images/team/satish.jpg
 status: current
 order: 7
+project: reduced-order-modeling-rom-of-room-acoustic-simulations
 ---
 
 Satish Kumar Bonthu received his bachelor’s degree in Mechanical, Production and Industrial Engineering and his master’s in Engineering Mechanics with a major in Thermo-fluids from the Indian Institute of Technology (IIT) Delhi. Following his studies, he spent over 16 years working in the international engineering sector, holding roles ranging from application engineer to consulting manager and technical lead. Throughout his industry career, he directed and contributed to numerous high-value multiphysics and thermal management projects, gaining deep expertise in system standardization, techno-commercial evaluation, and cross-functional stakeholder management. This extensive background solidified his capability to bridge the gap between high-fidelity virtual prototyping and complex physical infrastructure deployment.
