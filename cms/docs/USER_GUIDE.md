@@ -681,6 +681,46 @@ After pushing, the website updates automatically.
 - If you've already set up a key, try running `ssh-add ~/.ssh/id_ed25519` in your terminal, then try again
 - If the issue persists, ask Stefanos for help
 
+### "Access denied" / "you don't have access" when pushing (but your key works)
+
+This is **different** from the "publickey" error above. Here GitHub *recognises* you — your key is fine — but says you're not allowed to push. The error looks like:
+
+```
+ERROR: Permission to Acute-hi-is/Acute-hi-is.github.io.git denied to SOMEUSERNAME.
+```
+
+The **username** in that message is the key to diagnosing it. First, find out which GitHub account your computer is actually using — in your terminal run:
+
+```bash
+ssh -T git@github.com
+```
+
+It replies `Hi USERNAME! You've successfully authenticated…`. Compare that `USERNAME` with the account you expect. There are two common causes:
+
+**Cause 1 — You only have read access (most common).**
+The username is *correct* (it's your account), but you were added to the organisation without write permission on this repository. Being an organisation member gives **read** access to repos by default — it does **not** automatically grant **write** (push) access. Ask Stefanos to grant you **Write** access on the website repo specifically:
+
+> Repo → **Settings → Collaborators and teams** → **Add people** → your username → role **Write**.
+
+Once that's done, pushing works — no changes needed on your computer.
+
+**Cause 2 — Your SSH key is on the wrong GitHub account.**
+The username is **not** the account you expected (e.g. you have two GitHub accounts and set the key up on the other one). A single SSH key can belong to only one account, and GitHub decides who you are from the key — so pushes go out as the wrong account, which has no access. To fix:
+
+1. Log into GitHub as the **wrong** account → **Settings → SSH and GPG keys** → delete the key that matches your computer.
+2. Log into GitHub as the **correct** account (the one with repo access) → **Settings → SSH and GPG keys** → **New SSH key** → paste the output of `cat ~/.ssh/id_ed25519.pub`.
+3. Run `ssh -T git@github.com` again — it should now greet you as the correct account. Then retry the push.
+
+If both could apply (wrong account *and* read-only), fix the account first, then make sure that account has **Write** access (Cause 1).
+
+### I accidentally created a duplicate team member (or project)
+
+If you see **two entries with the same name**, one was probably created with **+ Add Member** when you meant to **edit** the existing one. To fix:
+
+- Delete the **duplicate** you just created (trash icon on the Team page), and instead click the **pencil** icon on the original entry to make your changes.
+- Keep the **original** entry where possible — deleting and re-adding changes the member's page address (`/team/<name>/`) and drops links such as their research project.
+- If the duplicate was never pushed, you can also just discard your local changes and start again from the original.
+
 ### Images look wrong or don't upload
 
 - Supported formats: JPEG, PNG, SVG, WebP
