@@ -3,6 +3,25 @@ layout: default
 title: Home
 ---
 
+<!-- STATS TICKER -->
+<section class="stats">
+  <div class="stats-ticker" aria-label="Research highlights">
+    <div class="stats-ticker__track">
+      {% for stat in site.data.stats %}
+      <a href="{{ stat.link }}" class="stats__item" target="_blank" rel="noopener">
+        <span class="stats__number">{{ stat.number }}</span><span class="stats__label">{{ stat.label }}</span>
+      </a>
+      {% endfor %}
+      <!-- duplicate set for seamless CSS loop -->
+      {% for stat in site.data.stats %}
+      <a href="{{ stat.link }}" class="stats__item" target="_blank" rel="noopener">
+        <span class="stats__number">{{ stat.number }}</span><span class="stats__label">{{ stat.label }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <!-- HERO -->
 <section class="hero" id="hero-slideshow">
   <div class="hero__slideshow">
@@ -89,25 +108,6 @@ title: Home
           <a href="{{ '/research/' | relative_url }}" class="highlight-card__link">Read more →</a>
         </div>
       </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<!-- STATS TICKER -->
-<section class="stats">
-  <div class="stats-ticker" aria-label="Research highlights">
-    <div class="stats-ticker__track">
-      {% for stat in site.data.stats %}
-      <a href="{{ stat.link }}" class="stats__item" target="_blank" rel="noopener">
-        <span class="stats__number">{{ stat.number }}</span><span class="stats__label">{{ stat.label }}</span>
-      </a>
-      {% endfor %}
-      <!-- duplicate set for seamless CSS loop -->
-      {% for stat in site.data.stats %}
-      <a href="{{ stat.link }}" class="stats__item" target="_blank" rel="noopener">
-        <span class="stats__number">{{ stat.number }}</span><span class="stats__label">{{ stat.label }}</span>
-      </a>
       {% endfor %}
     </div>
   </div>
