@@ -166,11 +166,11 @@ p:last-child { margin-bottom: 0; }
 .highlight-card:hover .highlight-card__link { letter-spacing: 0.15em; }
 
 /* ── STATS TICKER ──────────────────────────────────────── */
-.stats { background: var(--bg-dark); padding: 3rem 0; border-top: 3px solid var(--accent); overflow: hidden; }
+.stats { background: var(--bg-dark); padding: 0; border-top: 3px solid var(--accent); overflow: hidden; }
 .stats-ticker { width: 100%; overflow: hidden; mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); }
 .stats-ticker__track { display: flex; width: max-content; animation: ticker-scroll 150s linear infinite; }
 .stats-ticker:hover .stats-ticker__track { animation-play-state: paused; }
-.stats__item { flex: 0 0 auto; padding: 1rem 2.5rem; border-left: 1px solid rgba(255,255,255,0.08); white-space: nowrap; display: flex; align-items: baseline; gap: 0.6rem; text-decoration: none; transition: background 0.2s; }
+.stats__item { flex: 0 0 auto; padding: 0.6rem 2.5rem; border-left: 1px solid rgba(255,255,255,0.08); white-space: nowrap; display: flex; align-items: baseline; gap: 0.6rem; text-decoration: none; transition: background 0.2s; }
 .stats__item:hover { background: rgba(255,255,255,0.05); }
 .stats__item:hover .stats__label { color: rgba(237,232,223,0.8); }
 .stats__number { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--accent); line-height: 1; }
