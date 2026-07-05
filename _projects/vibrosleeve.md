@@ -81,13 +81,13 @@ gallery:
       the signals and drove the Lofelt L5 actuators to generate the desired
       vibrotactile stimuli.
   - type: photo
-    image: /images/projects/20260417_115108.jpeg
+    image: /images/projects/1000163342.jpeg
     alt: Wearable vibrotactile sleeve with conductive threads and nine actuators.
     caption: >-
       Wearable vibrotactile sleeve with conductive thread interconnections and
       nine embedded actuators.
   - type: photo
-    image: /images/projects/1000163342.jpeg
+    image: /images/projects/20260417_115108.jpeg
     alt: Wearable vibrotactile sleeve worn on the forearm.
     caption: >-
       Revised wearable vibrotactile sleeve worn on the participant's forearm,
