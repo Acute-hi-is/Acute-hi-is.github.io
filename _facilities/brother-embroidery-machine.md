@@ -3,9 +3,13 @@ layout: facility
 title: Brother embroidery machine
 tag: E-textiles / wearables
 summary: A computerised Brother embroidery machine for stitching conductive threads into fabric — prototyping e-textile sensors, actuators, and wearable haptic garments.
-image: ""
+image: "/images/facilities/embroidery-machine/Embroidery Machine 2.jpg"
 link: ""
 order: 60
+gallery:
+  - "/images/facilities/embroidery-machine/Embroidery Machine 1.jpg"
+  - "/images/facilities/embroidery-machine/Embroidery Machine 3.jpg"
+  - "/images/facilities/embroidery-machine/Embroidery Machine 4.jpg"
 ---
 
 A computerised **Brother embroidery machine** for turning digital designs into

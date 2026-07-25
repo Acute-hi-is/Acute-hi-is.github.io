@@ -29,6 +29,19 @@ layout: default
         </div>
       </aside>
     </div>
+
+    {% if page.gallery and page.gallery.size > 0 %}
+    <div class="facility-gallery">
+      {% for img in page.gallery %}
+      <figure class="facility-gallery__item">
+        <a href="{{ img | relative_url }}" target="_blank" rel="noopener">
+          <img src="{{ img | relative_url }}" alt="{{ page.title }}" loading="lazy">
+        </a>
+      </figure>
+      {% endfor %}
+    </div>
+    {% endif %}
+
     <a href="{{ '/facilities/' | relative_url }}" class="member-profile__back">&larr; All facilities</a>
   </div>
 </section>
