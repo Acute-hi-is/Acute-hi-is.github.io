@@ -10,6 +10,7 @@ export const PATHS = {
   data: path.join(JEKYLL_ROOT, '_data'),
   team: path.join(JEKYLL_ROOT, '_team'),
   projects: path.join(JEKYLL_ROOT, '_projects'),
+  facilities: path.join(JEKYLL_ROOT, '_facilities'),
   posts: path.join(JEKYLL_ROOT, '_posts'),
   images: path.join(JEKYLL_ROOT, 'images'),
   config: path.join(JEKYLL_ROOT, '_config.yml'),

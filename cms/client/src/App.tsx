@@ -7,6 +7,7 @@ import { TeamPage } from './pages/TeamPage';
 import { PostsPage } from './pages/PostsPage';
 import { ResearchPage } from './pages/ResearchPage';
 import { ProjectsPage } from './pages/ProjectsPage';
+import { FacilitiesPage } from './pages/FacilitiesPage';
 import { FeaturesPage } from './pages/FeaturesPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { StatsPage } from './pages/StatsPage';
@@ -28,6 +29,7 @@ export default function App() {
             <Route path="/posts" element={<PostsPage />} />
             <Route path="/research" element={<ResearchPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/facilities" element={<FacilitiesPage />} />
             <Route path="/features" element={<FeaturesPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/stats" element={<StatsPage />} />

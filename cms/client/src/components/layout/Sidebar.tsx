@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import type { LucideIcon } from 'lucide-react';
 import {
   LayoutDashboard, FileText, Users, BookOpen, FlaskConical,
-  Star, Image, BarChart3, Handshake, Rocket, Eye, Images, Layers,
+  Star, Image, BarChart3, Handshake, Rocket, Eye, Images, Layers, Building2,
 } from 'lucide-react';
 
 type NavSection = { section: string };
@@ -17,6 +17,7 @@ const NAV: (NavSection | NavItem)[] = [
   { to: '/posts', icon: FileText, label: 'Posts' },
   { to: '/research', icon: FlaskConical, label: 'Research Areas' },
   { to: '/projects', icon: Layers, label: 'Projects' },
+  { to: '/facilities', icon: Building2, label: 'Facilities' },
   { to: '/features', icon: Star, label: 'Features' },
   { to: '/gallery', icon: Images, label: 'Gallery' },
   { to: '/stats', icon: BarChart3, label: 'Stats Ticker' },
