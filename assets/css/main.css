@@ -37,14 +37,13 @@ p:last-child { margin-bottom: 0; }
 .site-header__brand { display: flex; align-items: center; gap: 1rem; }
 .site-logo img { height: 60px; width: auto; display: block; }
 .site-header__divider { display: block; width: 1px; height: 32px; background: rgba(237, 232, 223, 0.25); }
-.site-header__hi { display: flex; align-items: center; opacity: 0.7; transition: opacity var(--ease); }
-.site-header__hi:hover { opacity: 1; }
-.site-header__hi img { height: 38px; width: auto; display: block; }
+.site-header__hi { display: flex; align-items: center; }
+.site-header__hi img { height: 54px; width: auto; display: block; }
 @media (max-width: 640px) {
   .site-header__brand { gap: 0.6rem; }
   .site-logo img { height: 44px; }
   .site-header__divider { height: 24px; }
-  .site-header__hi img { height: 28px; }
+  .site-header__hi img { height: 40px; }
 }
 .site-nav__list  { display: flex; gap: 2.5rem; }
 .site-nav__link  { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(237,232,223,0.5); transition: color var(--ease); }
