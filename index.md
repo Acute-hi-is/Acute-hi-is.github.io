@@ -113,21 +113,32 @@ title: Home
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery">
+<!-- FACILITIES -->
+<section class="facilities" id="facilities">
   <div class="container">
-    <div class="gallery__header">
+    <div class="facilities__header">
       <span class="section-label">Inside the lab</span>
-      <h2>Equipment &amp; environment</h2>
+      <h2>Facilities</h2>
+      <p class="facilities__intro">Our acoustic, audio, and fabrication infrastructure is open to collaborators, visiting researchers, and artists who want to hire the lab for their own work.</p>
     </div>
-    <div class="gallery__strip">
-      {% for item in site.data.gallery %}
-      {% assign img_name = item.image | split: '/' | last | split: '.' | first %}
-      <figure class="gallery__item">
-        <img src="{{ item.image | relative_url }}" srcset="{{ '/images/responsive/' | append: img_name | append: '-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/' | append: img_name | append: '-800w.jpg' | relative_url }} 800w, {{ item.image | relative_url }} 1200w" sizes="(max-width: 768px) 100vw, 33vw" alt="{{ item.alt }}" loading="lazy">
-        <figcaption class="gallery__caption">{{ item.caption }}</figcaption>
-      </figure>
+    <div class="facilities__grid">
+      {% assign home_facilities = site.facilities | sort: 'order' %}
+      {% for f in home_facilities %}
+      <a href="{{ f.url | relative_url }}" class="facility-card">
+        {% if f.image and f.image != "" %}
+        <div class="facility-card__img-wrap"><img class="facility-card__img" src="{{ f.image | relative_url }}" alt="{{ f.title }}" loading="lazy"></div>
+        {% endif %}
+        <div class="facility-card__body">
+          <span class="facility-card__tag">{{ f.tag }}</span>
+          <h3 class="facility-card__name">{{ f.title }}</h3>
+          <p class="facility-card__blurb">{{ f.summary }}</p>
+          <span class="facility-card__link">Learn more &rarr;</span>
+        </div>
+      </a>
       {% endfor %}
+    </div>
+    <div class="facilities__more">
+      <a href="{{ '/facilities/' | relative_url }}" class="facilities__more-link">All facilities &amp; how to hire the lab &rarr;</a>
     </div>
   </div>
 </section>

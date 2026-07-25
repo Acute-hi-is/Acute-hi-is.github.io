@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<section class="page-hero">
+  <div class="page-hero__inner">
+    <p class="page-hero__eyebrow">Facilities</p>
+    <h1 class="page-hero__title">{{ page.title }}</h1>
+    {% if page.tag and page.tag != "" %}<div class="project-hero__tags"><span class="proj-card__tag">{{ page.tag }}</span></div>{% endif %}
+  </div>
+</section>
+
+<section class="facility-detail">
+  <div class="container">
+    <div class="facility-detail__grid">
+      <div class="facility-detail__body">
+        {{ content }}
+      </div>
+      <aside class="facility-detail__meta">
+        {% if page.image and page.image != "" %}
+        <img class="facility-detail__img" src="{{ page.image | relative_url }}" alt="{{ page.title }}" loading="lazy">
+        {% endif %}
+        {% if page.link and page.link != "" %}
+        <a class="facility-detail__ext" href="{{ page.link }}" target="_blank" rel="noopener">Manufacturer / reference →</a>
+        {% endif %}
+        <div class="facility-detail__cta">
+          <span class="facility-detail__cta-label">Want to use this facility?</span>
+          <a href="{{ '/contact/' | relative_url }}">Enquire about access →</a>
+        </div>
+      </aside>
+    </div>
+    <a href="{{ '/facilities/' | relative_url }}" class="member-profile__back">&larr; All facilities</a>
+  </div>
+</section>
