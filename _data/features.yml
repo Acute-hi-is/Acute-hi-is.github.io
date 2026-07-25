@@ -27,7 +27,7 @@
 
 - label: Room acoustics
   title: "100× faster, equally accurate"
-  image: /images/room_acoustics.jpg
+  image: /images/facilities/anechoic-chamber/room_acoustics.jpg
   image_alt: Room acoustics
   text: >-
     Our structure-preserving model order reduction compresses the wave equation into a

@@ -3,9 +3,11 @@ layout: facility
 title: Anechoic chamber
 tag: Acoustics
 summary: A full-scale anechoic chamber for echo-free acoustic measurement, transducer characterisation, spatial-audio capture, and controlled psychoacoustic testing.
-image: ""
+image: /images/facilities/anechoic-chamber/room_acoustics.jpg
 link: ""
 order: 10
+gallery:
+  - /images/facilities/anechoic-chamber/lab_equipment.jpg
 ---
 
 ACUTE operates a fully built **anechoic chamber** — a room whose walls, floor,

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Shell } from '../components/layout/Shell';
 import { useData, showToast } from '../api/hooks';
 import { api } from '../api/client';
-import { Plus, Pencil, Trash2 } from 'lucide-react';
+import { Plus, Pencil, Trash2, X } from 'lucide-react';
 import { ConfirmDialog } from '../components/shared/ConfirmDialog';
 import { ImagePicker } from '../components/shared/ImagePicker';
 
@@ -13,6 +13,7 @@ interface FacilityFM {
   image?: string;
   link?: string;
   order: number;
+  gallery?: string[];
 }
 interface Facility {
   slug: string;
@@ -27,6 +28,7 @@ const EMPTY_FM: FacilityFM = {
   image: '',
   link: '',
   order: 100,
+  gallery: [],
 };
 
 export function FacilitiesPage() {
@@ -45,7 +47,7 @@ export function FacilitiesPage() {
   };
 
   const openEdit = (f: Facility) => {
-    setFm({ ...EMPTY_FM, ...f.frontmatter });
+    setFm({ ...EMPTY_FM, ...f.frontmatter, gallery: f.frontmatter.gallery || [] });
     setContent(f.content);
     setEditing(f);
     setCreating(false);
@@ -53,6 +55,23 @@ export function FacilitiesPage() {
 
   const update = <K extends keyof FacilityFM>(key: K, value: FacilityFM[K]) => {
     setFm((prev) => ({ ...prev, [key]: value }));
+  };
+
+  /* ── Gallery (list of image paths shown on the facility's own page) ── */
+  const addGalleryImage = () => update('gallery', [...(fm.gallery || []), '']);
+  const removeGalleryImage = (i: number) =>
+    update('gallery', (fm.gallery || []).filter((_, j) => j !== i));
+  const setGalleryImage = (i: number, path: string) => {
+    const next = [...(fm.gallery || [])];
+    next[i] = path;
+    update('gallery', next);
+  };
+  const moveGalleryImage = (i: number, dir: -1 | 1) => {
+    const list = [...(fm.gallery || [])];
+    const j = i + dir;
+    if (j < 0 || j >= list.length) return;
+    [list[i], list[j]] = [list[j], list[i]];
+    update('gallery', list);
   };
 
   const save = async () => {
@@ -179,6 +198,45 @@ export function FacilitiesPage() {
             />
           </div>
 
+          <div
+            className="form-group"
+            style={{ borderTop: '1px solid var(--border)', paddingTop: '1.25rem', marginTop: '1.5rem' }}
+          >
+            <label>Gallery (photos shown on the facility's own page)</label>
+            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.2rem', marginBottom: '0.75rem' }}>
+              Add a few photos to show below the description. The first field above ("Photo") is the card image used on the homepage and list.
+            </p>
+            {(fm.gallery || []).map((img, i) => (
+              <div
+                key={i}
+                style={{
+                  border: '1px solid var(--border)', borderRadius: 6, padding: '1rem',
+                  marginBottom: '0.75rem', background: 'var(--bg-alt, #fafafa)',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.75rem' }}>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--text-dim)' }}>
+                    #{i + 1}
+                  </span>
+                  <div style={{ marginLeft: 'auto', display: 'flex', gap: 4 }}>
+                    <button className="btn--icon" onClick={() => moveGalleryImage(i, -1)} disabled={i === 0} style={{ fontSize: '0.7rem' }}>▲</button>
+                    <button className="btn--icon" onClick={() => moveGalleryImage(i, 1)} disabled={i === (fm.gallery || []).length - 1} style={{ fontSize: '0.7rem' }}>▼</button>
+                    <button className="btn--icon" onClick={() => removeGalleryImage(i)}><X size={16} /></button>
+                  </div>
+                </div>
+                <ImagePicker
+                  value={img}
+                  onChange={(v) => setGalleryImage(i, v)}
+                  dir="facilities"
+                  preset="default"
+                />
+              </div>
+            ))}
+            <button className="btn btn--secondary btn--sm" onClick={addGalleryImage}>
+              <Plus size={14} /> Add Gallery Photo
+            </button>
+          </div>
+
           <div className="form-actions">
             <button className="btn btn--primary" onClick={save}>
               Save
@@ -203,6 +261,7 @@ export function FacilitiesPage() {
                 <th>Name</th>
                 <th>Tag</th>
                 <th>Photo</th>
+                <th>Gallery</th>
                 <th>Order</th>
                 <th></th>
               </tr>
@@ -219,6 +278,9 @@ export function FacilitiesPage() {
                   </td>
                   <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
                     {f.frontmatter.image ? 'Yes' : '—'}
+                  </td>
+                  <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+                    {(f.frontmatter.gallery || []).length || '—'}
                   </td>
                   <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
                     {f.frontmatter.order}

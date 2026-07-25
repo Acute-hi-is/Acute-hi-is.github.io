@@ -35,7 +35,7 @@ title: Home
       <img src="{{ '/images/kemar.jpg' | relative_url }}" srcset="{{ '/images/responsive/kemar-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/kemar-800w.jpg' | relative_url }} 800w, {{ '/images/kemar.jpg' | relative_url }} 1200w" sizes="100vw" alt="KEMAR mannequin in anechoic chamber">
     </div>
     <div class="hero__slide">
-      <img src="{{ '/images/room_acoustics.jpg' | relative_url }}" srcset="{{ '/images/responsive/room_acoustics-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/room_acoustics-800w.jpg' | relative_url }} 800w, {{ '/images/room_acoustics.jpg' | relative_url }} 1200w" sizes="100vw" alt="Room acoustics simulation">
+      <img src="{{ '/images/facilities/anechoic-chamber/room_acoustics.jpg' | relative_url }}" srcset="{{ '/images/responsive/room_acoustics-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/room_acoustics-800w.jpg' | relative_url }} 800w, {{ '/images/facilities/anechoic-chamber/room_acoustics.jpg' | relative_url }} 1200w" sizes="100vw" alt="Room acoustics simulation">
     </div>
     <div class="hero__slide hero__slide--logo">
       <img src="{{ '/images/logo.svg' | relative_url }}" alt="ACUTE" class="hero__slide-logo">

@@ -4,7 +4,7 @@
 
 - title: Vibrotactile Perception
   slug: vibrotactile-perception
-  image: /images/lab_equipment.jpg
+  image: /images/facilities/anechoic-chamber/lab_equipment.jpg
   image_alt: Forearm sleeve with vibrotactile actuator array
   highlight_image: /images/sensory_substitution.jpg
   summary: Mapping the frequency, amplitude, and spatial limits of touch on the forearm and wrist.
@@ -42,7 +42,7 @@
   slug: sensory-substitution
   image: /images/sensory_substitution.jpg
   image_alt: Cochlear implant user wearing vibrotactile sleeve
-  highlight_image: /images/lab_equipment.jpg
+  highlight_image: /images/facilities/anechoic-chamber/lab_equipment.jpg
   summary: Devices that translate sound and vision into touch for visually and hearing-impaired users.
   description:
     - >-
@@ -76,9 +76,9 @@
 
 - title: Room Acoustics Simulation
   slug: room-acoustics-simulation
-  image: /images/room_acoustics.jpg
+  image: /images/facilities/anechoic-chamber/room_acoustics.jpg
   image_alt: Acoustic pressure field simulation heat map
-  highlight_image: /images/room_acoustics.jpg
+  highlight_image: /images/facilities/anechoic-chamber/room_acoustics.jpg
   summary: Structure-preserving model reduction achieving 100× speedup in wave simulation.
   description:
     - >-
