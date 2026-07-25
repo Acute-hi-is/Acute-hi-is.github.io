@@ -23,9 +23,9 @@
 
 - title: Prosthetic Haptic Feedback
   slug: prosthetic-haptic-feedback
-  image: /images/mannequin.jpg
+  image: /images/facilities/kemar-manikin/mannequin.jpg
   image_alt: Prosthetic lower limb alongside forearm vibrotactile sleeve
-  highlight_image: /images/mannequin.jpg
+  highlight_image: /images/facilities/kemar-manikin/mannequin.jpg
   summary: Vibrotactile sleeves that restore proprioception for transfemoral amputees.
   description:
     - >-
@@ -57,9 +57,9 @@
 
 - title: "Spatial Audio & HRTFs"
   slug: spatial-audio-hrtfs
-  image: /images/kemar.jpg
+  image: /images/facilities/kemar-manikin/kemar.jpg
   image_alt: 3D-printed silicone pinna on KEMAR in anechoic chamber
-  highlight_image: /images/kemar.jpg
+  highlight_image: /images/facilities/kemar-manikin/kemar.jpg
   summary: Synthetic pinna models and machine learning to personalise 3D sound.
   description:
     - >-

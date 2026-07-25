@@ -32,7 +32,7 @@ title: Home
       <img src="{{ '/images/sensory_substitution.jpg' | relative_url }}" srcset="{{ '/images/responsive/sensory_substitution-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/sensory_substitution-800w.jpg' | relative_url }} 800w, {{ '/images/sensory_substitution.jpg' | relative_url }} 1200w" sizes="100vw" alt="Sensory substitution research">
     </div>
     <div class="hero__slide">
-      <img src="{{ '/images/kemar.jpg' | relative_url }}" srcset="{{ '/images/responsive/kemar-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/kemar-800w.jpg' | relative_url }} 800w, {{ '/images/kemar.jpg' | relative_url }} 1200w" sizes="100vw" alt="KEMAR mannequin in anechoic chamber">
+      <img src="{{ '/images/facilities/kemar-manikin/kemar.jpg' | relative_url }}" srcset="{{ '/images/responsive/kemar-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/kemar-800w.jpg' | relative_url }} 800w, {{ '/images/facilities/kemar-manikin/kemar.jpg' | relative_url }} 1200w" sizes="100vw" alt="KEMAR mannequin in anechoic chamber">
     </div>
     <div class="hero__slide">
       <img src="{{ '/images/facilities/anechoic-chamber/room_acoustics.jpg' | relative_url }}" srcset="{{ '/images/responsive/room_acoustics-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/room_acoustics-800w.jpg' | relative_url }} 800w, {{ '/images/facilities/anechoic-chamber/room_acoustics.jpg' | relative_url }} 1200w" sizes="100vw" alt="Room acoustics simulation">
@@ -41,7 +41,7 @@ title: Home
       <img src="{{ '/images/logo.svg' | relative_url }}" alt="ACUTE" class="hero__slide-logo">
     </div>
     <div class="hero__slide">
-      <img src="{{ '/images/mannequin.jpg' | relative_url }}" srcset="{{ '/images/responsive/mannequin-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/mannequin-800w.jpg' | relative_url }} 800w, {{ '/images/mannequin.jpg' | relative_url }} 1200w" sizes="100vw" alt="Prosthetic feedback mannequin">
+      <img src="{{ '/images/facilities/kemar-manikin/mannequin.jpg' | relative_url }}" srcset="{{ '/images/responsive/mannequin-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/mannequin-800w.jpg' | relative_url }} 800w, {{ '/images/facilities/kemar-manikin/mannequin.jpg' | relative_url }} 1200w" sizes="100vw" alt="Prosthetic feedback mannequin">
     </div>
     <div class="hero__slide">
       <img src="{{ '/images/scan_pattern.png' | relative_url }}" srcset="{{ '/images/responsive/scan_pattern-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/scan_pattern-800w.jpg' | relative_url }} 800w, {{ '/images/scan_pattern.png' | relative_url }} 1200w" sizes="100vw" alt="Attention and foraging research">

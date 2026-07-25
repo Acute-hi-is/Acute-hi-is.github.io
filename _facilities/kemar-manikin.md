@@ -3,9 +3,11 @@ layout: facility
 title: KEMAR head-and-torso simulator
 tag: Binaural / HRTF
 summary: A GRAS KEMAR manikin with anatomically accurate pinnae for binaural recording, HRTF measurement, hearing-device evaluation, and audiology research.
-image: /images/kemar.jpg
+image: /images/facilities/kemar-manikin/kemar.jpg
 link: https://www.grasacoustics.com/industries/audiology/kemar
 order: 20
+gallery:
+  - /images/facilities/kemar-manikin/mannequin.jpg
 ---
 
 The lab's **GRAS KEMAR** (Knowles Electronics Manikin for Acoustic Research) is a

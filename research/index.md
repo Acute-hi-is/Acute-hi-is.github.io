@@ -7,7 +7,7 @@ description: "Six interconnected themes spanning vibrotactile perception, prosth
 <section class="page-hero page-hero--slides">
   <div class="page-hero__slideshow">
     <img class="page-hero__slide" src="{{ '/images/facilities/anechoic-chamber/lab_equipment.jpg' | relative_url }}" srcset="{{ '/images/responsive/lab_equipment-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/lab_equipment-800w.jpg' | relative_url }} 800w, {{ '/images/facilities/anechoic-chamber/lab_equipment.jpg' | relative_url }} 1200w" sizes="100vw" alt="">
-    <img class="page-hero__slide" src="{{ '/images/kemar.jpg' | relative_url }}" srcset="{{ '/images/responsive/kemar-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/kemar-800w.jpg' | relative_url }} 800w, {{ '/images/kemar.jpg' | relative_url }} 1200w" sizes="100vw" alt="">
+    <img class="page-hero__slide" src="{{ '/images/facilities/kemar-manikin/kemar.jpg' | relative_url }}" srcset="{{ '/images/responsive/kemar-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/kemar-800w.jpg' | relative_url }} 800w, {{ '/images/facilities/kemar-manikin/kemar.jpg' | relative_url }} 1200w" sizes="100vw" alt="">
     <img class="page-hero__slide" src="{{ '/images/lobes_mold.jpg' | relative_url }}" srcset="{{ '/images/responsive/lobes_mold-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/lobes_mold-800w.jpg' | relative_url }} 800w, {{ '/images/lobes_mold.jpg' | relative_url }} 1200w" sizes="100vw" alt="">
   </div>
   <div class="page-hero__inner">
