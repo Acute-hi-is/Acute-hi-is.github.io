@@ -16,14 +16,15 @@ This guide explains how to use the ACUTE Content Manager (CMS) to edit the lab w
 6. [Managing Blog Posts](#6-managing-blog-posts)
 7. [Managing Research Areas](#7-managing-research-areas)
 8. [Managing Projects](#8-managing-projects)
-9. [Managing Featured Research](#9-managing-featured-research)
-10. [Managing the Homepage Gallery](#10-managing-the-homepage-gallery)
-11. [Managing the Stats Ticker](#11-managing-the-stats-ticker)
-12. [Managing Partners & Funders](#12-managing-partners--funders)
-13. [Image Manager](#13-image-manager)
-14. [Previewing the Website](#14-previewing-the-website)
-15. [Publishing Your Changes](#15-publishing-your-changes)
-16. [Troubleshooting](#16-troubleshooting)
+9. [Managing Facilities](#9-managing-facilities)
+10. [Managing Featured Research](#10-managing-featured-research)
+11. [Managing the Homepage Gallery](#11-managing-the-homepage-gallery)
+12. [Managing the Stats Ticker](#12-managing-the-stats-ticker)
+13. [Managing Partners & Funders](#13-managing-partners--funders)
+14. [Image Manager](#14-image-manager)
+15. [Previewing the Website](#15-previewing-the-website)
+16. [Publishing Your Changes](#16-publishing-your-changes)
+17. [Troubleshooting](#17-troubleshooting)
 
 ---
 
@@ -42,7 +43,7 @@ npm run dev                           # start the CMS
 ```
 
 3. Open your browser at **http://localhost:3000** and edit content.
-4. When done, **publish** from the **Deploy** page (or the orange **Build + Commit + Push** button — see [Section 15](#15-publishing-your-changes)).
+4. When done, **publish** from the **Deploy** page (or the orange **Build + Commit + Push** button — see [Section 16](#16-publishing-your-changes)).
 5. Back in the terminal, press **Ctrl+C** to stop the CMS.
 
 > **Tip (Windows):** skip typing the folder path — in File Explorer, right-click inside your `acute_web` folder and choose **Git Bash Here** to open a terminal already in the right place.
@@ -62,7 +63,7 @@ First-time setup on a new computer happens in **four stages**. Do Stages A–C i
 | **C — Get the website** | **Clone** the repo into a folder you choose | Having the website files locally to edit | ✅ Required (once) |
 | **D — Ruby + Jekyll** | Install **Ruby + Jekyll** | The optional local **Preview** only | ⬜ Optional |
 
-You can edit and publish the whole website with just Stages A–C. Stage D only adds the in-browser **Preview** and is covered in [Section 14](#14-previewing-the-website) — feel free to skip it for now.
+You can edit and publish the whole website with just Stages A–C. Stage D only adds the in-browser **Preview** and is covered in [Section 15](#15-previewing-the-website) — feel free to skip it for now.
 
 ### Which terminal to use
 
@@ -259,7 +260,7 @@ Hi YourUsername! You've successfully authenticated, but GitHub does not provide 
 
 If you see this message, **you're done**. You can now push changes from the CMS.
 
-If it doesn't work, see [Section 16: Troubleshooting](#16-troubleshooting).
+If it doesn't work, see [Section 17: Troubleshooting](#17-troubleshooting).
 
 ---
 
@@ -416,7 +417,7 @@ Click **Projects** in the sidebar.
 
 Each project gets its own page at `acute.hi.is/projects/<slug>/`. Projects are sorted by **Display Order** (lower numbers first) on the projects index page, and each can optionally show a **photo & video gallery** at the bottom of its detail page.
 
-> **Don't confuse this with the homepage Gallery** (Section 10). That one drives the carousel of lab photos on the homepage. *This* gallery lives inside an individual project's page and is opt-in per project.
+> **Don't confuse this with the homepage Gallery** (Section 11). That one drives the carousel of lab photos on the homepage. *This* gallery lives inside an individual project's page and is opt-in per project.
 
 ### Adding a new project
 
@@ -470,11 +471,43 @@ Untick **"Show photo & video gallery on this project page"** and save. The galle
 
 ### Editing or deleting a project
 
-Click the pencil icon on any row to edit, or the trash icon (with confirmation) to delete. Deleting a project removes its source file; uploaded gallery images stay in the repo and can be cleaned up via the [Image Manager](#13-image-manager).
+Click the pencil icon on any row to edit, or the trash icon (with confirmation) to delete. Deleting a project removes its source file; uploaded gallery images stay in the repo and can be cleaned up via the [Image Manager](#14-image-manager).
 
 ---
 
-## 9. Managing Featured Research
+## 9. Managing Facilities
+
+Click **Facilities** in the sidebar.
+
+Facilities are the pieces of lab infrastructure available to hire. Each facility gets its own page at `acute.hi.is/facilities/<name>/`, is listed on the **Facilities** page, and appears in the **Facilities** section on the homepage. They are ordered by **Display Order** (lower numbers first).
+
+### Adding a facility
+
+1. Click **+ Add Facility** (top right)
+2. Fill in:
+   - **Name** — e.g. "Anechoic chamber"
+   - **Tag** — a short category shown as a label, e.g. "Acoustics" or "3D metrology"
+   - **Summary** — one or two sentences, shown on the homepage cards and the Facilities list
+   - **Photo** — optional; click Upload to add an image (auto-compressed). Cards and pages upgrade automatically once a photo is set
+   - **External link** — optional; e.g. a manufacturer page. Shown as a "Manufacturer / reference" link on the facility's page
+   - **Display Order** — lower numbers appear first
+   - **Details** — the full description shown on the facility's own page. Supports Markdown (headings, **bold**, bullet lists, `[links](url)`)
+3. Click **Save**
+
+### Editing or deleting a facility
+
+- Click the **pencil** icon to edit, make your changes, and **Save**.
+- Click the **trash** icon to delete (confirmation required). Prefer editing over delete-and-recreate so the page address (`/facilities/<name>/`) stays stable.
+
+### Where facilities appear
+
+- **Homepage** — a "Facilities" teaser section with one card per facility.
+- **Facilities page** (`/facilities/`) — the full list with summaries.
+- **Individual pages** (`/facilities/<name>/`) — the full Details text, photo, external link, and an "Enquire about access" contact button.
+
+---
+
+## 10. Managing Featured Research
 
 Click **Features** in the sidebar.
 
@@ -492,7 +525,7 @@ Click the pencil icon. You can change the label, title, description text, DOI li
 
 ---
 
-## 10. Managing the Homepage Gallery
+## 11. Managing the Homepage Gallery
 
 Click **Gallery** in the sidebar.
 
@@ -513,7 +546,7 @@ Use the up/down arrows to change the carousel order.
 
 ---
 
-## 11. Managing the Stats Ticker
+## 12. Managing the Stats Ticker
 
 Click **Stats Ticker** in the sidebar.
 
@@ -534,7 +567,7 @@ Use the up/down arrows to change the scroll order.
 
 ---
 
-## 12. Managing Partners & Funders
+## 13. Managing Partners & Funders
 
 Click **Partners** in the sidebar.
 
@@ -557,7 +590,7 @@ Logos are auto-compressed to 300x150 pixels.
 
 ---
 
-## 13. Image Manager
+## 14. Image Manager
 
 Click **Image Manager** in the sidebar.
 
@@ -587,7 +620,7 @@ Click the trash icon below any image and confirm.
 
 ---
 
-## 14. Previewing the Website
+## 15. Previewing the Website
 
 Click **Preview** in the sidebar.
 
@@ -618,7 +651,7 @@ Every time you save content in the CMS, the preview updates automatically.
 
 ---
 
-## 15. Publishing Your Changes
+## 16. Publishing Your Changes
 
 When you're happy with your edits, click **Deploy** in the sidebar.
 
@@ -649,7 +682,7 @@ After pushing, the website updates automatically.
 
 ---
 
-## 16. Troubleshooting
+## 17. Troubleshooting
 
 ### The CMS won't start
 
@@ -737,6 +770,7 @@ If you see **two entries with the same name**, one was probably created with **+
 | Add a team member | Team page | + Add Member |
 | Add a project | Projects page | + Add Project |
 | Add a project gallery item | Projects → edit a project → tick "Show photo & video gallery" | + Add Photo / + Add Video |
+| Add a facility | Facilities page | + Add Facility |
 | Write a blog post | Posts page | + New Post |
 | Upload an image | Image Manager | Upload |
 | Reorder items | Gallery / Stats / Features / Project gallery | Up/Down arrows |
