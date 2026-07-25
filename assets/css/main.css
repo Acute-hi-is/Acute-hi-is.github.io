@@ -195,7 +195,7 @@ p:last-child { margin-bottom: 0; }
 .facility-card { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; text-decoration: none; color: inherit; transition: border-color var(--ease), transform var(--ease); }
 .facility-card:hover { border-color: var(--accent); transform: translateY(-2px); }
 .facility-card__img-wrap { height: 170px; overflow: hidden; flex-shrink: 0; }
-.facility-card__img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 500ms ease; }
+.facility-card__img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; transition: transform 500ms ease; }
 .facility-card:hover .facility-card__img { transform: scale(1.04); }
 .facility-card__body { padding: 1.5rem 1.6rem 1.7rem; flex: 1; display: flex; flex-direction: column; }
 .facility-card__tag { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
@@ -214,7 +214,7 @@ p:last-child { margin-bottom: 0; }
 .facility-row:first-child { padding-top: 0; }
 .facility-row:hover { opacity: 0.96; }
 .facility-row__img-wrap { height: 180px; border-radius: 6px; overflow: hidden; border: 1px solid var(--border); }
-.facility-row__img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.facility-row__img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .facility-row__name { font-family: var(--font-display); font-size: clamp(1.3rem, 2.5vw, 1.7rem); font-weight: 700; margin: 0.4rem 0 0.6rem; transition: color var(--ease); }
 .facility-row:hover .facility-row__name { color: var(--accent); }
 .facility-row__summary { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; max-width: 60ch; }
