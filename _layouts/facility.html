@@ -2,7 +2,12 @@
 layout: default
 ---
 
-<section class="page-hero">
+<section class="page-hero{% if page.image and page.image != '' %} page-hero--image{% endif %}">
+  {% if page.image and page.image != "" %}
+  <div class="page-hero__bg">
+    <img class="page-hero__bg-img" src="{{ page.image | relative_url }}" alt="" loading="eager">
+  </div>
+  {% endif %}
   <div class="page-hero__inner">
     <p class="page-hero__eyebrow">Facilities</p>
     <h1 class="page-hero__title">{{ page.title }}</h1>
@@ -17,9 +22,6 @@ layout: default
         {{ content }}
       </div>
       <aside class="facility-detail__meta">
-        {% if page.image and page.image != "" %}
-        <img class="facility-detail__img" src="{{ page.image | relative_url }}" alt="{{ page.title }}" loading="lazy">
-        {% endif %}
         {% if page.link and page.link != "" %}
         <a class="facility-detail__ext" href="{{ page.link }}" target="_blank" rel="noopener">Manufacturer / reference →</a>
         {% endif %}
