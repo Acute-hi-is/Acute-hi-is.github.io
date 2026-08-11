@@ -81,18 +81,61 @@ gallery:
       the signals and drove the Lofelt L5 actuators to generate the desired
       vibrotactile stimuli.
   - type: photo
-    image: /images/projects/1000163342.jpeg
+    image: '/images/projects/ChatGPT Image May 20, 2026, 02_24_10 PM.jpeg'
+    alt: 'VibroSleeve Evolution: Prototype 2 to Prototype 3'
+    caption: >-
+      Transition from a wired prototype to a more integrated VibroSleeve design,
+      using embroidered conductive threads to reduce loose wiring and improve
+      wearability, flexibility, and overall system integration.
+  - type: photo
+    image: /images/projects/Intermediate samples.jpeg
+    alt: Wavy Conductive Thread Embroidery
+    caption: >-
+      Samples of conductive threads embroidered into the fabric in wavy paths to
+      preserve the fabric’s stretchability while providing electrical
+      connections.
+  - type: photo
+    image: /images/projects/Embroidery and pattern-poster.jpeg
+    alt: Embroidering Conductive Paths
+    caption: >-
+      Conductive threads are machine-embroidered into the fabric in wavy paths,
+      creating the electrical connections for the VibroSleeve while preserving
+      the fabric’s stretchability.
+  - type: photo
+    image: /images/projects/Fastening mechanism.jpeg
+    alt: Fastening mechanism used in 3rd revision of VibroSleeve
+    caption: >-
+      3D-printed fastening mechanism designed to provide secure actuator
+      placement and consistent contact with the skin, improving the clarity and
+      quality of the perceived vibrotactile sensation.
+  - type: photo
+    image: /images/projects/Connection mechanism.jpeg
+    alt: Magnetic Actuator Connection – VibroSleeve Revision 3
+    caption: >-
+      The 3rd revision of the VibroSleeve uses a magnetic connection mechanism
+      to simplify actuator attachment and removal, improve connection
+      reliability, and make actuator replacement and system assembly more
+      practical.
+  - type: photo
+    image: /images/projects/Input Terminals.jpeg
+    alt: Signal Input Terminals - VibroSleeve Revision 3
+    caption: >-
+      Input terminals of the 3rd VibroSleeve revision, connecting the
+      embroidered conductive threads to the signal generator and delivering
+      signals to the individual vibrotactile actuators.
+  - type: photo
+    image: /images/projects/participant 4.jpeg
     alt: Wearable vibrotactile sleeve with conductive threads and nine actuators.
     caption: >-
-      Wearable vibrotactile sleeve with conductive thread interconnections and
-      nine embedded actuators.
+      3rd revision Vibrosleeve with conductive thread interconnections and nine
+      embedded actuators.
   - type: photo
-    image: /images/projects/20260417_115108.jpeg
+    image: /images/projects/IMG_20260501_115254_246(2).jpeg
     alt: Wearable vibrotactile sleeve worn on the forearm.
     caption: >-
-      Revised wearable vibrotactile sleeve worn on the participant's forearm,
-      featuring an improved ergonomic design for enhanced comfort and one-handed
-      donning and doffing.
+      3rd Revision Vibrosleeve worn on the participant's forearm, featuring an
+      improved ergonomic design for enhanced comfort and one-handed donning and
+      doffing.
 ---
 
 A forearm-worn vibrotactile display with six voice-coil actuators arranged in a 2&times;3 array, designed to deliver Braille-like spatial patterns through the skin. The device serves as the shared hardware platform across several ACUTE projects.
