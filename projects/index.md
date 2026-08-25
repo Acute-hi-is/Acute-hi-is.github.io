@@ -50,12 +50,14 @@ description: "Active and emerging research projects at ACUTE Lab — from vibrot
             <span>{{ project.funding }}</span>
           </div>
           {% endif %}
-          {% if project.pubs and project.pubs.size > 0 %}
+          {%- assign pslug = project.path | split: '/' | last | split: '.' | first -%}
+          {%- assign proj_pubs = site.data.publications | where_exp: "pub", "pub.projects contains pslug" | sort: "year" | reverse -%}
+          {% if proj_pubs.size > 0 %}
           <div class="proj-card__meta-block">
             <span class="proj-card__meta-label">Key publications</span>
             <ul class="proj-card__pubs">
-              {% for pub in project.pubs %}
-              <li>{{ pub.text }}{% if pub.venue %} &middot; <em>{{ pub.venue }}</em>{% endif %}</li>
+              {% for pub in proj_pubs %}
+              <li>{{ pub.title }}{% if pub.venue %} &middot; <em>{{ pub.venue | strip }}{% if pub.year %} {{ pub.year }}{% endif %}</em>{% endif %}</li>
               {% endfor %}
             </ul>
           </div>

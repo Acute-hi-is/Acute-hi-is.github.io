@@ -46,12 +46,14 @@ layout: default
           <span>{{ page.funding }}</span>
         </div>
         {% endif %}
-        {% if page.pubs and page.pubs.size > 0 %}
+        {%- assign pslug = page.path | split: '/' | last | split: '.' | first -%}
+        {%- assign proj_pubs = site.data.publications | where_exp: "pub", "pub.projects contains pslug" | sort: "year" | reverse -%}
+        {% if proj_pubs.size > 0 %}
         <div class="proj-card__meta-block">
           <span class="proj-card__meta-label">Key publications</span>
           <ul class="proj-card__pubs">
-            {% for pub in page.pubs %}
-            <li><a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">{{ pub.text }}{% if pub.venue %} &middot; <em>{{ pub.venue }}</em>{% endif %}</a></li>
+            {% for pub in proj_pubs %}
+            <li><a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">{{ pub.title }}{% if pub.venue %} &middot; <em>{{ pub.venue | strip }}{% if pub.year %} {{ pub.year }}{% endif %}</em>{% endif %}</a></li>
             {% endfor %}
           </ul>
         </div>

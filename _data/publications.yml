@@ -28,6 +28,8 @@
   venue: Actuators
   year: 2026
   doi: 10.3390/act15030164
+  projects:
+    - haptic-harmony
   topic: haptics
   summary: Amplitude differences drive vibrotactile discrimination — participants reliably distinguished wrist-delivered signals differing in amplitude, while frequency-only changes were near chance. Combined amplitude + frequency cues offered no additional benefit, indicating amplitude is the dominant perceptual channel for vibrotactile interfaces.
 - title: Perceptual Design and Evaluation of a Forearm-Based Vibrotactile Interface for Transfemoral Prosthetic Feedback
@@ -35,6 +37,8 @@
   venue: Biomimetics
   year: 2026
   doi: 10.3390/biomimetics11020112
+  projects:
+    - prosthetic-haptic-feedback
   topic: haptics
   image: /images/publications/biomimetics-11-00112-g001.jpg
   summary: A forearm-worn vibrotactile system can convey prosthetic knee-joint position to transfemoral amputees without visual monitoring. Healthy participants reliably detected dual-actuator tactile cues encoding joint angles, validating the design parameters for a non-invasive proprioceptive feedback interface.
@@ -43,6 +47,8 @@
   venue: Int. J. Numerical Methods in Engineering
   year: 2026
   doi: 10.1002/nme.70295
+  projects:
+    - reduced-order-modeling-rom-of-room-acoustic-simulations
   topic: acoustics
   summary: A new structure-preserving model-order reduction for time-domain room acoustics based on the Linearized Euler Equations. The formulation eliminates instabilities present in conventional approaches and achieves a 3.5× speedup for full-order models, enabling faster yet stable acoustic simulations with complex boundary conditions.
 - title: Sensory Substitution Through Vibrotactile Stimulation
@@ -58,6 +64,8 @@
   venue: Virtual Reality & Intelligent Hardware
   year: 2025
   doi: 10.1016/j.vrih.2025.06.001
+  projects:
+    - vibrosleeve
   topic: haptics
   summary: Timing between vibrotactile pulses critically determines pattern recognition accuracy. Using a 6-actuator forearm array delivering Braille-based patterns, short patterns peaked at 92–98 % accuracy with 300 ms intervals, while longer patterns peaked at 86–94 % at 400 ms. Performance improved with training, highlighting the importance of optimized interstimulus intervals for vibrotactile displays.
 - title: Design and Manufacture of Synthetic Pinnæ for Studying Head-Related Transfer Functions (HRTFs)
@@ -65,6 +73,8 @@
   venue: Cogent Engineering
   year: 2025
   doi: 10.1080/23311916.2025.2536150
+  projects:
+    - viking-hrtf-dataset
   topic: acoustics
   summary: Synthetic pinnae manufactured to precise specifications allow controlled HRTF experiments by isolating the effect of individual anthropometric properties — something impossible with natural ears. The approach opens a path to systematically studying how pinna geometry shapes spatial hearing cues.
 - title: "Haptic Feedback Systems for Lower-Limb Prosthetic Applications: A Review of System Design, User Experience, and Clinical Insights"
@@ -72,6 +82,8 @@
   venue: Bioengineering
   year: 2025
   doi: 10.3390/bioengineering12090989
+  projects:
+    - prosthetic-haptic-feedback
   topic: haptics
   image: /images/publications/bioengineering-12-00989-g001.jpg
   summary: A comprehensive review of haptic feedback systems for lower-limb prostheses, covering system architectures, user experience, and clinical outcomes. Tactile feedback on limb position, gait events, and environmental contact significantly improves amputee mobility and device confidence — but standardized evaluation protocols are still needed.
@@ -94,6 +106,8 @@
   venue: Applied Sciences
   year: 2024
   doi: 10.3390/app14010043
+  projects:
+    - vibrosleeve
   topic: haptics
   image: /images/publications/applsci-14-00043-g001.jpg
   summary: Sequential vibrotactile presentation vastly outperforms simultaneous delivery — pattern recognition jumped from 26 % (simultaneous) to 93 % (sequential) on a 2×3 forearm actuator array. Patterns activating 2–3 actuators were recognized most reliably, providing clear design guidance for vibrotactile communication systems.
@@ -116,6 +130,8 @@
   venue: Actuators
   year: 2023
   doi: 10.3390/act12060224
+  projects:
+    - vibrosleeve
   topic: haptics
   image: /images/publications/actuators-12-00224-g001.jpg
   summary: Frequency variation affects vibrotactile localization on the forearm — using a relative-point localization method with sequential stimuli at three forearm locations, participants showed that discrimination accuracy depends on both the frequency of stimulation and the spatial separation between actuators, informing optimal actuator placement for wearable haptic devices.
@@ -124,6 +140,8 @@
   venue: Acoustics
   year: 2023
   doi: 10.3390/acoustics5010015
+  projects:
+    - viking-hrtf-dataset
   topic: acoustics
   image: /images/publications/acoustics-05-00015-g001.jpg
   summary: Machine learning models can predict personalized HRTFs from anthropometric measurements, moving beyond the conventional amplitude-vs-frequency analysis. The approach targets significant elevation cues in the spectral domain, offering a path toward individualized spatial audio without full HRTF measurement sessions.
@@ -132,6 +150,8 @@
   venue: ASME IMECE · Acoustics, Vibration, and Phononics
   year: 2022
   doi: 10.1115/IMECE2022-97044
+  projects:
+    - paaac
   pdf: /papers/10-IMECE2022-97044.pdf
   topic: acoustics
   summary: Geometrical acoustics simulations can preserve the auditory cues essential for human echolocation, validated against the BRAS benchmark dataset. The work establishes requirements for virtual training environments that accurately reproduce echo-based spatial information used by blind echolocators.
@@ -140,6 +160,8 @@
   venue: SMC · Sound and Music Computing
   year: 2022
   doi: 10.5281/zenodo.6797854
+  projects:
+    - viking-hrtf-dataset
   topic: acoustics
   summary: A multi-layer perceptron trained on HRTFs from 48 individuals can replicate human sound-localization performance — determining the direction of an audio source from eardrum waveforms. Feature vectors derived from acoustical properties enable the model to match individual listeners' spatial hearing patterns.
 - title: Vibrotactile Threshold Measurements at the Wrist Using Parallel Vibration Actuators
@@ -154,6 +176,9 @@
   venue: ASME IMECE · Acoustics, Vibration, and Phononics
   year: 2022
   doi: 10.1115/imece2022-95591
+  projects:
+    - haptic-harmony
+    - vibrosleeve
   topic: haptics
   summary: A wearable sleeve with three voice-coil actuators delivers tactile accompaniment to music, creating an audio-tactile experience for cochlear implant users. Experiments showed the device enhances music perception beyond what the cochlear implant alone provides.
 - title: Estimation of Spectral Notches from Pinna Meshes
@@ -161,6 +186,8 @@
   venue: IEEE/ACM Transactions on Audio, Speech, and Language Processing
   year: 2021
   doi: 10.1109/TASLP.2021.3101928
+  projects:
+    - viking-hrtf-dataset
   topic: acoustics
   summary: A simple computational model predicts the lowest-frequency pinna notch from 3D ear meshes with improved accuracy over prior methods. Higher-order notches remain harder to predict, but the model advances understanding of how pinna geometry generates the spectral cues essential for HRTF individualization.
 - title: The Viking HRTF Dataset v2
@@ -168,6 +195,8 @@
   venue: Zenodo · Dataset
   year: 2020
   doi: 10.5281/zenodo.4160401
+  projects:
+    - viking-hrtf-dataset
   topic: acoustics
   summary: A public full-sphere HRTF dataset measured at 1 513 spatial positions on a KEMAR mannequin fitted with different custom-molded artificial pinnae. Provides a controlled resource for studying how pinna shape influences spatial hearing cues, enabling reproducible HRTF research.
 - title: "The Intensity Order Illusion: Temporal Order of Different Vibrotactile Intensity Causes Systematic Localization Errors"
@@ -177,3 +206,12 @@
   doi: 10.1152/jn.00125.2019
   topic: perception
   summary: "Discovery of a new haptic illusion: when two sequential vibrotactile stimuli of different intensities are applied to the lower back, participants systematically mislocalize the stronger stimulus in the direction of intensity increase. The illusion persists across motor types and spatial separations, revealing an intensity-order bias in tactile spatial processing."
+- title: "Assessing Interstimulus Interval and Waveform Effects on Vibrotactile Pattern Recognition on the Forearm for Transfemoral Prosthetic Sensory Feedback"
+  authors: "M. Karimi, K. Briem, Á. Kristjánsson, S. Brynjólfsson, R. Unnthorsson"
+  venue: Sensors
+  year: 2026
+  doi: 10.3390/s26092664
+  topic: haptics
+  summary: "A vibrotactile feedback prototype for transfemoral prosthetic sensory feedback, examining which interstimulus intervals (ISIs) and vibration waveforms best improve recognition of sequential tactile patterns on the forearm — informing a prototype to be tested with people with transfemoral amputation."
+  projects:
+    - prosthetic-haptic-feedback
