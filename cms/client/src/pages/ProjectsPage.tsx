@@ -91,6 +91,8 @@ export function ProjectsPage() {
     try {
       const { ...cleanFm } = fm as ProjectFM & { layout?: string };
       delete (cleanFm as { layout?: string }).layout;
+      // Publications are managed in the Publications editor now; don't write a per-project pubs list.
+      delete (cleanFm as { pubs?: unknown }).pubs;
       const payload = { frontmatter: cleanFm, content };
       if (creating) {
         await api.post('/projects', payload);
@@ -119,16 +121,6 @@ export function ProjectsPage() {
     }
   };
 
-  /* ── Pubs ── */
-  const addPub = () =>
-    update('pubs', [...(fm.pubs || []), { text: '', venue: '', doi: '' }]);
-  const removePub = (i: number) =>
-    update('pubs', (fm.pubs || []).filter((_, j) => j !== i));
-  const updatePub = (i: number, key: keyof ProjectPub, v: string) => {
-    const next = [...(fm.pubs || [])];
-    next[i] = { ...next[i], [key]: v };
-    update('pubs', next);
-  };
 
   /* ── Gallery ── */
   const addGalleryItem = (type: 'photo' | 'video') => {
@@ -258,40 +250,9 @@ export function ProjectsPage() {
 
           <div className="form-group">
             <label>Key Publications</label>
-            {(fm.pubs || []).map((p, i) => (
-              <div
-                key={i}
-                style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem' }}
-              >
-                <input
-                  className="form-control"
-                  value={p.text}
-                  onChange={(e) => updatePub(i, 'text', e.target.value)}
-                  placeholder="Citation text"
-                  style={{ flex: 2 }}
-                />
-                <input
-                  className="form-control"
-                  value={p.venue || ''}
-                  onChange={(e) => updatePub(i, 'venue', e.target.value)}
-                  placeholder="Venue"
-                  style={{ flex: 1.2 }}
-                />
-                <input
-                  className="form-control"
-                  value={p.doi}
-                  onChange={(e) => updatePub(i, 'doi', e.target.value)}
-                  placeholder="DOI"
-                  style={{ flex: 1 }}
-                />
-                <button className="btn--icon" onClick={() => removePub(i)}>
-                  <X size={16} />
-                </button>
-              </div>
-            ))}
-            <button className="btn btn--secondary btn--sm" onClick={addPub}>
-              <Plus size={14} /> Add Publication
-            </button>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: 0 }}>
+              Publications are managed in the <strong>Publications</strong> section. Open a paper there and tick this project under <strong>Projects</strong> — it will then appear under "Key publications" on this project's page automatically.
+            </p>
           </div>
 
           <div

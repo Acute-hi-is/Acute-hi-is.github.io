@@ -15,15 +15,22 @@ interface Publication {
   summary: string;
   image?: string;
   pdf?: string;
+  projects?: string[];
+}
+
+interface ProjectRef {
+  slug: string;
+  frontmatter: { title: string };
 }
 
 const EMPTY: Publication = {
   title: '', authors: '', venue: '', year: new Date().getFullYear(),
-  doi: '', topic: 'haptics', summary: '', image: '', pdf: '',
+  doi: '', topic: 'haptics', summary: '', image: '', pdf: '', projects: [],
 };
 
 export function PublicationsPage() {
   const { data: pubs, reload } = useData<Publication[]>('/publications');
+  const { data: projects } = useData<ProjectRef[]>('/projects');
   const [editing, setEditing] = useState<{ index: number; pub: Publication } | null>(null);
   const [creating, setCreating] = useState(false);
   const [form, setForm] = useState<Publication>(EMPTY);
@@ -39,9 +46,16 @@ export function PublicationsPage() {
   };
 
   const openEdit = (index: number, pub: Publication) => {
-    setForm({ ...pub });
+    setForm({ ...pub, projects: pub.projects || [] });
     setEditing({ index, pub });
     setCreating(false);
+  };
+
+  const toggleProject = (slug: string) => {
+    setForm(prev => {
+      const cur = prev.projects || [];
+      return { ...prev, projects: cur.includes(slug) ? cur.filter(s => s !== slug) : [...cur, slug] };
+    });
   };
 
   const save = async () => {
@@ -122,6 +136,24 @@ export function PublicationsPage() {
           <div className="form-group">
             <label>Summary</label>
             <textarea className="form-control" value={form.summary} onChange={e => updateField('summary', e.target.value)} rows={4} />
+          </div>
+          <div className="form-group">
+            <label>Projects</label>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem 1.25rem', padding: '0.5rem 0' }}>
+              {(projects || []).map(p => (
+                <label key={p.slug} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.9rem', cursor: 'pointer' }}>
+                  <input
+                    type="checkbox"
+                    checked={(form.projects || []).includes(p.slug)}
+                    onChange={() => toggleProject(p.slug)}
+                  />
+                  {p.frontmatter.title}
+                </label>
+              ))}
+            </div>
+            <small style={{ color: 'var(--text-muted)' }}>
+              Tick the project(s) this paper belongs to — it will then appear under "Key publications" on those project pages.
+            </small>
           </div>
           <div className="form-row">
             <div className="form-group">
