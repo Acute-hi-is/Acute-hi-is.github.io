@@ -96,10 +96,25 @@ title: Home
     <div class="highlights__grid">
       {% for area in site.data.research %}
       {% assign num = forloop.index | prepend: "0" | slice: -2, 2 %}
-      {% assign hl_name = area.highlight_image | split: '/' | last | split: '.' | first %}
+      {%- comment -%} Draw the card image from the linked project (hero_image or first gallery photo) when set, else fall back to the area's own highlight_image. {%- endcomment -%}
+      {%- assign area_img = "" -%}
+      {%- if area.project and area.project != "" -%}
+        {%- for p in site.projects -%}
+          {%- assign pslug = p.path | split: '/' | last | split: '.' | first -%}
+          {%- if pslug == area.project -%}
+            {%- if p.hero_image and p.hero_image != "" -%}{%- assign area_img = p.hero_image -%}
+            {%- elsif p.gallery -%}{%- for g in p.gallery -%}{%- if g.type != "video" and g.image and g.image != "" and area_img == "" -%}{%- assign area_img = g.image -%}{%- endif -%}{%- endfor -%}{%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
       <article class="highlight-card">
         <div class="highlight-card__img-wrap">
+          {% if area_img != "" %}
+          <img class="highlight-card__img" loading="lazy" src="{{ area_img | relative_url }}" sizes="(max-width: 768px) 100vw, 33vw" alt="{{ area.title }}">
+          {% else %}
+          {% assign hl_name = area.highlight_image | split: '/' | last | split: '.' | first %}
           <img class="highlight-card__img" loading="lazy" src="{{ area.highlight_image | relative_url }}" srcset="{{ '/images/responsive/' | append: hl_name | append: '-480w.jpg' | relative_url }} 480w, {{ '/images/responsive/' | append: hl_name | append: '-800w.jpg' | relative_url }} 800w, {{ area.highlight_image | relative_url }} 1200w" sizes="(max-width: 768px) 100vw, 33vw" alt="{{ area.title }}">
+          {% endif %}
         </div>
         <div class="highlight-card__body">
           <div class="highlight-card__number">{{ num }}</div>
