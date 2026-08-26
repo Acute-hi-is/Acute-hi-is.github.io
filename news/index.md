@@ -6,7 +6,7 @@ description: "Latest news, publications, and updates from the ACUTE Lab."
 
 <section class="page-hero page-hero--image">
   <div class="page-hero__bg">
-    <img class="page-hero__bg-img" src="{{ '/images/Sound-of-Vision-Team-Award-1024x784.jpg' | relative_url }}" alt="" loading="eager">
+    <img class="page-hero__bg-img" src="{{ '/images/Sound-of-Vision-Team-Award-1024x784.jpg' | relative_url }}" alt="" loading="eager" style="object-position: center 25%">
   </div>
   <div class="page-hero__inner">
     <p class="page-hero__eyebrow">News</p>

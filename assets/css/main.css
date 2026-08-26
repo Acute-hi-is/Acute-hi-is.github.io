@@ -419,7 +419,7 @@ a.person-card--linked { color: inherit; text-decoration: none; }
 .page-hero--slides .page-hero__inner { position: relative; z-index: 2; }
 .page-hero--image { position: relative; overflow: hidden; }
 .page-hero__bg { position: absolute; inset: 0; z-index: 0; }
-.page-hero__bg-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.page-hero__bg-img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
 .page-hero__bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(105deg, rgba(13,27,47,0.94) 0%, rgba(13,27,47,0.8) 50%, rgba(13,27,47,0.6) 100%); }
 .page-hero--image .page-hero__inner { position: relative; z-index: 2; }
 .page-hero--logo { position: relative; overflow: hidden; }

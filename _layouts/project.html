@@ -20,7 +20,7 @@ layout: default
 <section class="page-hero{% if proj_hero != '' %} page-hero--image{% endif %}">
   {% if proj_hero != "" %}
   <div class="page-hero__bg">
-    <img class="page-hero__bg-img" src="{{ proj_hero | relative_url }}" alt="" loading="eager">
+    <img class="page-hero__bg-img" src="{{ proj_hero | relative_url }}" alt="" loading="eager"{% if page.hero_focus and page.hero_focus != "" %} style="object-position: {{ page.hero_focus }}"{% endif %}>
   </div>
   {% endif %}
   <div class="page-hero__inner">
