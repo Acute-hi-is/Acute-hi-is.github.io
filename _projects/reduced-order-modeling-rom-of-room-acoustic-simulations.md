@@ -11,10 +11,6 @@ team: >-
   Unnþórsson
 partners: Treble Technologies
 funding: RANNÍS — Icelandic Research Fund
-pubs:
-  - text: Bonthu et al. (2026)
-    venue: Int. J. Numerical Methods in Engineering
-    doi: 10.1002/nme.70295
 gallery_enabled: false
 gallery: []
 ---

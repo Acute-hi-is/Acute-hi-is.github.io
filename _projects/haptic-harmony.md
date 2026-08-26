@@ -9,13 +9,6 @@ order: 30
 team: "Ivan Makarov, Nashmin Yeganeh, Hafliði Ásgeirsson, Árni Kristjánsson, Rúnar Unnþórsson"
 partners: ""
 funding: ""
-pubs:
-  - text: "Makarov et al. (2026)"
-    venue: "Actuators"
-    doi: "10.3390/act15030164"
-  - text: "Yeganeh et al. (2022)"
-    venue: "ASME IMECE"
-    doi: "10.1115/imece2022-95591"
 gallery_enabled: false
 gallery: []
 ---

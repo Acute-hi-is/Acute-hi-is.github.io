@@ -8,19 +8,6 @@ order: 10
 team: 'Nashmin Yeganeh, Ivan Makarov, Árni Kristjánsson, Rúnar Unnþórsson'
 partners: ''
 funding: ''
-pubs:
-  - text: Yeganeh et al. (2024)
-    venue: Applied Sciences
-    doi: 10.3390/app14010043
-  - text: Yeganeh et al. (2025)
-    venue: Virtual Reality & Intelligent Hardware
-    doi: 10.1016/j.vrih.2025.06.001
-  - text: Yeganeh et al. (2023)
-    venue: Actuators
-    doi: 10.3390/act12060224
-  - text: Yeganeh et al. (2022)
-    venue: ASME IMECE
-    doi: 10.1115/imece2022-95591
 gallery_enabled: true
 gallery:
   - type: photo

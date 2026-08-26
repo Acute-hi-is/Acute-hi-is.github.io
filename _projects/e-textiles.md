@@ -9,7 +9,6 @@ order: 80
 team: "Emma Shannon, Rúnar Unnþórsson"
 partners: ""
 funding: ""
-pubs: []
 gallery_enabled: false
 gallery: []
 ---

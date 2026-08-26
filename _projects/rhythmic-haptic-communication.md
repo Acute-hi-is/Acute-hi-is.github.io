@@ -8,7 +8,6 @@ order: 70
 team: "Mohammad Karimi, Rúnar Unnþórsson"
 partners: ""
 funding: ""
-pubs: []
 gallery_enabled: false
 gallery: []
 ---

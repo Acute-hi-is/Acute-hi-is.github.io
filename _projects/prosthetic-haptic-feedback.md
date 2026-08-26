@@ -11,16 +11,6 @@ team: >-
   Unnþórsson
 partners: Össur ehf. · Landspítali (National University Hospital)
 funding: 'RANNÍS — Icelandic Research Fund '
-pubs:
-  - text: Karimi et al. (2026)
-    venue: Biomimetics
-    doi: 10.3390/biomimetics11020112
-  - text: Karimi et al. (2025)
-    venue: Bioengineering
-    doi: 10.3390/bioengineering12090989
-  - text: Karimi et al. (2026)
-    venue: Sensors
-    doi: 10.3390/s26092664
 gallery_enabled: true
 gallery:
   - type: photo

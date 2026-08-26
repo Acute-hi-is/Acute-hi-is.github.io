@@ -306,10 +306,15 @@ Click **Publications** in the sidebar.
 | DOI | The DOI identifier (e.g. "10.3390/s25010001") |
 | Topic | Select: Haptics, Acoustics, or Perception |
 | Summary | A 1-2 sentence description of the paper |
+| Projects | Optional. Tick the project(s) this paper belongs to (see below) |
 | Image URL | Optional — path to a thumbnail image |
 | PDF Path | Optional — path to a locally hosted PDF |
 
 3. Click **Save**
+
+### Linking a publication to a project
+
+Publications and a project's **Key publications** are now **one list** — you manage both from here. On a paper, tick the **Projects** it belongs to, and it automatically appears under "Key publications" on those project pages (as well as on the main Publications page). You do **not** add publications inside the Projects editor anymore — a paper only needs to be entered once, here.
 
 ### Editing a publication
 
@@ -434,9 +439,10 @@ Each project gets its own page at `acute.hi.is/projects/<slug>/`. Projects are s
 | Partners | Collaborating institutions or companies |
 | Funding | Grant / funder names |
 | Description | Body content in **Markdown**. Appears as the main column of the project page. |
-| Key Publications | Optional. Add citation text, venue, and DOI for each — they render as a list in the project sidebar. |
 
 3. Click **Save**
+
+> **Key publications are managed in the Publications section, not here.** To show a paper under a project's "Key publications", open it in the **Publications** section and tick that project under **Projects** (see [Section 4](#4-managing-publications)). It then appears on the project page automatically.
 
 ### Adding a photo & video gallery
 

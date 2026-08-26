@@ -8,10 +8,6 @@ order: 50
 team: "Jonas Karlberg, A. Milo, F. Pind, Rúnar Unnþórsson"
 partners: ""
 funding: ""
-pubs:
-  - text: "Karlberg et al. (2022)"
-    venue: "ASME IMECE"
-    doi: "10.1115/IMECE2022-97044"
 gallery_enabled: false
 gallery: []
 ---
