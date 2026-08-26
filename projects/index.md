@@ -4,7 +4,10 @@ title: Projects
 description: "Active and emerging research projects at ACUTE Lab — from vibrotactile wearables to spatial audio datasets."
 ---
 
-<section class="page-hero">
+<section class="page-hero page-hero--image">
+  <div class="page-hero__bg">
+    <img class="page-hero__bg-img" src="{{ '/images/projects/20220225_124431.jpeg' | relative_url }}" alt="" loading="eager">
+  </div>
   <div class="page-hero__inner">
     <p class="page-hero__eyebrow">Projects</p>
     <h1 class="page-hero__title">What we're<br>building</h1>

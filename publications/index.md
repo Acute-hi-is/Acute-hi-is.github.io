@@ -4,7 +4,10 @@ title: Publications
 description: "Peer-reviewed publications from ACUTE Lab — vibrotactile perception, prosthetic feedback, spatial audio, room acoustics, and sensory substitution."
 ---
 
-<section class="page-hero">
+<section class="page-hero page-hero--image">
+  <div class="page-hero__bg">
+    <img class="page-hero__bg-img" src="{{ '/images/lobes_mold.jpg' | relative_url }}" alt="" loading="eager">
+  </div>
   <div class="page-hero__inner">
     <p class="page-hero__eyebrow">Publications</p>
     <h1 class="page-hero__title">Research output</h1>

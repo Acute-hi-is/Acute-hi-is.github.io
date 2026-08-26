@@ -4,7 +4,10 @@ title: News
 description: "Latest news, publications, and updates from the ACUTE Lab."
 ---
 
-<section class="page-hero">
+<section class="page-hero page-hero--image">
+  <div class="page-hero__bg">
+    <img class="page-hero__bg-img" src="{{ '/images/Sound-of-Vision-Team-Award-1024x784.jpg' | relative_url }}" alt="" loading="eager">
+  </div>
   <div class="page-hero__inner">
     <p class="page-hero__eyebrow">News</p>
     <h1 class="page-hero__title">Latest updates</h1>

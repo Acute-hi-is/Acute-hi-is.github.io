@@ -11,6 +11,7 @@ team: >-
   Unnþórsson
 partners: Össur ehf. · Landspítali (National University Hospital)
 funding: 'RANNÍS — Icelandic Research Fund '
+hero_image: /images/projects/IMG_20250306_101547.jpeg
 gallery_enabled: true
 gallery:
   - type: photo

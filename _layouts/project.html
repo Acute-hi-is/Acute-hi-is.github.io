@@ -10,7 +10,19 @@ layout: default
   {%- endif -%}
 {%- endfor -%}
 
-<section class="page-hero">
+{%- assign proj_hero = "" -%}
+{%- if page.hero_image and page.hero_image != "" -%}
+  {%- assign proj_hero = page.hero_image -%}
+{%- elsif page.gallery -%}
+  {%- for g in page.gallery -%}{%- if g.type != "video" and g.image and g.image != "" and proj_hero == "" -%}{%- assign proj_hero = g.image -%}{%- endif -%}{%- endfor -%}
+{%- endif -%}
+
+<section class="page-hero{% if proj_hero != '' %} page-hero--image{% endif %}">
+  {% if proj_hero != "" %}
+  <div class="page-hero__bg">
+    <img class="page-hero__bg-img" src="{{ proj_hero | relative_url }}" alt="" loading="eager">
+  </div>
+  {% endif %}
   <div class="page-hero__inner">
     <p class="page-hero__eyebrow">Project {{ num }}</p>
     <h1 class="page-hero__title">{{ page.title }}</h1>

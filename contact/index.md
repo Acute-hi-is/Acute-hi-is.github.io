@@ -4,7 +4,10 @@ title: Contact
 description: "Find ACUTE Lab at the University of Iceland, Faculty of Industrial Engineering."
 ---
 
-<section class="page-hero">
+<section class="page-hero page-hero--image">
+  <div class="page-hero__bg">
+    <img class="page-hero__bg-img" src="{{ '/images/team_presentation.jpg' | relative_url }}" alt="" loading="eager">
+  </div>
   <div class="page-hero__inner">
     <p class="page-hero__eyebrow">Contact</p>
     <h1 class="page-hero__title">Find us</h1>

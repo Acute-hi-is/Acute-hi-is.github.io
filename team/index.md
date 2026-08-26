@@ -4,7 +4,8 @@ title: Team
 description: "The people behind ACUTE Lab — researchers, postdocs, and PhD candidates."
 ---
 
-<section class="page-hero">
+<section class="page-hero page-hero--logo">
+  <img class="page-hero__logo-mark" src="{{ '/images/logo_horizontal_white.svg' | relative_url }}" alt="" aria-hidden="true">
   <div class="page-hero__inner">
     <p class="page-hero__eyebrow">Team</p>
     <h1 class="page-hero__title">The people<br>behind the work</h1>
