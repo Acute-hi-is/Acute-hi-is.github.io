@@ -4,7 +4,10 @@ title: Facilities
 description: "Hire ACUTE Lab's research infrastructure — anechoic chamber, KEMAR manikin, Brüel & Kjær acquisition, multichannel audio, 3D scanning, and e-textile fabrication."
 ---
 
-<section class="page-hero">
+<section class="page-hero page-hero--image">
+  <div class="page-hero__bg">
+    <img class="page-hero__bg-img" src="{{ '/images/facilities/absorption-tube/absortpion-tube-2.jpg' | relative_url }}" alt="" loading="eager">
+  </div>
   <div class="page-hero__inner">
     <p class="page-hero__eyebrow">Facilities</p>
     <h1 class="page-hero__title">Hire the lab</h1>
