@@ -18,13 +18,12 @@ This guide explains how to use the ACUTE Content Manager (CMS) to edit the lab w
 8. [Managing Projects](#8-managing-projects)
 9. [Managing Facilities](#9-managing-facilities)
 10. [Managing Featured Research](#10-managing-featured-research)
-11. [Managing the Homepage Gallery](#11-managing-the-homepage-gallery)
-12. [Managing the Stats Ticker](#12-managing-the-stats-ticker)
-13. [Managing Partners & Funders](#13-managing-partners--funders)
-14. [Image Manager](#14-image-manager)
-15. [Previewing the Website](#15-previewing-the-website)
-16. [Publishing Your Changes](#16-publishing-your-changes)
-17. [Troubleshooting](#17-troubleshooting)
+11. [Managing the Stats Ticker](#11-managing-the-stats-ticker)
+12. [Managing Partners & Funders](#12-managing-partners--funders)
+13. [Image Manager](#13-image-manager)
+14. [Previewing the Website](#14-previewing-the-website)
+15. [Publishing Your Changes](#15-publishing-your-changes)
+16. [Troubleshooting](#16-troubleshooting)
 
 ---
 
@@ -43,7 +42,7 @@ npm run dev                           # start the CMS
 ```
 
 3. Open your browser at **http://localhost:3000** and edit content.
-4. When done, **publish** from the **Deploy** page (or the orange **Build + Commit + Push** button — see [Section 16](#16-publishing-your-changes)).
+4. When done, **publish** from the **Deploy** page (or the orange **Build + Commit + Push** button — see [Section 15](#15-publishing-your-changes)).
 5. Back in the terminal, press **Ctrl+C** to stop the CMS.
 
 > **Tip (Windows):** skip typing the folder path — in File Explorer, right-click inside your `acute_web` folder and choose **Git Bash Here** to open a terminal already in the right place.
@@ -63,7 +62,7 @@ First-time setup on a new computer happens in **four stages**. Do Stages A–C i
 | **C — Get the website** | **Clone** the repo into a folder you choose | Having the website files locally to edit | ✅ Required (once) |
 | **D — Ruby + Jekyll** | Install **Ruby + Jekyll** | The optional local **Preview** only | ⬜ Optional |
 
-You can edit and publish the whole website with just Stages A–C. Stage D only adds the in-browser **Preview** and is covered in [Section 15](#15-previewing-the-website) — feel free to skip it for now.
+You can edit and publish the whole website with just Stages A–C. Stage D only adds the in-browser **Preview** and is covered in [Section 14](#14-previewing-the-website) — feel free to skip it for now.
 
 ### Which terminal to use
 
@@ -260,7 +259,7 @@ Hi YourUsername! You've successfully authenticated, but GitHub does not provide 
 
 If you see this message, **you're done**. You can now push changes from the CMS.
 
-If it doesn't work, see [Section 17: Troubleshooting](#17-troubleshooting).
+If it doesn't work, see [Section 16: Troubleshooting](#16-troubleshooting).
 
 ---
 
@@ -408,7 +407,7 @@ Each research area has a title, summary, description paragraphs, and linked publ
 2. The form includes:
    - **Title** and **Summary**
    - **Description** — multiple paragraphs (use Add/Remove buttons to manage)
-   - **Publications** — linked papers with text and DOI (use Add/Remove buttons)
+   - **Publications** — the key papers for this area, chosen from the **Publications** section (pick each from the dropdown). Their citations are pulled from Publications automatically, so add the papers there first.
    - **Images** — main image and highlight image
 3. Click **Save**
 
@@ -422,7 +421,7 @@ Click **Projects** in the sidebar.
 
 Each project gets its own page at `acute.hi.is/projects/<slug>/`. Projects are sorted by **Display Order** (lower numbers first) on the projects index page, and each can optionally show a **photo & video gallery** at the bottom of its detail page.
 
-> **Don't confuse this with the homepage Gallery** (Section 11). That one drives the carousel of lab photos on the homepage. *This* gallery lives inside an individual project's page and is opt-in per project.
+> This gallery lives inside an individual project's page and is opt-in per project. (It's separate from the hero photo carousel on the homepage, which is set in the site templates, not the CMS.)
 
 ### Adding a new project
 
@@ -477,7 +476,7 @@ Untick **"Show photo & video gallery on this project page"** and save. The galle
 
 ### Editing or deleting a project
 
-Click the pencil icon on any row to edit, or the trash icon (with confirmation) to delete. Deleting a project removes its source file; uploaded gallery images stay in the repo and can be cleaned up via the [Image Manager](#14-image-manager).
+Click the pencil icon on any row to edit, or the trash icon (with confirmation) to delete. Deleting a project removes its source file; uploaded gallery images stay in the repo and can be cleaned up via the [Image Manager](#13-image-manager).
 
 ---
 
@@ -531,28 +530,7 @@ Click the pencil icon. You can change the label, title, description text, DOI li
 
 ---
 
-## 11. Managing the Homepage Gallery
-
-Click **Gallery** in the sidebar.
-
-![Gallery page](screenshots/06-gallery.png)
-
-The gallery controls the **photo carousel on the homepage**. (For galleries that live inside an individual project page, see [Section 8: Managing Projects](#8-managing-projects) instead.)
-
-### Adding a photo
-
-1. Click **+ Add Photo** (top right)
-2. Set the **image path** (type it or use Upload)
-3. Add a **caption** and **alt text** (for accessibility)
-4. Click **Save**
-
-### Reordering photos
-
-Use the up/down arrows to change the carousel order.
-
----
-
-## 12. Managing the Stats Ticker
+## 11. Managing the Stats Ticker
 
 Click **Stats Ticker** in the sidebar.
 
@@ -573,7 +551,7 @@ Use the up/down arrows to change the scroll order.
 
 ---
 
-## 13. Managing Partners & Funders
+## 12. Managing Partners & Funders
 
 Click **Partners** in the sidebar.
 
@@ -596,7 +574,7 @@ Logos are auto-compressed to 300x150 pixels.
 
 ---
 
-## 14. Image Manager
+## 13. Image Manager
 
 Click **Image Manager** in the sidebar.
 
@@ -626,7 +604,7 @@ Click the trash icon below any image and confirm.
 
 ---
 
-## 15. Previewing the Website
+## 14. Previewing the Website
 
 Click **Preview** in the sidebar.
 
@@ -657,7 +635,7 @@ Every time you save content in the CMS, the preview updates automatically.
 
 ---
 
-## 16. Publishing Your Changes
+## 15. Publishing Your Changes
 
 When you're happy with your edits, click **Deploy** in the sidebar.
 
@@ -688,7 +666,7 @@ After pushing, the website updates automatically.
 
 ---
 
-## 17. Troubleshooting
+## 16. Troubleshooting
 
 ### The CMS won't start
 
@@ -765,6 +743,28 @@ If you see **two entries with the same name**, one was probably created with **+
 - Supported formats: JPEG, PNG, SVG, WebP
 - Images are auto-compressed on upload — the original is not kept
 - Maximum recommended size before upload: 10 MB
+
+---
+
+## Good to Know — How Content Connects
+
+A few things are linked behind the scenes, so you don't have to enter the same thing twice — and a couple of places where you *do* still need to keep two spots in sync.
+
+**Publications are entered once, shown everywhere.**
+Every paper lives in the **Publications** section. From there it automatically appears wherever it's referenced — you never retype a citation:
+
+- **Project pages** — tick a paper's **Projects** (in the Publications editor).
+- **Research area pages** — pick the paper in that area's **Key Publications** (in the Research Areas editor).
+- **Homepage "Featured Research"** — the citation line under each feature is pulled from the paper's DOI.
+
+So if you fix a title or author in Publications, it updates in all of those at once. If a paper isn't showing somewhere, it's almost always because it hasn't been added to **Publications** yet.
+
+**Two places you still keep in sync manually** (these use free text on purpose, so they can include people/organisations that aren't in the CMS lists):
+
+- **Project team vs. team profiles.** A project's **Team** field is a free-text list (it can include external collaborators). It is *separate* from the people in the **Team** section. If someone joins or leaves a project, update the project's Team field — and, for an ACUTE member, their profile's **Research Project** if it's their main one.
+- **Partners.** Partner and funder **logos** are managed in the **Partners** section; a project's **Partners** / **Funding** fields are free text. Keep the names spelled consistently between them.
+
+**One file to ignore:** `_data/sources.yaml` is *not* the publications list — it's a separate file for a future automated-citation tool and the website doesn't use it. Always add papers in the **Publications** section, not there.
 
 ---
 
