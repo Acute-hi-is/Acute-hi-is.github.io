@@ -6,20 +6,22 @@ import { Plus, Pencil, Trash2, X } from 'lucide-react';
 import { ConfirmDialog } from '../components/shared/ConfirmDialog';
 import { ImagePicker } from '../components/shared/ImagePicker';
 
-interface ResearchPub { text: string; doi: string; }
+interface PubRef { doi: string; title: string; }
 interface ResearchArea {
   title: string; slug: string; image: string; image_alt: string;
   highlight_image: string; summary: string; description: string[];
-  pubs: ResearchPub[];
+  pubs: string[];
+  project?: string;
 }
 
 const EMPTY: ResearchArea = {
   title: '', slug: '', image: '', image_alt: '', highlight_image: '',
-  summary: '', description: [''], pubs: [{ text: '', doi: '' }],
+  summary: '', description: [''], pubs: [],
 };
 
 export function ResearchPage() {
   const { data: items, reload } = useData<ResearchArea[]>('/research');
+  const { data: publications } = useData<PubRef[]>('/publications');
   const [editing, setEditing] = useState<{ index: number } | null>(null);
   const [creating, setCreating] = useState(false);
   const [form, setForm] = useState<ResearchArea>(EMPTY);
@@ -58,10 +60,10 @@ export function ResearchPage() {
     setForm({ ...form, description: d });
   };
 
-  const addPub = () => setForm({ ...form, pubs: [...form.pubs, { text: '', doi: '' }] });
+  const addPub = () => setForm({ ...form, pubs: [...form.pubs, ''] });
   const removePub = (i: number) => setForm({ ...form, pubs: form.pubs.filter((_, j) => j !== i) });
-  const updatePub = (i: number, field: keyof ResearchPub, v: string) => {
-    const p = [...form.pubs]; p[i] = { ...p[i], [field]: v };
+  const setPub = (i: number, doi: string) => {
+    const p = [...form.pubs]; p[i] = doi;
     setForm({ ...form, pubs: p });
   };
 
@@ -117,10 +119,17 @@ export function ResearchPage() {
 
           <div className="form-group">
             <label>Key Publications</label>
-            {form.pubs.map((p, i) => (
+            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.2rem', marginBottom: '0.6rem' }}>
+              Pick the key papers for this area from the Publications list — their citations are pulled from Publications automatically. Add papers there first.
+            </p>
+            {form.pubs.map((doi, i) => (
               <div key={i} style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                <input className="form-control" value={p.text} onChange={e => updatePub(i, 'text', e.target.value)} placeholder="Citation text (HTML ok)" style={{ flex: 2 }} />
-                <input className="form-control" value={p.doi} onChange={e => updatePub(i, 'doi', e.target.value)} placeholder="DOI" style={{ flex: 1 }} />
+                <select className="form-control" value={doi} onChange={e => setPub(i, e.target.value)} style={{ flex: 1 }}>
+                  <option value="">— select a publication —</option>
+                  {(publications || []).map(p => (
+                    <option key={p.doi} value={p.doi}>{p.title}</option>
+                  ))}
+                </select>
                 <button className="btn--icon" onClick={() => removePub(i)}><X size={16} /></button>
               </div>
             ))}

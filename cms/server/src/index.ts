@@ -5,7 +5,6 @@ import { WebSocketServer } from 'ws';
 import { PORT, WS_PORT } from './config.js';
 import { registerWsClient } from './services/jekyll-service.js';
 
-import galleryRouter from './routes/gallery.js';
 import statsRouter from './routes/stats.js';
 import featuresRouter from './routes/features.js';
 import publicationsRouter from './routes/publications.js';
@@ -24,7 +23,6 @@ app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 
 // API routes
-app.use('/api/gallery', galleryRouter);
 app.use('/api/stats', statsRouter);
 app.use('/api/features', featuresRouter);
 app.use('/api/publications', publicationsRouter);

@@ -9,7 +9,6 @@ import { ResearchPage } from './pages/ResearchPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { FacilitiesPage } from './pages/FacilitiesPage';
 import { FeaturesPage } from './pages/FeaturesPage';
-import { GalleryPage } from './pages/GalleryPage';
 import { StatsPage } from './pages/StatsPage';
 import { PartnersPage } from './pages/PartnersPage';
 import { ImagesPage } from './pages/ImagesPage';
@@ -31,7 +30,6 @@ export default function App() {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/facilities" element={<FacilitiesPage />} />
             <Route path="/features" element={<FeaturesPage />} />
-            <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/stats" element={<StatsPage />} />
             <Route path="/partners" element={<PartnersPage />} />
             <Route path="/images" element={<ImagesPage />} />
