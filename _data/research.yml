@@ -15,12 +15,9 @@
     - >-
       Presenting patterns <em>sequentially</em> yields <strong>93% recognition accuracy</strong>, versus 26% with simultaneous stimulation.
   pubs:
-    - text: "Yeganeh et al. (2024). Sequential vs. simultaneous stimulation. <em>Applied Sciences</em>."
-      doi: 10.3390/app14010043
-    - text: "Yeganeh et al. (2023). Frequency &amp; location on the forearm. <em>Actuators</em>."
-      doi: 10.3390/act12060224
-    - text: "Ævarsson et al. (2022). Vibrotactile thresholds at the wrist. <em>ACM TAP</em>."
-      doi: 10.1145/3529259
+    - 10.3390/app14010043
+    - 10.3390/act12060224
+    - 10.1145/3529259
 
 - title: Prosthetic Haptic Feedback
   slug: prosthetic-haptic-feedback
@@ -35,10 +32,8 @@
     - >-
       Developed with <strong>Össur ehf.</strong> and <strong>Landspítali</strong>.
   pubs:
-    - text: "Karimi et al. (2026). Forearm interface for transfemoral amputees. <em>Biomimetics</em>."
-      doi: 10.3390/biomimetics11020112
-    - text: "Karimi et al. (2025). Haptic systems review. <em>Bioengineering</em>."
-      doi: 10.3390/bioengineering12090989
+    - 10.3390/biomimetics11020112
+    - 10.3390/bioengineering12090989
 
 - title: Sensory Substitution
   slug: sensory-substitution
@@ -52,10 +47,8 @@
     - >-
       Our cochlear implant project encodes musical rhythms into tactile patterns, reaching <strong>500,000+ CI users</strong> worldwide.
   pubs:
-    - text: "Kristjánsson et al. (2026). Sensory substitution through vibrotactile stimulation. In <em>Mobility of Visually Impaired People</em>, Springer."
-      doi: 10.1007/978-3-031-91550-5_8
-    - text: "Yeganeh et al. (2022). Vibrotactile sleeve for cochlear implant users. <em>ASME IMECE</em>."
-      doi: 10.1115/imece2022-95591
+    - 10.1007/978-3-031-91550-5_8
+    - 10.1115/imece2022-95591
 
 - title: "Spatial Audio & HRTFs"
   slug: spatial-audio-hrtfs
@@ -70,12 +63,9 @@
     - >-
       Our open <strong>Viking HRTF Dataset v2</strong> — 1513 positions, 20 pinna replicas — is used by researchers worldwide.
   pubs:
-    - text: "Sumner et al. (2025). Synthetic pinnæ for HRTF research. <em>Cogent Engineering</em>."
-      doi: 10.1080/23311916.2025.2536150
-    - text: "Fernández et al. (2023). HRTF prediction with ML. <em>Acoustics</em>."
-      doi: 10.3390/acoustics5010015
-    - text: "Spagnol et al. (2020). Viking HRTF Dataset v2. <em>Zenodo</em>."
-      doi: 10.5281/zenodo.4160401
+    - 10.1080/23311916.2025.2536150
+    - 10.3390/acoustics5010015
+    - 10.5281/zenodo.4160401
 
 - title: Room Acoustics Simulation
   slug: room-acoustics-simulation
@@ -90,8 +80,7 @@
     - >-
       Developed with <strong>Treble Technologies</strong>. Funded by RANNÍS.
   pubs:
-    - text: "Bonthu et al. (2026). Stable model reduction for room acoustics. <em>Int. J. Numerical Methods in Engineering</em>."
-      doi: 10.1002/nme.70295
+    - 10.1002/nme.70295
 
 - title: "Attention, Foraging & Haptic Illusions"
   slug: attention-foraging-haptic-illusions
@@ -105,7 +94,5 @@
     - >-
       We have also documented the <strong>haptic intensity order illusion</strong>: strong-then-weak vibration order makes the second stimulus feel displaced — overriding the actual direction.
   pubs:
-    - text: "Makarov et al. (2024). Visual &amp; auditory synchrony in foraging. <em>Attention, Perception, &amp; Psychophysics</em>."
-      doi: 10.3758/s13414-023-02840-z
-    - text: "Hoffmann et al. (2019). The intensity order illusion. <em>Journal of Neurophysiology</em>."
-      doi: 10.1152/jn.00125.2019
+    - 10.3758/s13414-023-02840-z
+    - 10.1152/jn.00125.2019

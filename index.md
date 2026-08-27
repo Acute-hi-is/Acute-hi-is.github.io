@@ -170,7 +170,8 @@ title: Home
       <span class="section-label">{{ feat.label }}</span>
       <h3>{{ feat.title }}</h3>
       <p>{{ feat.text }}</p>
-      <span class="feature__meta">{{ feat.meta }}</span>
+      {%- assign fpub = site.data.publications | where: "doi", feat.doi | first -%}
+      {% if fpub %}<span class="feature__meta">{{ fpub.authors | split: ',' | first | strip }} et al. &middot; {{ fpub.venue | strip }} {{ fpub.year }}</span>{% endif %}
       <a href="https://doi.org/{{ feat.doi }}" class="feature__link" target="_blank" rel="noopener">Read the paper →</a>
     </div>
   </div>

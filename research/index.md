@@ -33,8 +33,11 @@ description: "Six interconnected themes spanning vibrotactile perception, prosth
     <div class="ra__pubs">
       <p class="ra__pubs-label">Key publications</p>
       <ul>
-        {% for pub in area.pubs %}
-        <li>{{ pub.text }} <a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">doi:{{ pub.doi }}</a></li>
+        {% for doi in area.pubs %}
+        {%- assign pub = site.data.publications | where: "doi", doi | first -%}
+        {% if pub %}
+        <li>{{ pub.authors | strip }} ({{ pub.year }}). <a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">{{ pub.title }}</a>. <em>{{ pub.venue | strip }}</em>.</li>
+        {% endif %}
         {% endfor %}
       </ul>
     </div>

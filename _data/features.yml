@@ -9,7 +9,6 @@
     Sequential vibrotactile patterns achieve 93% recognition accuracy on the forearm — nearly
     four times the 26% seen with simultaneous stimulation. This finding shapes the core
     programming logic of every wearable device we build.
-  meta: "Yeganeh et al. · Applied Sciences 2024"
   doi: 10.3390/app14010043
   reverse: false
 
@@ -21,7 +20,6 @@
     We 3D-scan real pinnae, alter one geometric feature at a time, cast them in silicone, and
     measure their acoustic fingerprint. This controlled methodology lets us isolate exactly which
     part of your ear shape determines where you hear sound coming from.
-  meta: "Sumner, Riedel & Unnthorsson · Cogent Engineering 2025"
   doi: 10.1080/23311916.2025.2536150
   reverse: true
 
@@ -33,6 +31,5 @@
     Our structure-preserving model order reduction compresses the wave equation into a
     low-dimensional form that runs 100 times faster than a full simulation — without
     sacrificing stability at complex material boundaries. Built with Treble Technologies.
-  meta: "Bonthu et al. · Int. J. Numerical Methods in Engineering 2026"
   doi: 10.1002/nme.70295
   reverse: false
