@@ -44,6 +44,7 @@ exclude:
   - _cite/
   - cms/
   - CMS_PLAN.md
+  - DEV_HISTORY.md
 
 defaults:
   - scope:
