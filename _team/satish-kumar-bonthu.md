@@ -21,3 +21,15 @@ In 2022, he took a career break and began his PhD at the University of Iceland, 
 His recent project portfolio spans multiple disciplines, including managing the aerodynamic validation of a high-speed rail pantograph system, simulating complex ray-tracing physics for the Tokarsky unilluminable room paradox, and optimizing the hydrodynamic efficiency of a whale-watching boat propeller for North Sailing. Additionally, his work includes numerical investigations of cavitation in piping systems to advance novel heat pump technologies, analysing toilet ventilation efficiency within the Nordic building context, and evaluating the socio-economic and environmental factors of the rapidly growing data center industry in Iceland. 
 
 His academic and industrial interests lie at the intersection of data-driven surrogate modeling, computational fluid dynamics (CFD), aeroacoustics, and energy-efficient, sustainability-focused engineering design.
+
+## PhD research
+
+Satish develops reduced-order models that make wave-based room-acoustic simulations faster. His published work introduces a structure-preserving formulation for stable time-domain simulations with frequency-dependent absorbing boundaries. He is now investigating whether a shared reduced model can predict room impulse responses across different wall impedances, so that acoustic treatments can be compared at lower computational cost. [Research project](https://acute.hi.is/projects/reduced-order-modeling-rom-of-room-acoustic-simulations/) · [Open-access paper](https://doi.org/10.1002/nme.70295)
+
+## Selected work in Iceland
+
+**North Sailing propeller retrofit.** Satish used CFD to assess the hydrodynamic performance of a propeller retrofit for a whale-watching vessel. The study examined the potential for fuel savings and lower greenhouse gas emissions.
+
+**Wind-driven toilet ventilation.** Satish compared CFD predictions of ventilator suction with experimental measurements. He then used a passive tracer to study how effectively the airflow could remove an odor surrogate from a naturally ventilated toilet.
+
+**The Cloud Beneath the Ice.** Presented at IGEC 2025 in Reykjavík, this study examines the environmental and socioeconomic implications of data center development in Iceland, including competition for electricity and potential impacts on the marine environment.
