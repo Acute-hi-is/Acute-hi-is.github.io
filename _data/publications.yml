@@ -42,6 +42,15 @@
   topic: haptics
   image: /images/publications/biomimetics-11-00112-g001.jpg
   summary: A forearm-worn vibrotactile system can convey prosthetic knee-joint position to transfemoral amputees without visual monitoring. Healthy participants reliably detected dual-actuator tactile cues encoding joint angles, validating the design parameters for a non-invasive proprioceptive feedback interface.
+- title: "A Non-Intrusive Data-Driven Surrogate for Parametric Wave-Based Room Acoustics: Performance Limits and Data Sparsity Challenges"
+  authors: B. Sakarwala, S. Bonthu, R. Unnthórsson, M. Kozak
+  venue: SSRN preprint
+  year: 2026
+  doi: 10.2139/ssrn.7412273
+  projects:
+    - reduced-order-modeling-rom-of-room-acoustic-simulations
+  topic: acoustics
+  summary: "This preprint combines proper orthogonal decomposition with regression to predict wave-based room responses across surface-absorption settings. It examines how sparse coverage of the parameters affects prediction accuracy and how targeted additional simulations can improve it."
 - title: "Stable Model Reduction for Time-Domain Room Acoustics: A Structure-Preserving Formulation for Complex Boundaries"
   authors: S. Bonthu, H. Sampedro Llopis, S. Thrastarson, F. Pind, R. Unnthorsson
   venue: Int. J. Numerical Methods in Engineering
