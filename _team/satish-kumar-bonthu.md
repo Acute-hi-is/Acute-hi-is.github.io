@@ -41,3 +41,5 @@ Satish develops reduced-order models that make wave-based room-acoustic simulati
 **Room Resonance Lab.** An interactive prototype for exploring how room geometry shapes natural frequencies and the spatial patterns of acoustic modes.
 
 **Didgeridoo resonance.** A computational acoustics experiment exploring how the length and shape of a didgeridoo’s bore affect its resonances, including a snake-shaped geometry.
+
+[Visit the Fun Corner]({{ '/team/satish-kumar-bonthu/fun-corner/' | relative_url }}) for short acoustics experiments, animations, and LinkedIn posts.
