@@ -30,6 +30,14 @@ Satish develops reduced-order models that make wave-based room-acoustic simulati
 
 **North Sailing propeller retrofit.** Satish used CFD to assess the hydrodynamic performance of a propeller retrofit for a whale-watching vessel. The study examined the potential for fuel savings and lower greenhouse gas emissions.
 
+**Cavitation in heat-pump piping.** Satish used CFD to investigate cavitation in piping as part of heat-pump technology development.
+
 **Wind-driven toilet ventilation.** Satish compared CFD predictions of ventilator suction with experimental measurements. He then used a passive tracer to study how effectively the airflow could remove an odor surrogate from a naturally ventilated toilet.
 
 **The Cloud Beneath the Ice.** Presented at IGEC 2025 in Reykjavík, this study examines the environmental and socioeconomic implications of data center development in Iceland, including competition for electricity and potential impacts on the marine environment.
+
+## Acoustics demonstrations
+
+**Room Resonance Lab.** An interactive prototype for exploring how room geometry shapes natural frequencies and the spatial patterns of acoustic modes.
+
+**Didgeridoo resonance.** A computational acoustics experiment exploring how the length and shape of a didgeridoo’s bore affect its resonances, including a snake-shaped geometry.
